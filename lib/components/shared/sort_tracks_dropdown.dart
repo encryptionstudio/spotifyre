@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/library/user_local_tracks.dart';
-import 'package:spotube/components/shared/adaptive/adaptive_pop_sheet_list.dart';
-import 'package:spotube/extensions/context.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/library/user_local_tracks.dart';
+import 'package:spotifyre/components/shared/adaptive/adaptive_pop_sheet_list.dart';
+import 'package:spotifyre/extensions/context.dart';
 
 class SortTracksDropdown extends StatelessWidget {
   final SortBy? value;
@@ -75,7 +75,7 @@ class SortTracksDropdown extends StatelessWidget {
             style: theme.textTheme.titleSmall!,
             child: Row(
               children: [
-                const Icon(SpotubeIcons.sort),
+                const Icon(spotifyreIcons.sort),
                 const SizedBox(width: 8),
                 Text(context.l10n.sort_tracks),
               ],

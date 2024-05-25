@@ -4,21 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-import 'package:spotube/collections/fake.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/heart_button.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/components/shared/links/artist_link.dart';
-import 'package:spotube/components/shared/links/link_text.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/components/shared/track_tile/track_options.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
+import 'package:spotifyre/collections/fake.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/heart_button.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/components/shared/links/artist_link.dart';
+import 'package:spotifyre/components/shared/links/link_text.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/components/shared/track_tile/track_options.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
 
-import 'package:spotube/extensions/constrains.dart';
+import 'package:spotifyre/extensions/constrains.dart';
 
 class TrackPage extends HookConsumerWidget {
   final String trackId;
@@ -128,7 +128,7 @@ class TrackPage extends HookConsumerWidget {
                               Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  const Icon(SpotubeIcons.album),
+                                  const Icon(spotifyreIcons.album),
                                   const Gap(5),
                                   Flexible(
                                     child: LinkText(
@@ -144,7 +144,7 @@ class TrackPage extends HookConsumerWidget {
                               Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  const Icon(SpotubeIcons.artist),
+                                  const Icon(spotifyreIcons.artist),
                                   const Gap(5),
                                   ArtistLink(artists: track.artists!),
                                 ],
@@ -162,7 +162,8 @@ class TrackPage extends HookConsumerWidget {
                                     if (!isActive &&
                                         !playlist.tracks.contains(track))
                                       OutlinedButton.icon(
-                                        icon: const Icon(SpotubeIcons.queueAdd),
+                                        icon:
+                                            const Icon(spotifyreIcons.queueAdd),
                                         label: Text(context.l10n.queue),
                                         onPressed: () {
                                           playlistNotifier.addTrack(track);
@@ -172,8 +173,8 @@ class TrackPage extends HookConsumerWidget {
                                     if (!isActive &&
                                         !playlist.tracks.contains(track))
                                       IconButton.outlined(
-                                        icon:
-                                            const Icon(SpotubeIcons.lightning),
+                                        icon: const Icon(
+                                            spotifyreIcons.lightning),
                                         tooltip: context.l10n.play_next,
                                         onPressed: () {
                                           playlistNotifier
@@ -187,8 +188,8 @@ class TrackPage extends HookConsumerWidget {
                                           : context.l10n.play,
                                       icon: Icon(
                                         isActive
-                                            ? SpotubeIcons.pause
-                                            : SpotubeIcons.play,
+                                            ? spotifyreIcons.pause
+                                            : spotifyreIcons.play,
                                         color: colorScheme.onPrimary,
                                       ),
                                       onPressed: onPlay,

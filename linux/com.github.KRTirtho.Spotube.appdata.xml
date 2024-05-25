@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.github.KRTirtho.Spotube</id>
-  <name>Spotube</name>
+  <id>com.github.KRTirtho.spotifyre</id>
+  <name>spotifyre</name>
   <summary>
     Freedom of music
   </summary>
@@ -13,13 +13,13 @@
     <control>touch</control>
   </recommends>
   <developer_name>Kingkor Roy Tirtho</developer_name>
-  <url type="bugtracker">https://github.com/krtirtho/spotube/issues</url>
-  <url type="homepage">https://spotube.krtirtho.dev</url>
-  <url type="donation">https://opencollective.com/spotube</url>
+  <url type="bugtracker">https://github.com/krtirtho/spotifyre/issues</url>
+  <url type="homepage">https://spotifyre.krtirtho.dev</url>
+  <url type="donation">https://opencollective.com/spotifyre</url>
   <description>
     <p>Open source Spotify client that doesn't require Premium nor uses Electron! Available for
       both desktop &amp; mobile!</p>
-    <p>Following are the features that currently spotube offers:</p>
+    <p>Following are the features that currently spotifyre offers:</p>
     <ul>
       <li>🚫 No ads, thanks to the use of public &amp; free Spotify and YT Music APIs¹</li>
       <li>⬇️ Downloadable tracks</li>
@@ -36,12 +36,12 @@
   <screenshots>
     <screenshot type="default">
       <image type="source">
-        https://rawcdn.githack.com/KRTirtho/spotube/62055018feade0b895663a0bfc5f85f265ae2154/assets/spotube-screenshot.png
+        https://rawcdn.githack.com/KRTirtho/spotifyre/62055018feade0b895663a0bfc5f85f265ae2154/assets/spotifyre-screenshot.png
       </image>
-      <caption>Spotube screenshot</caption>
+      <caption>spotifyre screenshot</caption>
     </screenshot>
   </screenshots>
-  <launchable type="desktop-id">com.github.KRTirtho.Spotube.desktop</launchable>
+  <launchable type="desktop-id">com.github.KRTirtho.spotifyre.desktop</launchable>
   <releases> %{{APPDATA_RELEASE}}% <release version="2.6.0" date="2022-12-09" />
     <release
       version="2.5.0" date="2022-10-13" />

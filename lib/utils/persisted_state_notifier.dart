@@ -6,10 +6,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:hive/hive.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:spotube/components/shared/dialogs/prompt_dialog.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/utils/platform.dart';
-import 'package:spotube/utils/primitive_utils.dart';
+import 'package:spotifyre/components/shared/dialogs/prompt_dialog.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/utils/platform.dart';
+import 'package:spotifyre/utils/primitive_utils.dart';
 
 const secureStorage = FlutterSecureStorage(
   aOptions: AndroidOptions(
@@ -17,10 +17,10 @@ const secureStorage = FlutterSecureStorage(
   ),
 );
 
-const kKeyBoxName = "spotube_box_name";
+const kKeyBoxName = "spotifyre_box_name";
 const kNoEncryptionWarningShownKey = "showedNoEncryptionWarning";
 const kIsUsingEncryption = "isUsingEncryption";
-String getBoxKey(String boxName) => "spotube_box_$boxName";
+String getBoxKey(String boxName) => "spotifyre_box_$boxName";
 
 abstract class PersistedStateNotifier<T> extends StateNotifier<T> {
   final String cacheKey;
@@ -92,7 +92,7 @@ abstract class PersistedStateNotifier<T> extends StateNotifier<T> {
     String? boxName = await read(kKeyBoxName);
 
     if (boxName == null) {
-      boxName = "spotube-${PrimitiveUtils.uuid.v4()}";
+      boxName = "spotifyre-${PrimitiveUtils.uuid.v4()}";
       await write(kKeyBoxName, boxName);
     }
 
@@ -109,7 +109,7 @@ abstract class PersistedStateNotifier<T> extends StateNotifier<T> {
     );
 
     _box = await Hive.openLazyBox(
-      "spotube_cache",
+      "spotifyre_cache",
       path: path,
     );
   }

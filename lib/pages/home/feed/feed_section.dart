@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-import 'package:spotube/collections/fake.dart';
-import 'package:spotube/components/album/album_card.dart';
-import 'package:spotube/components/artist/artist_card.dart';
-import 'package:spotube/components/playlist/playlist_card.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/provider/spotify/views/home_section.dart';
+import 'package:spotifyre/collections/fake.dart';
+import 'package:spotifyre/components/album/album_card.dart';
+import 'package:spotifyre/components/artist/artist_card.dart';
+import 'package:spotifyre/components/playlist/playlist_card.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/provider/spotify/views/home_section.dart';
 
 class HomeFeedSectionPage extends HookConsumerWidget {
   final String sectionUri;

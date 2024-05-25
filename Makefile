@@ -1,5 +1,5 @@
 INNO_VERSION=6.2.0
-TEMP_DIR=/tmp/spotube-tar
+TEMP_DIR=/tmp/spotifyre-tar
 USR_SHARE=deb-struct/usr/share
 BUNDLE_DIR=build/linux/${ARCH}/release/bundle
 MIRRORLIST=${PWD}/build/mirrorlist
@@ -7,10 +7,10 @@ MIRRORLIST=${PWD}/build/mirrorlist
 tar:
 		mkdir -p $(TEMP_DIR)\
 		&& cp -r $(BUNDLE_DIR)/* $(TEMP_DIR)\
-		&& cp linux/spotube.desktop $(TEMP_DIR)\
-		&& cp assets/spotube-logo.png $(TEMP_DIR)\
-		&& cp linux/com.github.KRTirtho.Spotube.appdata.xml $(TEMP_DIR)\
-		&& tar -cJf build/spotube-linux-${VERSION}-${PKG_ARCH}.tar.xz -C $(TEMP_DIR) .\
+		&& cp linux/spotifyre.desktop $(TEMP_DIR)\
+		&& cp assets/spotifyre-logo.png $(TEMP_DIR)\
+		&& cp linux/com.github.KRTirtho.spotifyre.appdata.xml $(TEMP_DIR)\
+		&& tar -cJf build/spotifyre-linux-${VERSION}-${PKG_ARCH}.tar.xz -C $(TEMP_DIR) .\
 		&& rm -rf $(TEMP_DIR)
 
 aursrcinfo:
@@ -18,10 +18,10 @@ aursrcinfo:
 
 publishaur: 
 					 echo '[Warning!]: you need SSH paired with AUR'\
-					 && rm -rf build/spotube\
-					 && git clone ssh://aur@aur.archlinux.org/spotube-bin.git build/spotube\
-					 && cp aur-struct/PKGBUILD aur-struct/.SRCINFO build/spotube\
-					 && cd build/spotube\
+					 && rm -rf build/spotifyre\
+					 && git clone ssh://aur@aur.archlinux.org/spotifyre-bin.git build/spotifyre\
+					 && cp aur-struct/PKGBUILD aur-struct/.SRCINFO build/spotifyre\
+					 && cd build/spotifyre\
 					 && git add .\
 					 && git commit -m "${MSG}"\
 					 && git push
@@ -35,11 +35,11 @@ inno:
 		 powershell .\build\iscc\iscc.exe scripts\windows-setup-creator.iss
 
 choco:
-			powershell cp dist\Spotube-windows-x86_64-setup.exe choco-struct\tools
-			powershell choco pack .\choco-struct\spotube.nuspec  --outputdirectory dist
+			powershell cp dist\spotifyre-windows-x86_64-setup.exe choco-struct\tools
+			powershell choco pack .\choco-struct\spotifyre.nuspec  --outputdirectory dist
 
 apk:
-		mv build/app/outputs/apk/release/app-release.apk build/Spotube-android-all-arch.apk
+		mv build/app/outputs/apk/release/app-release.apk build/spotifyre-android-all-arch.apk
 
 gensums:
 				sh -c scripts/gensums.sh

@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:spotube/services/sourced_track/enums.dart';
+import 'package:spotifyre/services/sourced_track/enums.dart';
 
 part 'source_map.g.dart';
 

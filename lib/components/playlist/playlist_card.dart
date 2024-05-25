@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/components/shared/dialogs/select_device_dialog.dart';
-import 'package:spotube/components/shared/playbutton_card.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/models/connect/connect.dart';
-import 'package:spotube/provider/connect/connect.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
-import 'package:spotube/utils/service_utils.dart';
+import 'package:spotifyre/components/shared/dialogs/select_device_dialog.dart';
+import 'package:spotifyre/components/shared/playbutton_card.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/models/connect/connect.dart';
+import 'package:spotifyre/provider/connect/connect.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
+import 'package:spotifyre/utils/service_utils.dart';
 
 class PlaylistCard extends HookConsumerWidget {
   final PlaylistSimple playlist;

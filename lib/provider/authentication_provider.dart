@@ -5,11 +5,11 @@ import 'package:collection/collection.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:http/http.dart';
-import 'package:spotube/collections/routes.dart';
-import 'package:spotube/components/shared/dialogs/prompt_dialog.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/utils/persisted_state_notifier.dart';
-import 'package:spotube/utils/platform.dart';
+import 'package:spotifyre/collections/routes.dart';
+import 'package:spotifyre/components/shared/dialogs/prompt_dialog.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/utils/persisted_state_notifier.dart';
+import 'package:spotifyre/utils/platform.dart';
 
 class AuthenticationCredentials {
   String cookie;

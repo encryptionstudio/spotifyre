@@ -5,8 +5,8 @@ import sys
 import requests
 import yaml
 
-REPO = "KRTirtho/spotube"
-YAML_FILENAME = "com.github.KRTirtho.Spotube.yml"
+REPO = "KRTirtho/spotifyre"
+YAML_FILENAME = "com.github.KRTirtho.spotifyre.yml"
 
 config = None
 with open(YAML_FILENAME, mode="r", encoding="utf-8") as input:
@@ -16,7 +16,7 @@ with open(YAML_FILENAME, mode="r", encoding="utf-8") as input:
 version = sys.argv[1:][0]
 
 
-tar_url = f"https://github.com/{REPO}/releases/download/v{version}/spotube-linux-{version}-x86_64.tar.xz"
+tar_url = f"https://github.com/{REPO}/releases/download/v{version}/spotifyre-linux-{version}-x86_64.tar.xz"
 tar_sha256 = hashlib.sha256()
 print(f"Downloading file {tar_url} to generete sha256 sum")
 tar = requests.get(tar_url)

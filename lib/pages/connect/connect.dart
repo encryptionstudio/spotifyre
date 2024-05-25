@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/connect/local_devices.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/connect/clients.dart';
-import 'package:spotube/utils/service_utils.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/connect/local_devices.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/connect/clients.dart';
+import 'package:spotifyre/utils/service_utils.dart';
 
 class ConnectPage extends HookConsumerWidget {
   const ConnectPage({super.key});
@@ -54,7 +54,7 @@ class ConnectPage extends HookConsumerWidget {
                           device.name;
                   return Card(
                     child: ListTile(
-                      leading: const Icon(SpotubeIcons.monitor),
+                      leading: const Icon(spotifyreIcons.monitor),
                       title: Text(device.name),
                       subtitle: selected
                           ? Text(
@@ -75,7 +75,7 @@ class ConnectPage extends HookConsumerWidget {
                       },
                       trailing: selected
                           ? IconButton(
-                              icon: const Icon(SpotubeIcons.power),
+                              icon: const Icon(spotifyreIcons.power),
                               onPressed: () =>
                                   connectClientsNotifier.clearResolvedService(),
                             )

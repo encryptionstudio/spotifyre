@@ -1,12 +1,12 @@
-name: spotube
+name: spotifyre
 description: Open source Spotify client that doesn't require Premium nor uses Electron! Available for both desktop & mobile!
 
 publish_to: "none"
 
 version: 3.6.0+30
 
-homepage: https://spotube.krtirtho.dev
-repository: https://github.com/KRTirtho/spotube
+homepage: https://spotifyre.krtirtho.dev
+repository: https://github.com/KRTirtho/spotifyre
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -166,26 +166,26 @@ flutter:
 flutter_launcher_icons:
   ios: true
   android: true
-  image_path: "assets/spotube-logo.png"
-  adaptive_icon_foreground: "assets/spotube-logo-foreground.jpg"
+  image_path: "assets/spotifyre-logo.png"
+  adaptive_icon_foreground: "assets/spotifyre-logo-foreground.jpg"
   adaptive_icon_background: "#242832"
   windows:
     generate: true
-    image_path: "assets/spotube-logo.png"
+    image_path: "assets/spotifyre-logo.png"
     icon_size: 48 # min:48, max:256, default: 48
   macos:
     generate: true
-    image_path: "assets/spotube-logo.png"
+    image_path: "assets/spotifyre-logo.png"
 
 flutter_gen:
   output: lib/collections
 
 flutter_native_splash:
   background_image: assets/bengali-patterns-bg.jpg
-  image: assets/spotube-logo.png
+  image: assets/spotifyre-logo.png
   branding: assets/branding.png
   android_12:
-    image: assets/spotube-logo_android12.png
+    image: assets/spotifyre-logo_android12.png
     branding: assets/branding.png
     color: "#000000"
     icon_background_color: "#000000"

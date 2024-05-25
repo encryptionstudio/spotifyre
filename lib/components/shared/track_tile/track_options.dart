@@ -6,26 +6,26 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/library/user_local_tracks.dart';
-import 'package:spotube/components/shared/adaptive/adaptive_pop_sheet_list.dart';
-import 'package:spotube/components/shared/dialogs/playlist_add_track_dialog.dart';
-import 'package:spotube/components/shared/dialogs/prompt_dialog.dart';
-import 'package:spotube/components/shared/dialogs/track_details_dialog.dart';
-import 'package:spotube/components/shared/heart_button.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/components/shared/links/artist_link.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/models/local_track.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/provider/blacklist_provider.dart';
-import 'package:spotube/provider/download_manager_provider.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
-import 'package:spotube/provider/spotify_provider.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/library/user_local_tracks.dart';
+import 'package:spotifyre/components/shared/adaptive/adaptive_pop_sheet_list.dart';
+import 'package:spotifyre/components/shared/dialogs/playlist_add_track_dialog.dart';
+import 'package:spotifyre/components/shared/dialogs/prompt_dialog.dart';
+import 'package:spotifyre/components/shared/dialogs/track_details_dialog.dart';
+import 'package:spotifyre/components/shared/heart_button.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/components/shared/links/artist_link.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/models/local_track.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/provider/blacklist_provider.dart';
+import 'package:spotifyre/provider/download_manager_provider.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
+import 'package:spotifyre/provider/spotify_provider.dart';
 
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -192,9 +192,9 @@ class TrackOptions extends HookConsumerWidget {
     ]);
 
     final progressNotifier = useMemoized(() {
-      final spotubeTrack = downloadManager.mapToSourcedTrack(track);
-      if (spotubeTrack == null) return null;
-      return downloadManager.getProgressNotifier(spotubeTrack);
+      final spotifyreTrack = downloadManager.mapToSourcedTrack(track);
+      if (spotifyreTrack == null) return null;
+      return downloadManager.getProgressNotifier(spotifyreTrack);
     });
 
     final adaptivePopSheetList = AdaptivePopSheetList<TrackOptionValue>(
@@ -287,7 +287,7 @@ class TrackOptions extends HookConsumerWidget {
             break;
         }
       },
-      icon: icon ?? const Icon(SpotubeIcons.moreHorizontal),
+      icon: icon ?? const Icon(spotifyreIcons.moreHorizontal),
       headings: [
         ListTile(
           dense: true,
@@ -318,7 +318,7 @@ class TrackOptions extends HookConsumerWidget {
         LocalTrack() => [
             PopSheetEntry(
               value: TrackOptionValue.delete,
-              leading: const Icon(SpotubeIcons.trash),
+              leading: const Icon(spotifyreIcons.trash),
               title: Text(context.l10n.delete),
             )
           ],
@@ -326,26 +326,26 @@ class TrackOptions extends HookConsumerWidget {
             if (mediaQuery.smAndDown)
               PopSheetEntry(
                 value: TrackOptionValue.album,
-                leading: const Icon(SpotubeIcons.album),
+                leading: const Icon(spotifyreIcons.album),
                 title: Text(context.l10n.go_to_album),
                 subtitle: Text(track.album!.name!),
               ),
             if (!playlist.containsTrack(track)) ...[
               PopSheetEntry(
                 value: TrackOptionValue.addToQueue,
-                leading: const Icon(SpotubeIcons.queueAdd),
+                leading: const Icon(spotifyreIcons.queueAdd),
                 title: Text(context.l10n.add_to_queue),
               ),
               PopSheetEntry(
                 value: TrackOptionValue.playNext,
-                leading: const Icon(SpotubeIcons.lightning),
+                leading: const Icon(spotifyreIcons.lightning),
                 title: Text(context.l10n.play_next),
               ),
             ] else
               PopSheetEntry(
                 value: TrackOptionValue.removeFromQueue,
                 enabled: playlist.activeTrack?.id != track.id,
-                leading: const Icon(SpotubeIcons.queueRemove),
+                leading: const Icon(spotifyreIcons.queueRemove),
                 title: Text(context.l10n.remove_from_queue),
               ),
             if (me.asData?.value != null)
@@ -353,10 +353,10 @@ class TrackOptions extends HookConsumerWidget {
                 value: TrackOptionValue.favorite,
                 leading: favorites.isLiked
                     ? const Icon(
-                        SpotubeIcons.heartFilled,
+                        spotifyreIcons.heartFilled,
                         color: Colors.pink,
                       )
-                    : const Icon(SpotubeIcons.heart),
+                    : const Icon(spotifyreIcons.heart),
                 title: Text(
                   favorites.isLiked
                       ? context.l10n.remove_from_favorites
@@ -366,19 +366,19 @@ class TrackOptions extends HookConsumerWidget {
             if (auth != null) ...[
               PopSheetEntry(
                 value: TrackOptionValue.startRadio,
-                leading: const Icon(SpotubeIcons.radio),
+                leading: const Icon(spotifyreIcons.radio),
                 title: Text(context.l10n.start_a_radio),
               ),
               PopSheetEntry(
                 value: TrackOptionValue.addToPlaylist,
-                leading: const Icon(SpotubeIcons.playlistAdd),
+                leading: const Icon(spotifyreIcons.playlistAdd),
                 title: Text(context.l10n.add_to_playlist),
               ),
             ],
             if (userPlaylist && auth != null)
               PopSheetEntry(
                 value: TrackOptionValue.removeFromPlaylist,
-                leading: const Icon(SpotubeIcons.removeFilled),
+                leading: const Icon(spotifyreIcons.removeFilled),
                 title: Text(context.l10n.remove_from_playlist),
               ),
             PopSheetEntry(
@@ -391,12 +391,12 @@ class TrackOptions extends HookConsumerWidget {
                         value: progress.value,
                       );
                     })
-                  : const Icon(SpotubeIcons.download),
+                  : const Icon(spotifyreIcons.download),
               title: Text(context.l10n.download_track),
             ),
             PopSheetEntry(
               value: TrackOptionValue.blacklist,
-              leading: const Icon(SpotubeIcons.playlistRemove),
+              leading: const Icon(spotifyreIcons.playlistRemove),
               iconColor: !isBlackListed ? Colors.red[400] : null,
               textColor: !isBlackListed ? Colors.red[400] : null,
               title: Text(
@@ -407,7 +407,7 @@ class TrackOptions extends HookConsumerWidget {
             ),
             PopSheetEntry(
               value: TrackOptionValue.share,
-              leading: const Icon(SpotubeIcons.share),
+              leading: const Icon(spotifyreIcons.share),
               title: Text(context.l10n.share),
             ),
             PopSheetEntry(
@@ -421,7 +421,7 @@ class TrackOptions extends HookConsumerWidget {
             ),
             PopSheetEntry(
               value: TrackOptionValue.details,
-              leading: const Icon(SpotubeIcons.info),
+              leading: const Icon(spotifyreIcons.info),
               title: Text(context.l10n.details),
             ),
           ]

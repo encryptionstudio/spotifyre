@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/fake.dart';
-import 'package:spotube/components/album/album_card.dart';
-import 'package:spotube/components/artist/artist_card.dart';
-import 'package:spotube/components/playlist/playlist_card.dart';
-import 'package:spotube/hooks/utils/use_breakpoint_value.dart';
+import 'package:spotifyre/collections/fake.dart';
+import 'package:spotifyre/components/album/album_card.dart';
+import 'package:spotifyre/components/artist/artist_card.dart';
+import 'package:spotifyre/components/playlist/playlist_card.dart';
+import 'package:spotifyre/hooks/utils/use_breakpoint_value.dart';
 import 'package:very_good_infinite_list/very_good_infinite_list.dart';
 
 class HorizontalPlaybuttonCardView<T> extends HookWidget {

@@ -1,6 +1,6 @@
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/utils/primitive_utils.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/utils/primitive_utils.dart';
 import 'package:collection/collection.dart';
 
 enum ImagePlaceholder {

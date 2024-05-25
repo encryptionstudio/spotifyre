@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_desktop_tools/flutter_desktop_tools.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/pages/settings/sections/about.dart';
-import 'package:spotube/pages/settings/sections/accounts.dart';
-import 'package:spotube/pages/settings/sections/appearance.dart';
-import 'package:spotube/pages/settings/sections/desktop.dart';
-import 'package:spotube/pages/settings/sections/developers.dart';
-import 'package:spotube/pages/settings/sections/downloads.dart';
-import 'package:spotube/pages/settings/sections/language_region.dart';
-import 'package:spotube/pages/settings/sections/playback.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/pages/settings/sections/about.dart';
+import 'package:spotifyre/pages/settings/sections/accounts.dart';
+import 'package:spotifyre/pages/settings/sections/appearance.dart';
+import 'package:spotifyre/pages/settings/sections/desktop.dart';
+import 'package:spotifyre/pages/settings/sections/developers.dart';
+import 'package:spotifyre/pages/settings/sections/downloads.dart';
+import 'package:spotifyre/pages/settings/sections/language_region.dart';
+import 'package:spotifyre/pages/settings/sections/playback.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
 
 class SettingsPage extends HookConsumerWidget {
   const SettingsPage({super.key});

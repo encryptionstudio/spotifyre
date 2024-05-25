@@ -4,24 +4,24 @@ import 'dart:math';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:palette_generator/palette_generator.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/extensions/track.dart';
-import 'package:spotube/models/local_track.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/extensions/track.dart';
+import 'package:spotifyre/models/local_track.dart';
 
-import 'package:spotube/provider/blacklist_provider.dart';
-import 'package:spotube/provider/palette_provider.dart';
-import 'package:spotube/provider/proxy_playlist/player_listeners.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist.dart';
-import 'package:spotube/provider/scrobbler_provider.dart';
-import 'package:spotube/provider/server/sourced_track.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_state.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
-import 'package:spotube/services/audio_services/audio_services.dart';
-import 'package:spotube/provider/discord_provider.dart';
+import 'package:spotifyre/provider/blacklist_provider.dart';
+import 'package:spotifyre/provider/palette_provider.dart';
+import 'package:spotifyre/provider/proxy_playlist/player_listeners.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist.dart';
+import 'package:spotifyre/provider/scrobbler_provider.dart';
+import 'package:spotifyre/provider/server/sourced_track.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_state.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
+import 'package:spotifyre/services/audio_services/audio_services.dart';
+import 'package:spotifyre/provider/discord_provider.dart';
 
-import 'package:spotube/utils/persisted_state_notifier.dart';
+import 'package:spotifyre/utils/persisted_state_notifier.dart';
 
 class ProxyPlaylistNotifier extends PersistedStateNotifier<ProxyPlaylist> {
   final Ref ref;
@@ -52,13 +52,13 @@ class ProxyPlaylistNotifier extends PersistedStateNotifier<ProxyPlaylist> {
 
   Future<void> addTrack(Track track) async {
     if (blacklist.contains(track)) return;
-    await audioPlayer.addTrack(SpotubeMedia(track));
+    await audioPlayer.addTrack(spotifyreMedia(track));
   }
 
   Future<void> addTracks(Iterable<Track> tracks) async {
     tracks = blacklist.filter(tracks).toList() as List<Track>;
     for (final track in tracks) {
-      await audioPlayer.addTrack(SpotubeMedia(track));
+      await audioPlayer.addTrack(spotifyreMedia(track));
     }
   }
 
@@ -147,7 +147,7 @@ class ProxyPlaylistNotifier extends PersistedStateNotifier<ProxyPlaylist> {
       final track = tracks.elementAt(i);
 
       await audioPlayer.addTrackAt(
-        SpotubeMedia(track),
+        spotifyreMedia(track),
         (state.active ?? 0) + i + 1,
       );
     }

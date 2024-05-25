@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/language_codes.dart';
-import 'package:spotube/collections/spotify_markets.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/settings/section_card_with_heading.dart';
-import 'package:spotube/components/shared/adaptive/adaptive_select_tile.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/l10n/l10n.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/collections/language_codes.dart';
+import 'package:spotifyre/collections/spotify_markets.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/settings/section_card_with_heading.dart';
+import 'package:spotifyre/components/shared/adaptive/adaptive_select_tile.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/l10n/l10n.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
 
 class SettingsLanguageRegionSection extends HookConsumerWidget {
   const SettingsLanguageRegionSection({super.key});
@@ -32,7 +32,7 @@ class SettingsLanguageRegionSection extends HookConsumerWidget {
             preferencesNotifier.setLocale(locale);
           },
           title: Text(context.l10n.language),
-          secondary: const Icon(SpotubeIcons.language),
+          secondary: const Icon(spotifyreIcons.language),
           options: [
             DropdownMenuItem(
               value: const Locale("system", "system"),
@@ -54,7 +54,7 @@ class SettingsLanguageRegionSection extends HookConsumerWidget {
         ),
         AdaptiveSelectTile<Market>(
           breakLayout: mediaQuery.lgAndUp,
-          secondary: const Icon(SpotubeIcons.shoppingBag),
+          secondary: const Icon(spotifyreIcons.shoppingBag),
           title: Text(context.l10n.market_place_region),
           subtitle: Text(context.l10n.recommendation_country),
           value: preferences.recommendationMarket,

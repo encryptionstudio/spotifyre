@@ -11,7 +11,7 @@ class SkipSegment {
   SkipSegment(this.start, this.end);
 
   static String version = 'v1';
-  static final boxName = "oss.krtirtho.spotube.skip_segments.$version";
+  static final boxName = "oss.krtirtho.spotifyre.skip_segments.$version";
   static LazyBox get box => Hive.lazyBox(boxName);
 
   SkipSegment.fromJson(Map<String, dynamic> json)

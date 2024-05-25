@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/spotube_icons.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
 
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/extensions/image.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/extensions/image.dart';
 
 class SimpleTrackTile extends HookWidget {
   final Track track;
@@ -34,7 +34,7 @@ class SimpleTrackTile extends HookWidget {
       trailing: onDelete == null
           ? null
           : IconButton(
-              icon: const Icon(SpotubeIcons.close),
+              icon: const Icon(spotifyreIcons.close),
               onPressed: onDelete,
             ),
       subtitle: Text(

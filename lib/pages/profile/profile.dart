@@ -4,13 +4,13 @@ import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:sliver_tools/sliver_tools.dart';
-import 'package:spotube/collections/fake.dart';
-import 'package:spotube/collections/spotify_markets.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/collections/fake.dart';
+import 'package:spotifyre/collections/spotify_markets.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class ProfilePage extends HookConsumerWidget {
@@ -84,7 +84,7 @@ class ProfilePage extends HookConsumerWidget {
                     children: [
                       TextButton.icon(
                         label: const Text("Edit"),
-                        icon: const Icon(SpotubeIcons.edit),
+                        icon: const Icon(spotifyreIcons.edit),
                         onPressed: () {
                           launchUrlString(
                             "https://www.spotify.com/account/profile/",

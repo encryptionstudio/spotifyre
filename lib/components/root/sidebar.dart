@@ -6,24 +6,24 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
 
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/collections/side_bar_tiles.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/connect/connect_device.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/hooks/utils/use_brightness_value.dart';
-import 'package:spotube/hooks/controllers/use_sidebarx_controller.dart';
-import 'package:spotube/provider/download_manager_provider.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/collections/side_bar_tiles.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/connect/connect_device.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/hooks/utils/use_brightness_value.dart';
+import 'package:spotifyre/hooks/controllers/use_sidebarx_controller.dart';
+import 'package:spotifyre/provider/download_manager_provider.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_state.dart';
-import 'package:spotube/utils/platform.dart';
-import 'package:spotube/utils/service_utils.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_state.dart';
+import 'package:spotifyre/utils/platform.dart';
+import 'package:spotifyre/utils/service_utils.dart';
 
 class Sidebar extends HookConsumerWidget {
   final int? selectedIndex;
@@ -43,7 +43,7 @@ class Sidebar extends HookConsumerWidget {
         color: Colors.black,
         borderRadius: BorderRadius.circular(50),
       ),
-      child: Assets.spotubeLogoPng.image(height: 50),
+      child: Assets.spotifyreLogoPng.image(height: 50),
     );
   }
 
@@ -224,7 +224,7 @@ class SidebarHeader extends HookWidget {
               Sidebar.brandLogo(),
               const SizedBox(width: 10),
               Text(
-                "Spotube",
+                "spotifyre",
                 style: theme.textTheme.titleLarge,
               ),
             ],
@@ -256,7 +256,7 @@ class SidebarFooter extends HookConsumerWidget {
 
     if (mediaQuery.mdAndDown) {
       return IconButton(
-        icon: const Icon(SpotubeIcons.settings),
+        icon: const Icon(spotifyreIcons.settings),
         onPressed: () => Sidebar.goToSettings(context),
       );
     }
@@ -308,7 +308,7 @@ class SidebarFooter extends HookConsumerWidget {
                   ),
                 ),
               IconButton(
-                icon: const Icon(SpotubeIcons.settings),
+                icon: const Icon(spotifyreIcons.settings),
                 onPressed: () {
                   Sidebar.goToSettings(context);
                 },

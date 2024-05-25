@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'spotube*'
+  softwareName  = 'spotifyre*'
   fileType      = 'exe'
   validExitCodes= @(0, 3010, 1605, 1614, 1641)
   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup

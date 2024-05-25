@@ -3,8 +3,8 @@ import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/utils/platform.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/utils/platform.dart';
 
 class WebViewLogin extends HookConsumerWidget {
   const WebViewLogin({super.key});

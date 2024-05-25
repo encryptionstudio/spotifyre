@@ -5,14 +5,14 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:piped_client/piped_client.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/settings/section_card_with_heading.dart';
-import 'package:spotube/components/shared/adaptive/adaptive_select_tile.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/piped_instances_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_state.dart';
-import 'package:spotube/services/sourced_track/enums.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/settings/section_card_with_heading.dart';
+import 'package:spotifyre/components/shared/adaptive/adaptive_select_tile.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/piped_instances_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_state.dart';
+import 'package:spotifyre/services/sourced_track/enums.dart';
 
 class SettingsPlaybackSection extends HookConsumerWidget {
   const SettingsPlaybackSection({super.key});
@@ -28,7 +28,7 @@ class SettingsPlaybackSection extends HookConsumerWidget {
       children: [
         const Gap(10),
         AdaptiveSelectTile<SourceQualities>(
-          secondary: const Icon(SpotubeIcons.audioQuality),
+          secondary: const Icon(spotifyreIcons.audioQuality),
           title: Text(context.l10n.audio_quality),
           value: preferences.audioQuality,
           options: [
@@ -53,7 +53,7 @@ class SettingsPlaybackSection extends HookConsumerWidget {
         ),
         const Gap(5),
         AdaptiveSelectTile<AudioSource>(
-          secondary: const Icon(SpotubeIcons.api),
+          secondary: const Icon(spotifyreIcons.api),
           title: Text(context.l10n.audio_source),
           value: preferences.audioSource,
           options: AudioSource.values
@@ -77,7 +77,7 @@ class SettingsPlaybackSection extends HookConsumerWidget {
                   return instanceList.when(
                     data: (data) {
                       return AdaptiveSelectTile<String>(
-                        secondary: const Icon(SpotubeIcons.piped),
+                        secondary: const Icon(spotifyreIcons.piped),
                         title: Text(context.l10n.piped_instance),
                         subtitle: RichText(
                           text: TextSpan(
@@ -139,7 +139,7 @@ class SettingsPlaybackSection extends HookConsumerWidget {
           child: preferences.audioSource != AudioSource.piped
               ? const SizedBox.shrink()
               : AdaptiveSelectTile<SearchMode>(
-                  secondary: const Icon(SpotubeIcons.search),
+                  secondary: const Icon(spotifyreIcons.search),
                   title: Text(context.l10n.search_mode),
                   value: preferences.searchMode,
                   options: SearchMode.values
@@ -160,7 +160,7 @@ class SettingsPlaybackSection extends HookConsumerWidget {
                   (preferences.audioSource == AudioSource.piped ||
                       preferences.audioSource == AudioSource.youtube)
               ? SwitchListTile(
-                  secondary: const Icon(SpotubeIcons.skip),
+                  secondary: const Icon(spotifyreIcons.skip),
                   title: Text(context.l10n.skip_non_music),
                   value: preferences.skipNonMusic,
                   onChanged: (state) {
@@ -170,16 +170,16 @@ class SettingsPlaybackSection extends HookConsumerWidget {
               : const SizedBox.shrink(),
         ),
         ListTile(
-          leading: const Icon(SpotubeIcons.playlistRemove),
+          leading: const Icon(spotifyreIcons.playlistRemove),
           title: Text(context.l10n.blacklist),
           subtitle: Text(context.l10n.blacklist_description),
           onTap: () {
             GoRouter.of(context).push("/settings/blacklist");
           },
-          trailing: const Icon(SpotubeIcons.angleRight),
+          trailing: const Icon(spotifyreIcons.angleRight),
         ),
         SwitchListTile(
-          secondary: const Icon(SpotubeIcons.normalize),
+          secondary: const Icon(spotifyreIcons.normalize),
           title: Text(context.l10n.normalize_audio),
           value: preferences.normalizeAudio,
           onChanged: preferencesNotifier.setNormalizeAudio,
@@ -187,7 +187,7 @@ class SettingsPlaybackSection extends HookConsumerWidget {
         if (preferences.audioSource != AudioSource.jiosaavn) ...[
           const Gap(5),
           AdaptiveSelectTile<SourceCodecs>(
-            secondary: const Icon(SpotubeIcons.stream),
+            secondary: const Icon(spotifyreIcons.stream),
             title: Text(context.l10n.streaming_music_codec),
             value: preferences.streamMusicCodec,
             showValueWhenUnfolded: false,
@@ -207,7 +207,7 @@ class SettingsPlaybackSection extends HookConsumerWidget {
           ),
           const Gap(5),
           AdaptiveSelectTile<SourceCodecs>(
-            secondary: const Icon(SpotubeIcons.file),
+            secondary: const Icon(spotifyreIcons.file),
             title: Text(context.l10n.download_music_codec),
             value: preferences.downloadMusicCodec,
             showValueWhenUnfolded: false,
@@ -227,7 +227,7 @@ class SettingsPlaybackSection extends HookConsumerWidget {
           )
         ],
         SwitchListTile(
-          secondary: const Icon(SpotubeIcons.repeat),
+          secondary: const Icon(spotifyreIcons.repeat),
           title: Text(context.l10n.endless_playback),
           value: preferences.endlessPlayback,
           onChanged: preferencesNotifier.setEndlessPlayback,
@@ -235,7 +235,7 @@ class SettingsPlaybackSection extends HookConsumerWidget {
         SwitchListTile(
           title: Text(context.l10n.enable_connect),
           subtitle: Text(context.l10n.enable_connect_description),
-          secondary: const Icon(SpotubeIcons.connect),
+          secondary: const Icon(spotifyreIcons.connect),
           value: preferences.enableConnect,
           onChanged: preferencesNotifier.setEnableConnect,
         ),

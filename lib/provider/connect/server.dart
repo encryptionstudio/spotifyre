@@ -9,17 +9,17 @@ import 'package:shelf/shelf_io.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shelf_router/shelf_router.dart';
 import 'package:shelf_web_socket/shelf_web_socket.dart';
-import 'package:spotube/models/connect/connect.dart';
-import 'package:spotube/models/logger.dart';
-import 'package:spotube/provider/connect/clients.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
+import 'package:spotifyre/models/connect/connect.dart';
+import 'package:spotifyre/models/logger.dart';
+import 'package:spotifyre/provider/connect/clients.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
 import 'package:bonsoir/bonsoir.dart';
-import 'package:spotube/services/device_info/device_info.dart';
-import 'package:spotube/utils/primitive_utils.dart';
+import 'package:spotifyre/services/device_info/device_info.dart';
+import 'package:spotifyre/utils/primitive_utils.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
-import 'package:spotube/provider/volume_provider.dart';
+import 'package:spotifyre/provider/volume_provider.dart';
 
 final logger = getLogger('ConnectServer');
 final _connectClientStreamController = StreamController<String>.broadcast();
@@ -235,7 +235,7 @@ final connectServerProvider = FutureProvider((ref) async {
 
   final service = BonsoirService(
     name: await DeviceInfoService.instance.computerName(),
-    type: '_spotube._tcp',
+    type: '_spotifyre._tcp',
     port: port,
     attributes: {
       "id": PrimitiveUtils.uuid.v4(),

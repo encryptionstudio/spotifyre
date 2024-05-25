@@ -17,7 +17,7 @@
 		<Download class="inline" size={30} />
 	</h2>
 	<br /><br />
-	<h5 class="h5">Spotube is available for every platform</h5>
+	<h5 class="h5">spotifyre is available for every platform</h5>
 	<br />
 
 	<DownloadItems links={extendedDownloadLinks} />

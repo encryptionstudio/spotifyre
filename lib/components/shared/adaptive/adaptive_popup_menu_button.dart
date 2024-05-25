@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 import 'package:popover/popover.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/extensions/constrains.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/extensions/constrains.dart';
 
 class Action extends StatelessWidget {
   final Widget text;
@@ -62,7 +62,7 @@ class AdaptiveActions extends HookWidget {
 
     if (breakOn ?? mediaQuery.lgAndUp) {
       return IconButton(
-        icon: const Icon(SpotubeIcons.moreHorizontal),
+        icon: const Icon(spotifyreIcons.moreHorizontal),
         onPressed: () {
           showPopover(
             context: context,

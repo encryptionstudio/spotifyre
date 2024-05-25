@@ -4,39 +4,39 @@ import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotify/spotify.dart' hide Search;
-import 'package:spotube/models/spotify/recommendation_seeds.dart';
-import 'package:spotube/pages/album/album.dart';
-import 'package:spotube/pages/connect/connect.dart';
-import 'package:spotube/pages/connect/control/control.dart';
-import 'package:spotube/pages/getting_started/getting_started.dart';
-import 'package:spotube/pages/home/feed/feed_section.dart';
-import 'package:spotube/pages/home/genres/genre_playlists.dart';
-import 'package:spotube/pages/home/genres/genres.dart';
-import 'package:spotube/pages/home/home.dart';
-import 'package:spotube/pages/lastfm_login/lastfm_login.dart';
-import 'package:spotube/pages/library/playlist_generate/playlist_generate.dart';
-import 'package:spotube/pages/library/playlist_generate/playlist_generate_result.dart';
-import 'package:spotube/pages/lyrics/mini_lyrics.dart';
-import 'package:spotube/pages/playlist/liked_playlist.dart';
-import 'package:spotube/pages/playlist/playlist.dart';
-import 'package:spotube/pages/profile/profile.dart';
-import 'package:spotube/pages/search/search.dart';
-import 'package:spotube/pages/settings/blacklist.dart';
-import 'package:spotube/pages/settings/about.dart';
-import 'package:spotube/pages/settings/logs.dart';
-import 'package:spotube/pages/track/track.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/services/kv_store/kv_store.dart';
-import 'package:spotube/utils/platform.dart';
-import 'package:spotube/components/shared/spotube_page_route.dart';
-import 'package:spotube/pages/artist/artist.dart';
-import 'package:spotube/pages/library/library.dart';
-import 'package:spotube/pages/desktop_login/login_tutorial.dart';
-import 'package:spotube/pages/desktop_login/desktop_login.dart';
-import 'package:spotube/pages/lyrics/lyrics.dart';
-import 'package:spotube/pages/root/root_app.dart';
-import 'package:spotube/pages/settings/settings.dart';
-import 'package:spotube/pages/mobile_login/mobile_login.dart';
+import 'package:spotifyre/models/spotify/recommendation_seeds.dart';
+import 'package:spotifyre/pages/album/album.dart';
+import 'package:spotifyre/pages/connect/connect.dart';
+import 'package:spotifyre/pages/connect/control/control.dart';
+import 'package:spotifyre/pages/getting_started/getting_started.dart';
+import 'package:spotifyre/pages/home/feed/feed_section.dart';
+import 'package:spotifyre/pages/home/genres/genre_playlists.dart';
+import 'package:spotifyre/pages/home/genres/genres.dart';
+import 'package:spotifyre/pages/home/home.dart';
+import 'package:spotifyre/pages/lastfm_login/lastfm_login.dart';
+import 'package:spotifyre/pages/library/playlist_generate/playlist_generate.dart';
+import 'package:spotifyre/pages/library/playlist_generate/playlist_generate_result.dart';
+import 'package:spotifyre/pages/lyrics/mini_lyrics.dart';
+import 'package:spotifyre/pages/playlist/liked_playlist.dart';
+import 'package:spotifyre/pages/playlist/playlist.dart';
+import 'package:spotifyre/pages/profile/profile.dart';
+import 'package:spotifyre/pages/search/search.dart';
+import 'package:spotifyre/pages/settings/blacklist.dart';
+import 'package:spotifyre/pages/settings/about.dart';
+import 'package:spotifyre/pages/settings/logs.dart';
+import 'package:spotifyre/pages/track/track.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/services/kv_store/kv_store.dart';
+import 'package:spotifyre/utils/platform.dart';
+import 'package:spotifyre/components/shared/spotifyre_page_route.dart';
+import 'package:spotifyre/pages/artist/artist.dart';
+import 'package:spotifyre/pages/library/library.dart';
+import 'package:spotifyre/pages/desktop_login/login_tutorial.dart';
+import 'package:spotifyre/pages/desktop_login/desktop_login.dart';
+import 'package:spotifyre/pages/lyrics/lyrics.dart';
+import 'package:spotifyre/pages/root/root_app.dart';
+import 'package:spotifyre/pages/settings/settings.dart';
+import 'package:spotifyre/pages/mobile_login/mobile_login.dart';
 
 final rootNavigatorKey = Catcher2.navigatorKey;
 final shellRouteNavigatorKey = GlobalKey<NavigatorState>();
@@ -62,16 +62,16 @@ final routerProvider = Provider((ref) {
               return null;
             },
             pageBuilder: (context, state) =>
-                const SpotubePage(child: HomePage()),
+                const spotifyrePage(child: HomePage()),
             routes: [
               GoRoute(
                 path: "genres",
                 pageBuilder: (context, state) =>
-                    const SpotubePage(child: GenrePage()),
+                    const spotifyrePage(child: GenrePage()),
               ),
               GoRoute(
                 path: "genre/:categoryId",
-                pageBuilder: (context, state) => SpotubePage(
+                pageBuilder: (context, state) => spotifyrePage(
                   child: GenrePlaylistsPage(
                     category: state.extra as Category,
                   ),
@@ -79,7 +79,7 @@ final routerProvider = Provider((ref) {
               ),
               GoRoute(
                 path: "feeds/:feedId",
-                pageBuilder: (context, state) => SpotubePage(
+                pageBuilder: (context, state) => spotifyrePage(
                   child: HomeFeedSectionPage(
                     sectionUri: state.pathParameters["feedId"] as String,
                   ),
@@ -91,22 +91,22 @@ final routerProvider = Provider((ref) {
             path: "/search",
             name: "Search",
             pageBuilder: (context, state) =>
-                const SpotubePage(child: SearchPage()),
+                const spotifyrePage(child: SearchPage()),
           ),
           GoRoute(
               path: "/library",
               name: "Library",
               pageBuilder: (context, state) =>
-                  const SpotubePage(child: LibraryPage()),
+                  const spotifyrePage(child: LibraryPage()),
               routes: [
                 GoRoute(
                     path: "generate",
                     pageBuilder: (context, state) =>
-                        const SpotubePage(child: PlaylistGeneratorPage()),
+                        const spotifyrePage(child: PlaylistGeneratorPage()),
                     routes: [
                       GoRoute(
                         path: "result",
-                        pageBuilder: (context, state) => SpotubePage(
+                        pageBuilder: (context, state) => spotifyrePage(
                           child: PlaylistGenerateResultPage(
                             state: state.extra as GeneratePlaylistProviderInput,
                           ),
@@ -118,31 +118,31 @@ final routerProvider = Provider((ref) {
             path: "/lyrics",
             name: "Lyrics",
             pageBuilder: (context, state) =>
-                const SpotubePage(child: LyricsPage()),
+                const spotifyrePage(child: LyricsPage()),
           ),
           GoRoute(
             path: "/settings",
-            pageBuilder: (context, state) => const SpotubePage(
+            pageBuilder: (context, state) => const spotifyrePage(
               child: SettingsPage(),
             ),
             routes: [
               GoRoute(
                 path: "blacklist",
-                pageBuilder: (context, state) => SpotubeSlidePage(
+                pageBuilder: (context, state) => spotifyreSlidePage(
                   child: const BlackListPage(),
                 ),
               ),
               if (!kIsWeb)
                 GoRoute(
                   path: "logs",
-                  pageBuilder: (context, state) => SpotubeSlidePage(
+                  pageBuilder: (context, state) => spotifyreSlidePage(
                     child: const LogsPage(),
                   ),
                 ),
               GoRoute(
                 path: "about",
-                pageBuilder: (context, state) => SpotubeSlidePage(
-                  child: const AboutSpotube(),
+                pageBuilder: (context, state) => spotifyreSlidePage(
+                  child: const Aboutspotifyre(),
                 ),
               ),
             ],
@@ -151,7 +151,7 @@ final routerProvider = Provider((ref) {
             path: "/album/:id",
             pageBuilder: (context, state) {
               assert(state.extra is AlbumSimple);
-              return SpotubePage(
+              return spotifyrePage(
                 child: AlbumPage(album: state.extra as AlbumSimple),
               );
             },
@@ -160,7 +160,7 @@ final routerProvider = Provider((ref) {
             path: "/artist/:id",
             pageBuilder: (context, state) {
               assert(state.pathParameters["id"] != null);
-              return SpotubePage(
+              return spotifyrePage(
                   child: ArtistPage(state.pathParameters["id"]!));
             },
           ),
@@ -168,7 +168,7 @@ final routerProvider = Provider((ref) {
             path: "/playlist/:id",
             pageBuilder: (context, state) {
               assert(state.extra is PlaylistSimple);
-              return SpotubePage(
+              return spotifyrePage(
                 child: state.pathParameters["id"] == "user-liked-tracks"
                     ? LikedPlaylistPage(playlist: state.extra as PlaylistSimple)
                     : PlaylistPage(playlist: state.extra as PlaylistSimple),
@@ -179,21 +179,21 @@ final routerProvider = Provider((ref) {
             path: "/track/:id",
             pageBuilder: (context, state) {
               final id = state.pathParameters["id"]!;
-              return SpotubePage(
+              return spotifyrePage(
                 child: TrackPage(trackId: id),
               );
             },
           ),
           GoRoute(
             path: "/connect",
-            pageBuilder: (context, state) => const SpotubePage(
+            pageBuilder: (context, state) => const spotifyrePage(
               child: ConnectPage(),
             ),
             routes: [
               GoRoute(
                 path: "control",
                 pageBuilder: (context, state) {
-                  return const SpotubePage(
+                  return const spotifyrePage(
                     child: ConnectControlPage(),
                   );
                 },
@@ -203,35 +203,35 @@ final routerProvider = Provider((ref) {
           GoRoute(
             path: "/profile",
             pageBuilder: (context, state) =>
-                const SpotubePage(child: ProfilePage()),
+                const spotifyrePage(child: ProfilePage()),
           )
         ],
       ),
       GoRoute(
         path: "/mini-player",
         parentNavigatorKey: rootNavigatorKey,
-        pageBuilder: (context, state) => SpotubePage(
+        pageBuilder: (context, state) => spotifyrePage(
           child: MiniLyricsPage(prevSize: state.extra as Size),
         ),
       ),
       GoRoute(
         path: "/getting-started",
         parentNavigatorKey: rootNavigatorKey,
-        pageBuilder: (context, state) => const SpotubePage(
+        pageBuilder: (context, state) => const spotifyrePage(
           child: GettingStarting(),
         ),
       ),
       GoRoute(
         path: "/login",
         parentNavigatorKey: rootNavigatorKey,
-        pageBuilder: (context, state) => SpotubePage(
+        pageBuilder: (context, state) => spotifyrePage(
           child: kIsMobile ? const WebViewLogin() : const DesktopLoginPage(),
         ),
       ),
       GoRoute(
         path: "/login-tutorial",
         parentNavigatorKey: rootNavigatorKey,
-        pageBuilder: (context, state) => const SpotubePage(
+        pageBuilder: (context, state) => const spotifyrePage(
           child: LoginTutorial(),
         ),
       ),
@@ -239,7 +239,7 @@ final routerProvider = Provider((ref) {
         path: "/lastfm-login",
         parentNavigatorKey: rootNavigatorKey,
         pageBuilder: (context, state) =>
-            const SpotubePage(child: LastFMLoginPage()),
+            const spotifyrePage(child: LastFMLoginPage()),
       ),
     ],
   );

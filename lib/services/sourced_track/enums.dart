@@ -1,5 +1,5 @@
-import 'package:spotube/services/sourced_track/models/source_info.dart';
-import 'package:spotube/services/sourced_track/models/source_map.dart';
+import 'package:spotifyre/services/sourced_track/models/source_info.dart';
+import 'package:spotifyre/services/sourced_track/models/source_map.dart';
 
 enum SourceCodecs {
   m4a._("M4a (Best for downloaded music)"),

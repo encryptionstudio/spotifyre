@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/fake.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/dialogs/select_device_dialog.dart';
-import 'package:spotube/components/shared/track_tile/track_tile.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/models/connect/connect.dart';
-import 'package:spotube/provider/connect/connect.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/collections/fake.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/dialogs/select_device_dialog.dart';
+import 'package:spotifyre/components/shared/track_tile/track_tile.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/models/connect/connect.dart';
+import 'package:spotifyre/provider/connect/connect.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 class ArtistPageTopTracks extends HookConsumerWidget {
   final String artistId;
@@ -95,7 +95,7 @@ class ArtistPageTopTracks extends HookConsumerWidget {
               if (!isPlaylistPlaying)
                 IconButton(
                   icon: const Icon(
-                    SpotubeIcons.queueAdd,
+                    spotifyreIcons.queueAdd,
                   ),
                   onPressed: () {
                     playlistNotifier.addTracks(topTracks.toList());
@@ -117,7 +117,9 @@ class ArtistPageTopTracks extends HookConsumerWidget {
               IconButton(
                 icon: Skeleton.keep(
                   child: Icon(
-                    isPlaylistPlaying ? SpotubeIcons.stop : SpotubeIcons.play,
+                    isPlaylistPlaying
+                        ? spotifyreIcons.stop
+                        : spotifyreIcons.play,
                     color: Colors.white,
                   ),
                 ),

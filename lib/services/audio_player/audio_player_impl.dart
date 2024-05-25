@@ -1,9 +1,9 @@
 part of 'audio_player.dart';
 
-final audioPlayer = SpotubeAudioPlayer();
+final audioPlayer = spotifyreAudioPlayer();
 
-class SpotubeAudioPlayer extends AudioPlayerInterface
-    with SpotubeAudioPlayersStreams {
+class spotifyreAudioPlayer extends AudioPlayerInterface
+    with spotifyreAudioPlayersStreams {
   Future<void> pause() async {
     await _mkPlayer.pause();
   }

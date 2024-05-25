@@ -11,7 +11,7 @@ author: Kingkor Roy Tirtho
 <div class="p-4 md:ps-24">
 	<h2 class="h2">Package Managers</h2>
 
-    Spotube is available in various Package Managers supported by Platform
+    spotifyre is available in various Package Managers supported by Platform
 
     ## <Fa class="inline" icon={faLinux} /> Linux
 
@@ -20,62 +20,62 @@ author: Kingkor Roy Tirtho
 Make sure [Flatpak](https://flatpak.org) is installed in your Linux device & Run the following command in the terminal:
 
 ```bash
-$ flatpak install com.github.KRTirtho.Spotube
+$ flatpak install com.github.KRTirtho.spotifyre
 ```
 
 ### Arch User Repository (AUR)♾️
 
-If you're an Arch Linux user, you can also install Spotube from AUR.
+If you're an Arch Linux user, you can also install spotifyre from AUR.
 Make sure you have `yay`/`pamac`/`paru` installed in your system. And Run the Following command in the Terminal:
 
 ```bash
-$ yay -Sy spotube-bin
+$ yay -Sy spotifyre-bin
 ```
 
 ```bash
-$ pamac install spotube-bin
+$ pamac install spotifyre-bin
 ```
 
 ```bash
-$ paru -Sy spotube-bin
+$ paru -Sy spotifyre-bin
 ```
 
 ## <Fa class="inline" icon={faApple} /> MacOS
 
 ### Homebrew🍻
 
-Spotube can be installed through Homebrew. We host our own cask definition thus you'll need to add our tap first:
+spotifyre can be installed through Homebrew. We host our own cask definition thus you'll need to add our tap first:
 
 ```bash
 $ brew tap krtirtho/apps
-$ brew install --cask spotube
+$ brew install --cask spotifyre
 ```
 
 ## <Fa class="inline" icon={faWindows} color="#00A2F0" /> Windows
 
 ### Chocolatey🍫
 
-Spotube is available in [community.chocolatey.org](https://community.chocolatey.org) repo. If you have chocolatey install in your system just run following command in an Elevated Command Prompt or PowerShell:
+spotifyre is available in [community.chocolatey.org](https://community.chocolatey.org) repo. If you have chocolatey install in your system just run following command in an Elevated Command Prompt or PowerShell:
 
 ```powershell
-$ choco install spotube
+$ choco install spotifyre
 ```
 
 ### WinGet💫
 
-Spotube is also available in the Official Windows PackageManager WinGet. Make sure you have WinGet installed in your Windows machine and run following in a Terminal:
+spotifyre is also available in the Official Windows PackageManager WinGet. Make sure you have WinGet installed in your Windows machine and run following in a Terminal:
 
 ```powershell
-$ winget install --id KRTirtho.Spotube
+$ winget install --id KRTirtho.spotifyre
 ```
 
 ### Scoop🥄
 
-Spotube is also available in [Scoop](https://scoop.sh) bucket. Make sure you have Scoop installed in your Windows machine and run following in a Terminal:
+spotifyre is also available in [Scoop](https://scoop.sh) bucket. Make sure you have Scoop installed in your Windows machine and run following in a Terminal:
 
 ```powershell
 $ scoop bucket add extras
-$ scoop install spotube
+$ scoop install spotifyre
 ```
 
 </div>

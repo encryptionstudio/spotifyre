@@ -12,30 +12,30 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:media_kit/media_kit.dart';
 import 'package:metadata_god/metadata_god.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:spotube/collections/initializers.dart';
-import 'package:spotube/collections/routes.dart';
-import 'package:spotube/collections/intents.dart';
-import 'package:spotube/hooks/configurators/use_close_behavior.dart';
-import 'package:spotube/hooks/configurators/use_deep_linking.dart';
-import 'package:spotube/hooks/configurators/use_disable_battery_optimizations.dart';
-import 'package:spotube/hooks/configurators/use_get_storage_perms.dart';
-import 'package:spotube/l10n/l10n.dart';
-import 'package:spotube/models/logger.dart';
-import 'package:spotube/models/skip_segment.dart';
-import 'package:spotube/models/source_match.dart';
-import 'package:spotube/provider/connect/clients.dart';
-import 'package:spotube/provider/connect/server.dart';
-import 'package:spotube/provider/palette_provider.dart';
-import 'package:spotube/provider/server/server.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
-import 'package:spotube/services/cli/cli.dart';
-import 'package:spotube/services/kv_store/kv_store.dart';
-import 'package:spotube/themes/theme.dart';
-import 'package:spotube/utils/persisted_state_notifier.dart';
+import 'package:spotifyre/collections/initializers.dart';
+import 'package:spotifyre/collections/routes.dart';
+import 'package:spotifyre/collections/intents.dart';
+import 'package:spotifyre/hooks/configurators/use_close_behavior.dart';
+import 'package:spotifyre/hooks/configurators/use_deep_linking.dart';
+import 'package:spotifyre/hooks/configurators/use_disable_battery_optimizations.dart';
+import 'package:spotifyre/hooks/configurators/use_get_storage_perms.dart';
+import 'package:spotifyre/l10n/l10n.dart';
+import 'package:spotifyre/models/logger.dart';
+import 'package:spotifyre/models/skip_segment.dart';
+import 'package:spotifyre/models/source_match.dart';
+import 'package:spotifyre/provider/connect/clients.dart';
+import 'package:spotifyre/provider/connect/server.dart';
+import 'package:spotifyre/provider/palette_provider.dart';
+import 'package:spotifyre/provider/server/server.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
+import 'package:spotifyre/services/cli/cli.dart';
+import 'package:spotifyre/services/kv_store/kv_store.dart';
+import 'package:spotifyre/themes/theme.dart';
+import 'package:spotifyre/utils/persisted_state_notifier.dart';
 import 'package:system_theme/system_theme.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:spotube/hooks/configurators/use_init_sys_tray.dart';
+import 'package:spotifyre/hooks/configurators/use_init_sys_tray.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
@@ -104,7 +104,7 @@ Future<void> main(List<String> rawArgs) async {
   await DesktopTools.ensureInitialized(
     DesktopWindowOptions(
       hideTitleBar: true,
-      title: "Spotube",
+      title: "spotifyre",
       backgroundColor: Colors.transparent,
       minimumSize: const Size(300, 700),
     ),
@@ -144,7 +144,7 @@ Future<void> main(List<String> rawArgs) async {
               orientation: Orientation.portrait,
             ),
             builder: (context) {
-              return const Spotube();
+              return const spotifyre();
             },
           ),
         ),
@@ -153,18 +153,18 @@ Future<void> main(List<String> rawArgs) async {
   );
 }
 
-class Spotube extends StatefulHookConsumerWidget {
-  const Spotube({super.key});
+class spotifyre extends StatefulHookConsumerWidget {
+  const spotifyre({super.key});
 
   @override
-  SpotubeState createState() => SpotubeState();
+  spotifyreState createState() => spotifyreState();
 
-  static SpotubeState of(BuildContext context) =>
-      context.findAncestorStateOfType<SpotubeState>()!;
+  static spotifyreState of(BuildContext context) =>
+      context.findAncestorStateOfType<spotifyreState>()!;
 }
 
-class SpotubeState extends ConsumerState<Spotube> {
-  final logger = getLogger(Spotube);
+class spotifyreState extends ConsumerState<spotifyre> {
+  final logger = getLogger(spotifyre);
   SharedPreferences? localStorage;
 
   @override
@@ -229,7 +229,7 @@ class SpotubeState extends ConsumerState<Spotube> {
       ],
       routerConfig: router,
       debugShowCheckedModeBanner: false,
-      title: 'Spotube',
+      title: 'spotifyre',
       builder: (context, child) {
         return DevicePreview.appBuilder(
           context,

@@ -38,22 +38,22 @@ body:
   - type: input
     attributes:
       label: Operating System
-      description: The OS in which you used Spotube to face the issue.
+      description: The OS in which you used spotifyre to face the issue.
       placeholder: Android, Linux, macOS or Windows? Make sure to include the version too.
     validations:
       required: true
   - type: input
     attributes:
-      label: Spotube version
-      description: In which version of Spotube did you encounter this bug?
+      label: spotifyre version
+      description: In which version of spotifyre did you encounter this bug?
       placeholder: (e.g.) v3.0.0
   - type: dropdown
     attributes:
       label: Installation source
-      description: Where did you install Spotube from?
+      description: Where did you install spotifyre from?
       multiple: true
       options:
-        - "Website (spotube.netlify.app) or (spotube.krtirtho.dev)"
+        - "Website (spotifyre.netlify.app) or (spotifyre.krtirtho.dev)"
         - "GitHub Releases (Binary)"
         - "GitHub Actions (Nightly Binary)"
         - "Play Store (Android)"

@@ -1,4 +1,4 @@
-name: Spotube Release Binary
+name: spotifyre Release Binary
 on:
   workflow_dispatch:
     inputs:
@@ -26,7 +26,7 @@ on:
         default: true
 
 env:
-  FLUTTER_VERSION: '3.19.1'
+  FLUTTER_VERSION: "3.19.1"
 
 jobs:
   windows:
@@ -54,9 +54,9 @@ jobs:
       - name: Replace version in files
         run: |
           choco install sed make -y
-          sed -i "s/%{{SPOTUBE_VERSION}}%/${{ env.BUILD_VERSION }}/" windows/runner/Runner.rc
-          sed -i "s/%{{SPOTUBE_VERSION}}%/${{ env.BUILD_VERSION }}/" choco-struct/tools/VERIFICATION.txt
-          sed -i "s/%{{SPOTUBE_VERSION}}%/${{ env.BUILD_VERSION }}/" choco-struct/spotube.nuspec
+          sed -i "s/%{{spotifyre_VERSION}}%/${{ env.BUILD_VERSION }}/" windows/runner/Runner.rc
+          sed -i "s/%{{spotifyre_VERSION}}%/${{ env.BUILD_VERSION }}/" choco-struct/tools/VERIFICATION.txt
+          sed -i "s/%{{spotifyre_VERSION}}%/${{ env.BUILD_VERSION }}/" choco-struct/spotifyre.nuspec
 
       - name: Create Stable .env
         if: ${{ inputs.channel == 'stable' }}
@@ -77,25 +77,24 @@ jobs:
           dart pub global activate flutter_distributor
           make innoinstall
           flutter_distributor package --platform=windows --targets=exe --skip-clean
-          mv dist/**/spotube-*-windows-setup.exe dist/Spotube-windows-x86_64-setup.exe
+          mv dist/**/spotifyre-*-windows-setup.exe dist/spotifyre-windows-x86_64-setup.exe
 
       - name: Create Chocolatey Package and set hash
         if: ${{ inputs.channel == 'stable' }}
         run: |
-          Set-Variable -Name HASH -Value (Get-FileHash dist\Spotube-windows-x86_64-setup.exe).Hash
+          Set-Variable -Name HASH -Value (Get-FileHash dist\spotifyre-windows-x86_64-setup.exe).Hash
           sed -i "s/%{{WIN_SHA256}}%/$HASH/" choco-struct/tools/VERIFICATION.txt
           make choco
-          mv dist/spotube.*.nupkg dist/Spotube-windows-x86_64.nupkg
-
+          mv dist/spotifyre.*.nupkg dist/spotifyre-windows-x86_64.nupkg
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           if-no-files-found: error
-          name: Spotube-Release-Binaries
+          name: spotifyre-Release-Binaries
           path: |
-            dist/Spotube-windows-x86_64.nupkg
-            dist/Spotube-windows-x86_64-setup.exe
+            dist/spotifyre-windows-x86_64.nupkg
+            dist/spotifyre-windows-x86_64-setup.exe
 
       - name: Debug With SSH When fails
         if: ${{ failure() && inputs.debug && inputs.channel == 'nightly' }}
@@ -150,7 +149,7 @@ jobs:
 
       - name: Replace Version in files
         run: |
-          sed -i 's|%{{APPDATA_RELEASE}}%|<release version="${{ env.BUILD_VERSION }}" date="${{ steps.date.outputs.date }}" />|' linux/com.github.KRTirtho.Spotube.appdata.xml
+          sed -i 's|%{{APPDATA_RELEASE}}%|<release version="${{ env.BUILD_VERSION }}" date="${{ steps.date.outputs.date }}" />|' linux/com.github.KRTirtho.spotifyre.appdata.xml
 
       - name: Generate Secrets
         run: |
@@ -168,44 +167,42 @@ jobs:
       - name: Create tar.xz (stable)
         if: ${{ inputs.channel == 'stable' }}
         run: make tar VERSION=${{ env.BUILD_VERSION }} ARCH=x64 PKG_ARCH=x86_64
-      
+
       - name: Create tar.xz (nightly)
         if: ${{ inputs.channel == 'nightly' }}
         run: make tar VERSION=nightly ARCH=x64 PKG_ARCH=x86_64
 
       - name: Move Files to dist
         run: |
-          mv build/spotube-linux-*-x86_64.tar.xz dist/
-          mv dist/**/spotube-*-linux.deb dist/Spotube-linux-x86_64.deb
-          mv dist/**/spotube-*-linux.rpm dist/Spotube-linux-x86_64.rpm
-
+          mv build/spotifyre-linux-*-x86_64.tar.xz dist/
+          mv dist/**/spotifyre-*-linux.deb dist/spotifyre-linux-x86_64.deb
+          mv dist/**/spotifyre-*-linux.rpm dist/spotifyre-linux-x86_64.rpm
 
       - uses: actions/upload-artifact@v3
         if: ${{ inputs.channel == 'stable' }}
         with:
           if-no-files-found: error
-          name: Spotube-Release-Binaries
+          name: spotifyre-Release-Binaries
           path: |
-            dist/Spotube-linux-x86_64.deb
-            dist/Spotube-linux-x86_64.rpm
-            dist/spotube-linux-${{ env.BUILD_VERSION }}-x86_64.tar.xz
-            
+            dist/spotifyre-linux-x86_64.deb
+            dist/spotifyre-linux-x86_64.rpm
+            dist/spotifyre-linux-${{ env.BUILD_VERSION }}-x86_64.tar.xz
+
       - uses: actions/upload-artifact@v3
         if: ${{ inputs.channel == 'nightly' }}
         with:
           if-no-files-found: error
-          name: Spotube-Release-Binaries
+          name: spotifyre-Release-Binaries
           path: |
-            dist/Spotube-linux-x86_64.deb
-            dist/Spotube-linux-x86_64.rpm
-            dist/spotube-linux-nightly-x86_64.tar.xz
+            dist/spotifyre-linux-x86_64.deb
+            dist/spotifyre-linux-x86_64.rpm
+            dist/spotifyre-linux-nightly-x86_64.tar.xz
 
       - name: Debug With SSH When fails
         if: ${{ failure() && inputs.debug && inputs.channel == 'nightly' }}
         uses: mxschmitt/action-tmate@v3
         with:
           limit-access-to-actor: true
-
 
   android:
     runs-on: ubuntu-latest
@@ -255,7 +252,7 @@ jobs:
       - name: Build Apk
         run: |
           flutter build apk --flavor ${{ inputs.channel }}          
-          mv build/app/outputs/flutter-apk/app-${{ inputs.channel }}-release.apk build/Spotube-android-all-arch.apk
+          mv build/app/outputs/flutter-apk/app-${{ inputs.channel }}-release.apk build/spotifyre-android-all-arch.apk
 
       - name: Build Playstore AppBundle
         run: |
@@ -265,16 +262,15 @@ jobs:
           xmlstarlet ed -d '//meta-data[@android:name="com.google.android.gms.car.application"]' $MANIFEST > $MANIFEST.tmp
           mv $MANIFEST.tmp $MANIFEST
           flutter build appbundle --flavor ${{ inputs.channel }}
-          mv build/app/outputs/bundle/${{ inputs.channel }}Release/app-${{ inputs.channel }}-release.aab build/Spotube-playstore-all-arch.aab
-
+          mv build/app/outputs/bundle/${{ inputs.channel }}Release/app-${{ inputs.channel }}-release.aab build/spotifyre-playstore-all-arch.aab
 
       - uses: actions/upload-artifact@v3
         with:
           if-no-files-found: error
-          name: Spotube-Release-Binaries
+          name: spotifyre-Release-Binaries
           path: |
-            build/Spotube-android-all-arch.apk
-            build/Spotube-playstore-all-arch.aab
+            build/spotifyre-android-all-arch.apk
+            build/spotifyre-playstore-all-arch.aab
 
       - name: Debug With SSH When fails
         if: ${{ failure() && inputs.debug && inputs.channel == 'nightly' }}
@@ -283,7 +279,6 @@ jobs:
           limit-access-to-actor: true
 
   macos:
-
     runs-on: macos-14
     steps:
       - uses: actions/checkout@v4
@@ -323,24 +318,24 @@ jobs:
         run: |
           flutter config --enable-macos-desktop
           flutter build macos
-          du -sh build/macos/Build/Products/Release/spotube.app
+          du -sh build/macos/Build/Products/Release/spotifyre.app
 
       - name: Package Macos App
         run: |
           brew install python-setuptools
           npm install -g appdmg
           mkdir -p build/${{ env.BUILD_VERSION }}
-          appdmg appdmg.json build/Spotube-macos-universal.dmg
+          appdmg appdmg.json build/spotifyre-macos-universal.dmg
           flutter_distributor package --platform=macos --targets pkg --skip-clean
-          mv dist/**/spotube-*-macos.pkg build/Spotube-macos-universal.pkg
+          mv dist/**/spotifyre-*-macos.pkg build/spotifyre-macos-universal.pkg
 
       - uses: actions/upload-artifact@v3
         with:
           if-no-files-found: error
-          name: Spotube-Release-Binaries
+          name: spotifyre-Release-Binaries
           path: |
-            build/Spotube-macos-universal.dmg
-            build/Spotube-macos-universal.pkg
+            build/spotifyre-macos-universal.dmg
+            build/spotifyre-macos-universal.pkg
 
       - name: Debug With SSH When fails
         if: ${{ failure() && inputs.debug && inputs.channel == 'nightly' }}
@@ -387,21 +382,21 @@ jobs:
         run: |
           flutter build ios --release --no-codesign --flavor ${{ inputs.channel }}  
           ln -sf ./build/ios/iphoneos Payload
-          zip -r9 Spotube-iOS.ipa Payload/${{ inputs.channel }}.app
+          zip -r9 spotifyre-iOS.ipa Payload/${{ inputs.channel }}.app
 
       - uses: actions/upload-artifact@v3
         with:
           if-no-files-found: error
-          name: Spotube-Release-Binaries
+          name: spotifyre-Release-Binaries
           path: |
-            Spotube-iOS.ipa
+            spotifyre-iOS.ipa
 
       - name: Debug With SSH When fails
         if: ${{ failure() && inputs.debug && inputs.channel == 'nightly' }}
         uses: mxschmitt/action-tmate@v3
         with:
           limit-access-to-actor: true
-          
+
   upload:
     runs-on: ubuntu-latest
 
@@ -414,8 +409,8 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: Spotube-Release-Binaries
-          path: ./Spotube-Release-Binaries
+          name: spotifyre-Release-Binaries
+          path: ./spotifyre-Release-Binaries
 
       - name: Install dependencies
         run: sudo apt-get install tree -y
@@ -423,14 +418,14 @@ jobs:
       - name: Generate Checksums
         run: |
           tree .
-          md5sum Spotube-Release-Binaries/* >> RELEASE.md5sum
-          sha256sum Spotube-Release-Binaries/* >> RELEASE.sha256sum
-          sed -i 's|Spotube-Release-Binaries/||' RELEASE.sha256sum RELEASE.md5sum
+          md5sum spotifyre-Release-Binaries/* >> RELEASE.md5sum
+          sha256sum spotifyre-Release-Binaries/* >> RELEASE.sha256sum
+          sed -i 's|spotifyre-Release-Binaries/||' RELEASE.sha256sum RELEASE.md5sum
 
       - uses: actions/upload-artifact@v3
         with:
           if-no-files-found: error
-          name: Spotube-Release-Binaries
+          name: spotifyre-Release-Binaries
           path: |
             RELEASE.md5sum
             RELEASE.sha256sum
@@ -445,7 +440,7 @@ jobs:
           omitNameDuringUpdate: true
           omitPrereleaseDuringUpdate: true
           allowUpdates: true
-          artifacts: Spotube-Release-Binaries/*,RELEASE.sha256sum,RELEASE.md5sum
+          artifacts: spotifyre-Release-Binaries/*,RELEASE.sha256sum,RELEASE.md5sum
 
       - name: Upload Release Binaries (nightly)
         if: ${{ !inputs.dry_run && inputs.channel == 'nightly' }}
@@ -457,4 +452,4 @@ jobs:
           omitNameDuringUpdate: true
           omitPrereleaseDuringUpdate: true
           allowUpdates: true
-          artifacts: Spotube-Release-Binaries/*,RELEASE.sha256sum,RELEASE.md5sum
+          artifacts: spotifyre-Release-Binaries/*,RELEASE.sha256sum,RELEASE.md5sum

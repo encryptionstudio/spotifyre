@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
 
 class ConnectPageLocalDevices extends HookWidget {
   const ConnectPageLocalDevices({super.key});
@@ -45,7 +45,7 @@ class ConnectPageLocalDevices extends HookWidget {
 
             return Card(
               child: ListTile(
-                leading: const Icon(SpotubeIcons.speaker),
+                leading: const Icon(spotifyreIcons.speaker),
                 title: Text(device.description),
                 subtitle: Text(device.name),
                 selected: selectedDevice == device,

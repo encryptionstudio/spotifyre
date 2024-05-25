@@ -5,15 +5,15 @@ import 'package:flutter_desktop_tools/flutter_desktop_tools.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/components/settings/color_scheme_picker_dialog.dart';
-import 'package:spotube/provider/palette_provider.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_state.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
-import 'package:spotube/services/sourced_track/enums.dart';
+import 'package:spotifyre/components/settings/color_scheme_picker_dialog.dart';
+import 'package:spotifyre/provider/palette_provider.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_state.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
+import 'package:spotifyre/services/sourced_track/enums.dart';
 
-import 'package:spotube/utils/persisted_state_notifier.dart';
-import 'package:spotube/utils/platform.dart';
+import 'package:spotifyre/utils/persisted_state_notifier.dart';
+import 'package:spotifyre/utils/platform.dart';
 import 'package:path/path.dart' as path;
 
 class UserPreferencesNotifier extends PersistedStateNotifier<UserPreferences> {
@@ -42,7 +42,7 @@ class UserPreferencesNotifier extends PersistedStateNotifier<UserPreferences> {
     state = state.copyWith(recommendationMarket: country);
   }
 
-  void setAccentColorScheme(SpotubeColor color) {
+  void setAccentColorScheme(spotifyreColor color) {
     state = state.copyWith(accentColorScheme: color);
   }
 
@@ -132,14 +132,14 @@ class UserPreferencesNotifier extends PersistedStateNotifier<UserPreferences> {
   }
 
   Future<String> _getDefaultDownloadDirectory() async {
-    if (kIsAndroid) return "/storage/emulated/0/Download/Spotube";
+    if (kIsAndroid) return "/storage/emulated/0/Download/spotifyre";
 
     if (kIsMacOS) {
       return path.join((await getLibraryDirectory()).path, "Caches");
     }
 
     return getDownloadsDirectory().then((dir) {
-      return path.join(dir!.path, "Spotube");
+      return path.join(dir!.path, "spotifyre");
     });
   }
 

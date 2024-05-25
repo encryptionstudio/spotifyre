@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
 import 'package:system_theme/system_theme.dart';
 
-class SpotubeColor extends Color {
+class spotifyreColor extends Color {
   final String name;
 
-  const SpotubeColor(super.color, {required this.name});
+  const spotifyreColor(super.color, {required this.name});
 
-  const SpotubeColor.from(super.value, {required this.name});
+  const spotifyreColor.from(super.value, {required this.name});
 
-  factory SpotubeColor.fromString(String string) {
+  factory spotifyreColor.fromString(String string) {
     final slices = string.split(":");
-    return SpotubeColor(int.parse(slices.last), name: slices.first);
+    return spotifyreColor(int.parse(slices.last), name: slices.first);
   }
 
   @override
@@ -23,24 +23,24 @@ class SpotubeColor extends Color {
   }
 }
 
-final Set<SpotubeColor> colorsMap = {
-  SpotubeColor(SystemTheme.accentColor.accent.value, name: "System"),
-  SpotubeColor(Colors.red.value, name: "Red"),
-  SpotubeColor(Colors.pink.value, name: "Pink"),
-  SpotubeColor(Colors.purple.value, name: "Purple"),
-  SpotubeColor(Colors.deepPurple.value, name: "DeepPurple"),
-  SpotubeColor(Colors.indigo.value, name: "Indigo"),
-  SpotubeColor(Colors.blue.value, name: "Blue"),
-  SpotubeColor(Colors.lightBlue.value, name: "LightBlue"),
-  SpotubeColor(Colors.cyan.value, name: "Cyan"),
-  SpotubeColor(Colors.teal.value, name: "Teal"),
-  SpotubeColor(Colors.green.value, name: "Green"),
-  SpotubeColor(Colors.lightGreen.value, name: "LightGreen"),
-  SpotubeColor(Colors.yellow.value, name: "Yellow"),
-  SpotubeColor(Colors.amber.value, name: "Amber"),
-  SpotubeColor(Colors.orange.value, name: "Orange"),
-  SpotubeColor(Colors.deepOrange.value, name: "DeepOrange"),
-  SpotubeColor(Colors.brown.value, name: "Brown"),
+final Set<spotifyreColor> colorsMap = {
+  spotifyreColor(SystemTheme.accentColor.accent.value, name: "System"),
+  spotifyreColor(Colors.red.value, name: "Red"),
+  spotifyreColor(Colors.pink.value, name: "Pink"),
+  spotifyreColor(Colors.purple.value, name: "Purple"),
+  spotifyreColor(Colors.deepPurple.value, name: "DeepPurple"),
+  spotifyreColor(Colors.indigo.value, name: "Indigo"),
+  spotifyreColor(Colors.blue.value, name: "Blue"),
+  spotifyreColor(Colors.lightBlue.value, name: "LightBlue"),
+  spotifyreColor(Colors.cyan.value, name: "Cyan"),
+  spotifyreColor(Colors.teal.value, name: "Teal"),
+  spotifyreColor(Colors.green.value, name: "Green"),
+  spotifyreColor(Colors.lightGreen.value, name: "LightGreen"),
+  spotifyreColor(Colors.yellow.value, name: "Yellow"),
+  spotifyreColor(Colors.amber.value, name: "Amber"),
+  spotifyreColor(Colors.orange.value, name: "Orange"),
+  spotifyreColor(Colors.deepOrange.value, name: "DeepOrange"),
+  spotifyreColor(Colors.brown.value, name: "Brown"),
 };
 
 class ColorSchemePickerDialog extends HookConsumerWidget {

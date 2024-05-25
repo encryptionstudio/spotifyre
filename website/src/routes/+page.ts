@@ -21,7 +21,7 @@ interface Member {
 }
 
 export const load = async () => {
-	const res = await fetch('https://opencollective.com/spotube/members/all.json');
+	const res = await fetch('https://opencollective.com/spotifyre/members/all.json');
 	const members = (await res.json()) as Member[];
 
 	return {

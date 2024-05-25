@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotify/spotify.dart';
 
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/components/shared/links/artist_link.dart';
-import 'package:spotube/components/shared/links/link_text.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/utils/service_utils.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/components/shared/links/artist_link.dart';
+import 'package:spotifyre/components/shared/links/link_text.dart';
+import 'package:spotifyre/extensions/artist_simple.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/utils/service_utils.dart';
 
 class PlayerTrackDetails extends HookConsumerWidget {
   final Color? color;

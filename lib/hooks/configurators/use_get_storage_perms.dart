@@ -3,8 +3,8 @@ import 'package:flutter_desktop_tools/flutter_desktop_tools.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:spotube/components/library/user_local_tracks.dart';
-import 'package:spotube/hooks/utils/use_async_effect.dart';
+import 'package:spotifyre/components/library/user_local_tracks.dart';
+import 'package:spotifyre/hooks/utils/use_async_effect.dart';
 
 void useGetStoragePermissions(WidgetRef ref) {
   final isMounted = useIsMounted();

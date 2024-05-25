@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/adaptive/adaptive_pop_sheet_list.dart';
-import 'package:spotube/components/shared/dialogs/confirm_download_dialog.dart';
-import 'package:spotube/components/shared/dialogs/playlist_add_track_dialog.dart';
-import 'package:spotube/components/shared/tracks_view/track_view_props.dart';
-import 'package:spotube/components/shared/tracks_view/track_view_provider.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/download_manager_provider.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_state.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/adaptive/adaptive_pop_sheet_list.dart';
+import 'package:spotifyre/components/shared/dialogs/confirm_download_dialog.dart';
+import 'package:spotifyre/components/shared/dialogs/playlist_add_track_dialog.dart';
+import 'package:spotifyre/components/shared/tracks_view/track_view_props.dart';
+import 'package:spotifyre/components/shared/tracks_view/track_view_provider.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/download_manager_provider.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_state.dart';
 
 class TrackViewBodyOptions extends HookConsumerWidget {
   const TrackViewBodyOptions({super.key});
@@ -85,11 +85,11 @@ class TrackViewBodyOptions extends HookConsumerWidget {
           default:
         }
       },
-      icon: const Icon(SpotubeIcons.moreVertical),
+      icon: const Icon(spotifyreIcons.moreVertical),
       children: [
         PopSheetEntry(
           value: "download",
-          leading: const Icon(SpotubeIcons.download),
+          leading: const Icon(spotifyreIcons.download),
           enabled: selectedTracks.isNotEmpty,
           title: Text(
             context.l10n.download_count(selectedTracks.length),
@@ -97,7 +97,7 @@ class TrackViewBodyOptions extends HookConsumerWidget {
         ),
         PopSheetEntry(
           value: "add-to-playlist",
-          leading: const Icon(SpotubeIcons.playlistAdd),
+          leading: const Icon(spotifyreIcons.playlistAdd),
           enabled: selectedTracks.isNotEmpty,
           title: Text(
             context.l10n.add_count_to_playlist(selectedTracks.length),
@@ -106,7 +106,7 @@ class TrackViewBodyOptions extends HookConsumerWidget {
         PopSheetEntry(
           enabled: selectedTracks.isNotEmpty,
           value: "add-to-queue",
-          leading: const Icon(SpotubeIcons.queueAdd),
+          leading: const Icon(spotifyreIcons.queueAdd),
           title: Text(
             context.l10n.add_count_to_queue(selectedTracks.length),
           ),
@@ -114,7 +114,7 @@ class TrackViewBodyOptions extends HookConsumerWidget {
         PopSheetEntry(
           enabled: selectedTracks.isNotEmpty,
           value: "play-next",
-          leading: const Icon(SpotubeIcons.lightning),
+          leading: const Icon(spotifyreIcons.lightning),
           title: Text(
             context.l10n.play_count_next(selectedTracks.length),
           ),

@@ -5,9 +5,9 @@ import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/extensions/track.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist.dart';
-import 'package:spotube/services/audio_player/loop_mode.dart';
+import 'package:spotifyre/extensions/track.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist.dart';
+import 'package:spotifyre/services/audio_player/loop_mode.dart';
 
 part 'connect.freezed.dart';
 part 'connect.g.dart';

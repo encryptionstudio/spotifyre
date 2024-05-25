@@ -3,11 +3,11 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-import 'package:spotube/collections/fake.dart';
-import 'package:spotube/components/home/sections/friends/friend_item.dart';
-import 'package:spotube/hooks/utils/use_breakpoint_value.dart';
-import 'package:spotube/models/spotify_friends.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/collections/fake.dart';
+import 'package:spotifyre/components/home/sections/friends/friend_item.dart';
+import 'package:spotifyre/hooks/utils/use_breakpoint_value.dart';
+import 'package:spotifyre/models/spotify_friends.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 class HomePageFriendsSection extends HookConsumerWidget {
   const HomePageFriendsSection({super.key});

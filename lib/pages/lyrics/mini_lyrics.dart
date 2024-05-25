@@ -5,19 +5,19 @@ import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:palette_generator/palette_generator.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/player/player_controls.dart';
-import 'package:spotube/components/player/player_queue.dart';
-import 'package:spotube/components/root/sidebar.dart';
-import 'package:spotube/components/shared/fallbacks/anonymous_fallback.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/hooks/utils/use_force_update.dart';
-import 'package:spotube/pages/lyrics/plain_lyrics.dart';
-import 'package:spotube/pages/lyrics/synced_lyrics.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/utils/platform.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/player/player_controls.dart';
+import 'package:spotifyre/components/player/player_queue.dart';
+import 'package:spotifyre/components/root/sidebar.dart';
+import 'package:spotifyre/components/shared/fallbacks/anonymous_fallback.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/hooks/utils/use_force_update.dart';
+import 'package:spotifyre/pages/lyrics/plain_lyrics.dart';
+import 'package:spotifyre/pages/lyrics/synced_lyrics.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/utils/platform.dart';
 
 class MiniLyricsPage extends HookConsumerWidget {
   final Size prevSize;
@@ -99,8 +99,8 @@ class MiniLyricsPage extends HookConsumerWidget {
                     IconButton(
                       tooltip: context.l10n.lyrics,
                       icon: showLyrics.value
-                          ? const Icon(SpotubeIcons.lyrics)
-                          : const Icon(SpotubeIcons.lyricsOff),
+                          ? const Icon(spotifyreIcons.lyrics)
+                          : const Icon(spotifyreIcons.lyricsOff),
                       style: ButtonStyle(
                         foregroundColor: showLyrics.value
                             ? MaterialStateProperty.all(
@@ -122,8 +122,8 @@ class MiniLyricsPage extends HookConsumerWidget {
                     IconButton(
                       tooltip: context.l10n.show_hide_ui_on_hover,
                       icon: hoverMode.value
-                          ? const Icon(SpotubeIcons.hoverOn)
-                          : const Icon(SpotubeIcons.hoverOff),
+                          ? const Icon(spotifyreIcons.hoverOn)
+                          : const Icon(spotifyreIcons.hoverOff),
                       style: ButtonStyle(
                         foregroundColor: hoverMode.value
                             ? MaterialStateProperty.all(
@@ -142,8 +142,8 @@ class MiniLyricsPage extends HookConsumerWidget {
                           tooltip: context.l10n.always_on_top,
                           icon: Icon(
                             snapshot.data == true
-                                ? SpotubeIcons.pinOn
-                                : SpotubeIcons.pinOff,
+                                ? spotifyreIcons.pinOn
+                                : spotifyreIcons.pinOff,
                           ),
                           style: ButtonStyle(
                             foregroundColor: snapshot.data == true
@@ -202,7 +202,7 @@ class MiniLyricsPage extends HookConsumerWidget {
                 firstChild: Row(
                   children: [
                     IconButton(
-                      icon: const Icon(SpotubeIcons.queue),
+                      icon: const Icon(spotifyreIcons.queue),
                       tooltip: context.l10n.queue,
                       onPressed: playlistQueue.activeTrack != null
                           ? () {
@@ -241,7 +241,7 @@ class MiniLyricsPage extends HookConsumerWidget {
                     Flexible(child: PlayerControls(compact: true)),
                     IconButton(
                       tooltip: context.l10n.exit_mini_player,
-                      icon: const Icon(SpotubeIcons.maximize),
+                      icon: const Icon(spotifyreIcons.maximize),
                       onPressed: () async {
                         try {
                           await DesktopTools.window

@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/getting_started/blur_card.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/string.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_state.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/getting_started/blur_card.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/string.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_state.dart';
 
 final audioSourceToIconMap = {
   AudioSource.youtube: const Icon(
-    SpotubeIcons.youtube,
+    spotifyreIcons.youtube,
     color: Colors.red,
     size: 30,
   ),
-  AudioSource.piped: const Icon(SpotubeIcons.piped, size: 30),
+  AudioSource.piped: const Icon(spotifyreIcons.piped, size: 30),
   AudioSource.jiosaavn: Assets.jiosaavn.image(width: 48, height: 48),
 };
 
@@ -55,7 +55,7 @@ class GettingStartedPagePlaybackSection extends HookConsumerWidget {
           children: [
             Row(
               children: [
-                const Icon(SpotubeIcons.album, size: 16),
+                const Icon(spotifyreIcons.album, size: 16),
                 const Gap(8),
                 Text(context.l10n.playback, style: textTheme.titleMedium),
               ],
@@ -140,14 +140,14 @@ class GettingStartedPagePlaybackSection extends HookConsumerWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 FilledButton.icon(
-                  icon: const Icon(SpotubeIcons.angleLeft),
+                  icon: const Icon(spotifyreIcons.angleLeft),
                   label: Text(context.l10n.previous),
                   onPressed: onPrevious,
                 ),
                 Directionality(
                   textDirection: TextDirection.rtl,
                   child: FilledButton.icon(
-                    icon: const Icon(SpotubeIcons.angleRight),
+                    icon: const Icon(spotifyreIcons.angleRight),
                     label: Text(context.l10n.next),
                     onPressed: onNext,
                   ),

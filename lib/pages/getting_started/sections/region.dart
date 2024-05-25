@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/language_codes.dart';
-import 'package:spotube/collections/spotify_markets.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/getting_started/blur_card.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/l10n/l10n.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/collections/language_codes.dart';
+import 'package:spotifyre/collections/spotify_markets.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/getting_started/blur_card.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/l10n/l10n.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
 
 class GettingStartedPageLanguageRegionSection extends HookConsumerWidget {
   final void Function() onNext;
@@ -28,7 +28,7 @@ class GettingStartedPageLanguageRegionSection extends HookConsumerWidget {
               Row(
                 children: [
                   const Icon(
-                    SpotubeIcons.language,
+                    spotifyreIcons.language,
                     size: 16,
                   ),
                   const SizedBox(width: 8),
@@ -114,7 +114,7 @@ class GettingStartedPageLanguageRegionSection extends HookConsumerWidget {
                 child: Directionality(
                   textDirection: TextDirection.rtl,
                   child: FilledButton.icon(
-                    icon: const Icon(SpotubeIcons.angleRight),
+                    icon: const Icon(spotifyreIcons.angleRight),
                     label: Text(context.l10n.next),
                     onPressed: onNext,
                   ),

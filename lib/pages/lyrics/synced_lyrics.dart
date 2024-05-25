@@ -3,18 +3,18 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:palette_generator/palette_generator.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/lyrics/zoom_controls.dart';
-import 'package:spotube/components/shared/shimmers/shimmer_lyrics.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/hooks/controllers/use_auto_scroll_controller.dart';
-import 'package:spotube/components/lyrics/use_synced_lyrics.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/lyrics/zoom_controls.dart';
+import 'package:spotifyre/components/shared/shimmers/shimmer_lyrics.dart';
+import 'package:spotifyre/extensions/artist_simple.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/hooks/controllers/use_auto_scroll_controller.dart';
+import 'package:spotifyre/components/lyrics/use_synced_lyrics.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
 
 import 'package:stroke_text/stroke_text.dart';
 
@@ -189,7 +189,7 @@ class SyncedLyrics extends HookConsumerWidget {
               ),
               const SliverGap(26),
               const SliverToBoxAdapter(
-                child: Icon(SpotubeIcons.noLyrics, size: 60),
+                child: Icon(spotifyreIcons.noLyrics, size: 60),
               ),
             ] else if (lyricsState.asData?.value.static == true)
               SliverFillRemaining(
@@ -228,8 +228,8 @@ class SyncedLyrics extends HookConsumerWidget {
                     ref.read(syncedLyricsDelayProvider.notifier).state = value,
                 interval: 1,
                 unit: "s",
-                increaseIcon: const Icon(SpotubeIcons.add),
-                decreaseIcon: const Icon(SpotubeIcons.remove),
+                increaseIcon: const Icon(spotifyreIcons.add),
+                decreaseIcon: const Icon(spotifyreIcons.remove),
                 direction: isModal == true ? Axis.horizontal : Axis.vertical,
               ),
               ZoomControls(

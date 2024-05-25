@@ -1,11 +1,11 @@
 # Maintainer: Kingkor Roy Tirtho <krtirho@gmail.com>
-pkgname=spotube-bin
-pkgver=%{{SPOTUBE_VERSION}}%
+pkgname=spotifyre-bin
+pkgver=%{{spotifyre_VERSION}}%
 pkgrel=%{{PKGREL}}%
 epoch=
 pkgdesc="Open source Spotify client that doesn't require Premium nor uses Electron! Available for both desktop & mobile!"
 arch=(x86_64)
-url="https://github.com/KRTirtho/spotube/"
+url="https://github.com/KRTirtho/spotifyre/"
 license=('BSD-4-Clause')
 groups=()
 depends=('mpv' 'libappindicator-gtk3' 'libsecret' 'jsoncpp' 'libnotify' 'xdg-user-dirs')
@@ -19,22 +19,22 @@ backup=()
 options=()
 install=
 changelog=
-source=("https://github.com/KRTirtho/spotube/releases/download/v${pkgver}/spotube-linux-${pkgver}-x86_64.tar.xz")
+source=("https://github.com/KRTirtho/spotifyre/releases/download/v${pkgver}/spotifyre-linux-${pkgver}-x86_64.tar.xz")
 noextract=()
 md5sums=(%{{LINUX_MD5}}%)
 validpgpkeys=()
 
 package() {
-  install -dm755 "${pkgdir}/usr/share/icons/spotube"
+  install -dm755 "${pkgdir}/usr/share/icons/spotifyre"
   install -dm755 "${pkgdir}/usr/share/applications"
   install -dm755 "${pkgdir}/usr/share/appdata"
   install -dm755 "${pkgdir}/usr/share/${pkgname}"
   install -dm755 "${pkgdir}/usr/bin"
 
-  mv ./spotube.desktop "${pkgdir}/usr/share/applications"
-  mv ./spotube-logo.png "${pkgdir}/usr/share/icons/spotube/"
-  mv ./com.github.KRTirtho.Spotube.appdata.xml "${pkgdir}/usr/share/appdata/spotube.appdata.xml"
-  cp -ra ./data ./lib ./spotube "${pkgdir}/usr/share/${pkgname}"
-  sed -i 's|com.github.KRTirtho.Spotube|spotube|' "${pkgdir}/usr/share/appdata/spotube.appdata.xml"
-  ln -s "/usr/share/${pkgname}/spotube" "${pkgdir}/usr/bin/spotube"
+  mv ./spotifyre.desktop "${pkgdir}/usr/share/applications"
+  mv ./spotifyre-logo.png "${pkgdir}/usr/share/icons/spotifyre/"
+  mv ./com.github.KRTirtho.spotifyre.appdata.xml "${pkgdir}/usr/share/appdata/spotifyre.appdata.xml"
+  cp -ra ./data ./lib ./spotifyre "${pkgdir}/usr/share/${pkgname}"
+  sed -i 's|com.github.KRTirtho.spotifyre|spotifyre|' "${pkgdir}/usr/share/appdata/spotifyre.appdata.xml"
+  ln -s "/usr/share/${pkgname}/spotifyre" "${pkgdir}/usr/bin/spotifyre"
 }

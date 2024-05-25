@@ -1,8 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/models/current_playlist.dart';
-import 'package:spotube/utils/persisted_state_notifier.dart';
+import 'package:spotifyre/models/current_playlist.dart';
+import 'package:spotifyre/utils/persisted_state_notifier.dart';
 
 enum BlacklistedType {
   artist,

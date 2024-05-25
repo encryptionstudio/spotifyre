@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spotube/components/shared/links/anchor_button.dart';
-import 'package:spotube/utils/service_utils.dart';
+import 'package:spotifyre/components/shared/links/anchor_button.dart';
+import 'package:spotifyre/utils/service_utils.dart';
 
 class LinkText<T> extends StatelessWidget {
   final String text;

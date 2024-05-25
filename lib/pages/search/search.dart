@@ -8,22 +8,22 @@ import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/inter_scrollbar/inter_scrollbar.dart';
-import 'package:spotube/components/shared/fallbacks/anonymous_fallback.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/hooks/utils/use_force_update.dart';
-import 'package:spotube/pages/search/sections/albums.dart';
-import 'package:spotube/pages/search/sections/artists.dart';
-import 'package:spotube/pages/search/sections/playlists.dart';
-import 'package:spotube/pages/search/sections/tracks.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
-import 'package:spotube/services/kv_store/kv_store.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/inter_scrollbar/inter_scrollbar.dart';
+import 'package:spotifyre/components/shared/fallbacks/anonymous_fallback.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/hooks/utils/use_force_update.dart';
+import 'package:spotifyre/pages/search/sections/albums.dart';
+import 'package:spotifyre/pages/search/sections/artists.dart';
+import 'package:spotifyre/pages/search/sections/playlists.dart';
+import 'package:spotifyre/pages/search/sections/tracks.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
+import 'package:spotifyre/services/kv_store/kv_store.dart';
 
-import 'package:spotube/utils/platform.dart';
+import 'package:spotifyre/utils/platform.dart';
 
 class SearchPage extends HookConsumerWidget {
   const SearchPage({super.key});
@@ -120,10 +120,10 @@ class SearchPage extends HookConsumerWidget {
                             final suggestion = suggestions[index];
 
                             return ListTile(
-                              leading: const Icon(SpotubeIcons.history),
+                              leading: const Icon(spotifyreIcons.history),
                               title: Text(suggestion),
                               trailing: IconButton(
-                                icon: const Icon(SpotubeIcons.trash),
+                                icon: const Icon(spotifyreIcons.trash),
                                 onPressed: () {
                                   KVStoreService.setRecentSearches(
                                     KVStoreService.recentSearches
@@ -171,7 +171,7 @@ class SearchPage extends HookConsumerWidget {
                                   s.asData?.value != null && !s.hasError) &&
                               !kIsMobile,
                           controller: controller,
-                          leading: const Icon(SpotubeIcons.search),
+                          leading: const Icon(spotifyreIcons.search),
                           hintText: "${context.l10n.search}...",
                           onTap: controller.openView,
                           onChanged: (_) => controller.openView(),
@@ -189,7 +189,7 @@ class SearchPage extends HookConsumerWidget {
                                   height: mediaQuery.size.height * 0.2,
                                 ),
                                 Icon(
-                                  SpotubeIcons.web,
+                                  spotifyreIcons.web,
                                   size: 120,
                                   color: theme.colorScheme.onBackground
                                       .withOpacity(0.7),

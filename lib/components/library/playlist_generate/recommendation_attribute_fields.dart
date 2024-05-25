@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:spotube/components/library/playlist_generate/recommendation_attribute_dials.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/pages/library/playlist_generate/playlist_generate.dart';
+import 'package:spotifyre/components/library/playlist_generate/recommendation_attribute_dials.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/pages/library/playlist_generate/playlist_generate.dart';
 
 class RecommendationAttributeFields extends HookWidget {
   final Widget title;

@@ -1,7 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/provider/custom_spotify_endpoint_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/provider/custom_spotify_endpoint_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
 
 final homeViewProvider = FutureProvider((ref) async {
   final country = ref.watch(

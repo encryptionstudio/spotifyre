@@ -1,7 +1,7 @@
 import 'package:disable_battery_optimization/disable_battery_optimization.dart';
 import 'package:flutter_desktop_tools/flutter_desktop_tools.dart';
-import 'package:spotube/hooks/utils/use_async_effect.dart';
-import 'package:spotube/services/kv_store/kv_store.dart';
+import 'package:spotifyre/hooks/utils/use_async_effect.dart';
+import 'package:spotifyre/services/kv_store/kv_store.dart';
 
 void useDisableBatteryOptimizations() {
   useAsyncEffect(() async {

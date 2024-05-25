@@ -3,15 +3,15 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/library/playlist_generate/simple_track_tile.dart';
-import 'package:spotube/components/playlist/playlist_create_dialog.dart';
-import 'package:spotube/components/shared/dialogs/playlist_add_track_dialog.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/models/spotify/recommendation_seeds.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/library/playlist_generate/simple_track_tile.dart';
+import 'package:spotifyre/components/playlist/playlist_create_dialog.dart';
+import 'package:spotifyre/components/shared/dialogs/playlist_add_track_dialog.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/models/spotify/recommendation_seeds.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 class PlaylistGenerateResultPage extends HookConsumerWidget {
   final GeneratePlaylistProviderInput state;
@@ -72,7 +72,7 @@ class PlaylistGenerateResultPage extends HookConsumerWidget {
                     shrinkWrap: true,
                     children: [
                       FilledButton.tonalIcon(
-                        icon: const Icon(SpotubeIcons.play),
+                        icon: const Icon(spotifyreIcons.play),
                         label: Text(context.l10n.play),
                         onPressed: selectedTracks.value.isEmpty
                             ? null
@@ -86,7 +86,7 @@ class PlaylistGenerateResultPage extends HookConsumerWidget {
                               },
                       ),
                       FilledButton.tonalIcon(
-                        icon: const Icon(SpotubeIcons.queueAdd),
+                        icon: const Icon(spotifyreIcons.queueAdd),
                         label: Text(context.l10n.add_to_queue),
                         onPressed: selectedTracks.value.isEmpty
                             ? null
@@ -110,7 +110,7 @@ class PlaylistGenerateResultPage extends HookConsumerWidget {
                               },
                       ),
                       FilledButton.tonalIcon(
-                        icon: const Icon(SpotubeIcons.addFilled),
+                        icon: const Icon(spotifyreIcons.addFilled),
                         label: Text(context.l10n.create_a_playlist),
                         onPressed: selectedTracks.value.isEmpty
                             ? null
@@ -131,7 +131,7 @@ class PlaylistGenerateResultPage extends HookConsumerWidget {
                               },
                       ),
                       FilledButton.tonalIcon(
-                        icon: const Icon(SpotubeIcons.playlistAdd),
+                        icon: const Icon(spotifyreIcons.playlistAdd),
                         label: Text(context.l10n.add_to_playlist),
                         onPressed: selectedTracks.value.isEmpty
                             ? null
@@ -188,7 +188,7 @@ class PlaylistGenerateResultPage extends HookConsumerWidget {
                                   [];
                             }
                           },
-                          icon: const Icon(SpotubeIcons.selectionCheck),
+                          icon: const Icon(spotifyreIcons.selectionCheck),
                           label: Text(
                             isAllTrackSelected
                                 ? context.l10n.deselect_all

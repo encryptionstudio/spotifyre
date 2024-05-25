@@ -3,11 +3,11 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:form_validator/form_validator.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/dialogs/prompt_dialog.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/scrobbler_provider.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/dialogs/prompt_dialog.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/scrobbler_provider.dart';
 
 class LastFMLoginPage extends HookConsumerWidget {
   const LastFMLoginPage({super.key});
@@ -47,7 +47,7 @@ class LastFMLoginPage extends HookConsumerWidget {
                       ),
                       padding: const EdgeInsets.all(12),
                       child: const Icon(
-                        SpotubeIcons.lastFm,
+                        spotifyreIcons.lastFm,
                         color: Colors.white,
                         size: 60,
                       ),
@@ -86,8 +86,8 @@ class LastFMLoginPage extends HookConsumerWidget {
                               suffixIcon: IconButton(
                                 icon: Icon(
                                   passwordVisible.value
-                                      ? SpotubeIcons.eye
-                                      : SpotubeIcons.noEye,
+                                      ? spotifyreIcons.eye
+                                      : spotifyreIcons.noEye,
                                 ),
                                 onPressed: () => passwordVisible.value =
                                     !passwordVisible.value,

@@ -4,13 +4,13 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 import 'package:spotify/spotify.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/hooks/utils/use_breakpoint_value.dart';
-import 'package:spotube/hooks/utils/use_brightness_value.dart';
-import 'package:spotube/provider/blacklist_provider.dart';
-import 'package:spotube/utils/service_utils.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/hooks/utils/use_breakpoint_value.dart';
+import 'package:spotifyre/hooks/utils/use_brightness_value.dart';
+import 'package:spotifyre/provider/blacklist_provider.dart';
+import 'package:spotifyre/utils/service_utils.dart';
 
 class ArtistCard extends HookConsumerWidget {
   final Artist artist;

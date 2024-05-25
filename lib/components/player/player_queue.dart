@@ -10,16 +10,16 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/fallbacks/not_found.dart';
-import 'package:spotube/components/shared/inter_scrollbar/inter_scrollbar.dart';
-import 'package:spotube/components/shared/track_tile/track_tile.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/hooks/controllers/use_auto_scroll_controller.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/fallbacks/not_found.dart';
+import 'package:spotifyre/components/shared/inter_scrollbar/inter_scrollbar.dart';
+import 'package:spotifyre/components/shared/track_tile/track_tile.dart';
+import 'package:spotifyre/extensions/artist_simple.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/hooks/controllers/use_auto_scroll_controller.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
 
 class PlayerQueue extends HookConsumerWidget {
   final bool floating;
@@ -207,7 +207,7 @@ class PlayerQueue extends HookConsumerWidget {
                                           minimumSize: const Size.square(20),
                                         ),
                                       )
-                                    : const Icon(SpotubeIcons.filter),
+                                    : const Icon(spotifyreIcons.filter),
                                 constraints: BoxConstraints(
                                   maxHeight: 40,
                                   maxWidth: mediaQuery.smAndDown
@@ -218,7 +218,7 @@ class PlayerQueue extends HookConsumerWidget {
                             )
                           else
                             IconButton.filledTonal(
-                              icon: const Icon(SpotubeIcons.filter),
+                              icon: const Icon(spotifyreIcons.filter),
                               onPressed: () {
                                 isSearching.value = !isSearching.value;
                               },
@@ -234,7 +234,7 @@ class PlayerQueue extends HookConsumerWidget {
                               ),
                               child: Row(
                                 children: [
-                                  const Icon(SpotubeIcons.playlistRemove),
+                                  const Icon(spotifyreIcons.playlistRemove),
                                   const SizedBox(width: 5),
                                   Text(context.l10n.clear_all),
                                 ],
@@ -284,7 +284,7 @@ class PlayerQueue extends HookConsumerWidget {
                                       child: ReorderableDragStartListener(
                                         index: i,
                                         child: const Icon(
-                                          SpotubeIcons.dragHandle,
+                                          spotifyreIcons.dragHandle,
                                         ),
                                       ),
                                     ),

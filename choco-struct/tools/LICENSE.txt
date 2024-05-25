@@ -1,4 +1,4 @@
-﻿From: https://github.com/KRTirtho/spotube/blob/master/LICENSE
+﻿From: https://github.com/KRTirtho/spotifyre/blob/master/LICENSE
 
 BSD 4-Clause License
 

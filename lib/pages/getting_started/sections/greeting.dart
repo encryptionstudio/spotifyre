@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/getting_started/blur_card.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/utils/platform.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/getting_started/blur_card.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/utils/platform.dart';
 
 class GettingStartedPageGreetingSection extends HookConsumerWidget {
   final VoidCallback onNext;
@@ -20,10 +20,10 @@ class GettingStartedPageGreetingSection extends HookConsumerWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Assets.spotubeLogoPng.image(height: 200),
+            Assets.spotifyreLogoPng.image(height: 200),
             const Gap(24),
             Text(
-              "Spotube",
+              "spotifyre",
               style:
                   textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
             ),
@@ -43,7 +43,7 @@ class GettingStartedPageGreetingSection extends HookConsumerWidget {
               textDirection: TextDirection.rtl,
               child: FilledButton.icon(
                 onPressed: onNext,
-                icon: const Icon(SpotubeIcons.angleRight),
+                icon: const Icon(spotifyreIcons.angleRight),
                 label: Text(context.l10n.get_started),
               ),
             ),

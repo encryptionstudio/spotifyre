@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class SpotubePage<T> extends MaterialPage<T> {
-  const SpotubePage({required super.child});
+class spotifyrePage<T> extends MaterialPage<T> {
+  const spotifyrePage({required super.child});
 }
 
-class SpotubeSlidePage extends CustomTransitionPage {
-  SpotubeSlidePage({
+class spotifyreSlidePage extends CustomTransitionPage {
+  spotifyreSlidePage({
     required super.child,
     super.key,
   }) : super(

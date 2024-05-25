@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/extensions/constrains.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/extensions/constrains.dart';
 
 _emptyCB() {}
 
@@ -184,7 +184,7 @@ class AdaptivePopSheetList<T> extends StatelessWidget {
     }
 
     return IconButton(
-      icon: icon ?? const Icon(SpotubeIcons.moreVertical),
+      icon: icon ?? const Icon(spotifyreIcons.moreVertical),
       tooltip: tooltip,
       style: theme.iconButtonTheme.style?.copyWith(
         shape: MaterialStatePropertyAll(

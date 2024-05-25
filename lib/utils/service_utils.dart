@@ -4,13 +4,13 @@ import 'package:flutter/widgets.dart' hide Element;
 import 'package:go_router/go_router.dart';
 import 'package:html/dom.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/components/library/user_local_tracks.dart';
-import 'package:spotube/models/logger.dart';
+import 'package:spotifyre/components/library/user_local_tracks.dart';
+import 'package:spotifyre/models/logger.dart';
 import 'package:http/http.dart' as http;
-import 'package:spotube/models/lyrics.dart';
-import 'package:spotube/services/sourced_track/sourced_track.dart';
+import 'package:spotifyre/models/lyrics.dart';
+import 'package:spotifyre/services/sourced_track/sourced_track.dart';
 
-import 'package:spotube/utils/primitive_utils.dart';
+import 'package:spotifyre/utils/primitive_utils.dart';
 import 'package:collection/collection.dart';
 import 'package:html/parser.dart' as parser;
 

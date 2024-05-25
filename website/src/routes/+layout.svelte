@@ -43,20 +43,20 @@
 </main>
 <footer class="w-full bg-tertiary-backdrop-token p-4 flex justify-between">
 	<div>
-		<h3 class="h3">Spotube</h3>
+		<h3 class="h3">spotifyre</h3>
 		<p>
-			Copyright © {new Date().getFullYear()} Spotube
+			Copyright © {new Date().getFullYear()} spotifyre
 		</p>
 	</div>
 	<ul>
 		<li>
-			<a href="https://github.com/KRTirtho/spotube">
+			<a href="https://github.com/KRTirtho/spotifyre">
 				<Fa class="inline mr-1" icon={faGithub} size="lg" />
 				Github
 			</a>
 		</li>
 		<li>
-			<a href="https://opencollective.org/spotube">
+			<a href="https://opencollective.org/spotifyre">
 				<img
 					src="https://avatars0.githubusercontent.com/u/13403593?v=4"
 					alt="OpenCollective"

@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'package:catcher_2/catcher_2.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/models/connect/connect.dart';
-import 'package:spotube/models/logger.dart';
-import 'package:spotube/provider/connect/clients.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist.dart';
-import 'package:spotube/services/audio_player/loop_mode.dart';
+import 'package:spotifyre/models/connect/connect.dart';
+import 'package:spotifyre/models/logger.dart';
+import 'package:spotifyre/provider/connect/clients.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist.dart';
+import 'package:spotifyre/services/audio_player/loop_mode.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 import 'package:web_socket_channel/status.dart' as status;
 

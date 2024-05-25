@@ -4,15 +4,15 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:palette_generator/palette_generator.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/lyrics/zoom_controls.dart';
-import 'package:spotube/components/shared/shimmers/shimmer_lyrics.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/lyrics/zoom_controls.dart';
+import 'package:spotifyre/components/shared/shimmers/shimmer_lyrics.dart';
+import 'package:spotifyre/extensions/artist_simple.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
 
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 class PlainLyrics extends HookConsumerWidget {
   final PaletteColor palette;
@@ -85,7 +85,7 @@ class PlainLyrics extends HookConsumerWidget {
                                   textAlign: TextAlign.center,
                                 ),
                                 const Gap(26),
-                                const Icon(SpotubeIcons.noLyrics, size: 60),
+                                const Icon(spotifyreIcons.noLyrics, size: 60),
                               ],
                             ),
                           );

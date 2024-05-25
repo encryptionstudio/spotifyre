@@ -1,7 +1,7 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:spotube/hooks/utils/use_brightness_value.dart';
+import 'package:spotifyre/hooks/utils/use_brightness_value.dart';
 
 class ThemedButtonsTabBar extends HookWidget implements PreferredSizeWidget {
   final List<Widget> tabs;

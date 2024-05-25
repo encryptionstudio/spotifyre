@@ -2,14 +2,14 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart' hide Page;
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/components/shared/dialogs/prompt_dialog.dart';
-import 'package:spotube/components/shared/dialogs/select_device_dialog.dart';
-import 'package:spotube/components/shared/track_tile/track_tile.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/models/connect/connect.dart';
-import 'package:spotube/provider/connect/connect.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/components/shared/dialogs/prompt_dialog.dart';
+import 'package:spotifyre/components/shared/dialogs/select_device_dialog.dart';
+import 'package:spotifyre/components/shared/track_tile/track_tile.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/models/connect/connect.dart';
+import 'package:spotifyre/provider/connect/connect.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 class SearchTracksSection extends HookConsumerWidget {
   const SearchTracksSection({

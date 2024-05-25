@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/connect/clients.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/connect/clients.dart';
 
 class SelectDeviceDialog extends HookConsumerWidget {
   const SelectDeviceDialog({super.key});

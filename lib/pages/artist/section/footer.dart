@@ -2,11 +2,11 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -57,7 +57,7 @@ class ArtistPageFooter extends ConsumerWidget {
             // icon
             const WidgetSpan(
               child: Icon(
-                SpotubeIcons.wikipedia,
+                spotifyreIcons.wikipedia,
                 color: Colors.white,
                 size: 30,
               ),

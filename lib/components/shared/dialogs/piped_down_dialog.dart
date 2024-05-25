@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
 
 class PipedDownDialog extends HookConsumerWidget {
   const PipedDownDialog({super.key});
@@ -17,7 +17,7 @@ class PipedDownDialog extends HookConsumerWidget {
       insetPadding: const EdgeInsets.all(6),
       contentPadding: const EdgeInsets.all(6),
       icon: Icon(
-        SpotubeIcons.error,
+        spotifyreIcons.error,
         color: colorScheme.error,
       ),
       title: Text(

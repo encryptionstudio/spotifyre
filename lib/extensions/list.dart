@@ -1,5 +1,5 @@
 import 'package:collection/collection.dart';
-import 'package:spotube/models/logger.dart';
+import 'package:spotifyre/models/logger.dart';
 
 final logger = getLogger("List");
 

@@ -6,21 +6,21 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:spotube/collections/spotube_icons.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
 
-import 'package:spotube/main.dart';
+import 'package:spotifyre/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const Spotube());
+    await tester.pumpWidget(const spotifyre());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
     expect(find.text('1'), findsNothing);
 
     // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(SpotubeIcons.add));
+    await tester.tap(find.byIcon(spotifyreIcons.add));
     await tester.pump();
 
     // Verify that our counter has incremented.

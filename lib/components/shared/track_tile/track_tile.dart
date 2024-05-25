@@ -6,19 +6,19 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/hover_builder.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/components/shared/links/artist_link.dart';
-import 'package:spotube/components/shared/links/link_text.dart';
-import 'package:spotube/components/shared/track_tile/track_options.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/duration.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/models/local_track.dart';
-import 'package:spotube/provider/blacklist_provider.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/hover_builder.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/components/shared/links/artist_link.dart';
+import 'package:spotifyre/components/shared/links/link_text.dart';
+import 'package:spotifyre/components/shared/track_tile/track_options.dart';
+import 'package:spotifyre/extensions/artist_simple.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/duration.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/models/local_track.dart';
+import 'package:spotifyre/provider/blacklist_provider.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist.dart';
 
 class TrackTile extends HookConsumerWidget {
   /// [index] will not be shown if null
@@ -176,12 +176,12 @@ class TrackTile extends HookConsumerWidget {
                                       )
                                     : isPlaying
                                         ? Icon(
-                                            SpotubeIcons.pause,
+                                            spotifyreIcons.pause,
                                             color: theme.colorScheme.primary,
                                           )
                                         : !isHovering
                                             ? const SizedBox.shrink()
-                                            : const Icon(SpotubeIcons.play),
+                                            : const Icon(spotifyreIcons.play),
                               ),
                             ),
                           ),

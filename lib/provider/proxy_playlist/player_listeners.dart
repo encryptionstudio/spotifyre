@@ -3,18 +3,18 @@
 import 'dart:async';
 
 import 'package:catcher_2/catcher_2.dart';
-import 'package:spotube/models/local_track.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/proxy_playlist/skip_segments.dart';
-import 'package:spotube/provider/server/sourced_track.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
+import 'package:spotifyre/models/local_track.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/proxy_playlist/skip_segments.dart';
+import 'package:spotifyre/provider/server/sourced_track.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
 
 extension ProxyPlaylistListeners on ProxyPlaylistNotifier {
   StreamSubscription subscribeToPlaylist() {
     return audioPlayer.playlistStream.listen((playlist) {
       state = state.copyWith(
         tracks: playlist.medias
-            .map((media) => SpotubeMedia.fromMedia(media).track)
+            .map((media) => spotifyreMedia.fromMedia(media).track)
             .toSet(),
         active: playlist.index,
       );

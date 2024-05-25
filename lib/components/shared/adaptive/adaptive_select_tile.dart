@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/extensions/constrains.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/extensions/constrains.dart';
 
 class AdaptiveSelectTile<T> extends HookWidget {
   final Widget title;
@@ -52,7 +52,7 @@ class AdaptiveSelectTile<T> extends HookWidget {
         underline: const SizedBox.shrink(),
         padding: const EdgeInsets.symmetric(horizontal: 10),
         borderRadius: BorderRadius.circular(10),
-        icon: const Icon(SpotubeIcons.angleDown),
+        icon: const Icon(spotifyreIcons.angleDown),
         dropdownColor: theme.colorScheme.secondaryContainer,
       ),
     );

@@ -2,9 +2,9 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:fuzzywuzzy/fuzzywuzzy.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
 
 class MultiSelectField<T> extends HookWidget {
   final List<T> options;
@@ -224,7 +224,7 @@ class _MultiSelectDialog<T> extends HookWidget {
               controller: searchController,
               decoration: InputDecoration(
                 hintText: context.l10n.search,
-                prefixIcon: const Icon(SpotubeIcons.search),
+                prefixIcon: const Icon(spotifyreIcons.search),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),

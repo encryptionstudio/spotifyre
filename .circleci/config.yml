@@ -86,7 +86,7 @@ jobs:
       - run:
           name: Replace Version in files
           command: |
-            sed -i 's|%{{APPDATA_RELEASE}}%|<release version="${BUILD_VERSION}" date="${CURRENT_DATE}" />|' linux/com.github.KRTirtho.Spotube.appdata.xml
+            sed -i 's|%{{APPDATA_RELEASE}}%|<release version="${BUILD_VERSION}" date="${CURRENT_DATE}" />|' linux/com.github.KRTirtho.spotifyre.appdata.xml
             echo "build_arch: aarch64" >> linux/packaging/rpm/make_config.yaml
 
       - run:
@@ -124,14 +124,14 @@ jobs:
           name: Move artifacts
           command: |
             mkdir bundle
-            mv build/spotube-linux-*-aarch64.tar.xz bundle/
-            mv dist/**/spotube-*-linux.deb bundle/Spotube-linux-aarch64.deb
-            mv dist/**/spotube-*-linux.rpm bundle/Spotube-linux-aarch64.rpm
-            mv dist/**/spotube-*-linux.AppImage bundle/Spotube-linux-aarch64.AppImage
-            zip -r Spotube-linux-aarch64.zip bundle
+            mv build/spotifyre-linux-*-aarch64.tar.xz bundle/
+            mv dist/**/spotifyre-*-linux.deb bundle/spotifyre-linux-aarch64.deb
+            mv dist/**/spotifyre-*-linux.rpm bundle/spotifyre-linux-aarch64.rpm
+            mv dist/**/spotifyre-*-linux.AppImage bundle/spotifyre-linux-aarch64.AppImage
+            zip -r spotifyre-linux-aarch64.zip bundle
 
       - store_artifacts:
-          path: Spotube-linux-aarch64.zip
+          path: spotifyre-linux-aarch64.zip
 
       - when:
           condition:

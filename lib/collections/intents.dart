@@ -4,12 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spotube/collections/routes.dart';
-import 'package:spotube/components/player/player_controls.dart';
-import 'package:spotube/models/logger.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
-import 'package:spotube/utils/platform.dart';
+import 'package:spotifyre/collections/routes.dart';
+import 'package:spotifyre/components/player/player_controls.dart';
+import 'package:spotifyre/models/logger.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
+import 'package:spotifyre/utils/platform.dart';
 
 class PlayPauseIntent extends Intent {
   final WidgetRef ref;

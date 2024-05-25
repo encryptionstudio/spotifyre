@@ -2,12 +2,12 @@ import 'package:audio_service/audio_service.dart';
 import 'package:flutter_desktop_tools/flutter_desktop_tools.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/services/audio_services/mobile_audio_service.dart';
-import 'package:spotube/services/audio_services/windows_audio_service.dart';
-import 'package:spotube/services/sourced_track/sourced_track.dart';
+import 'package:spotifyre/extensions/artist_simple.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/services/audio_services/mobile_audio_service.dart';
+import 'package:spotifyre/services/audio_services/windows_audio_service.dart';
+import 'package:spotifyre/services/sourced_track/sourced_track.dart';
 
 class AudioServices {
   final MobileAudioService? mobile;
@@ -25,8 +25,8 @@ class AudioServices {
         ? await AudioService.init(
             builder: () => MobileAudioService(playback),
             config: const AudioServiceConfig(
-              androidNotificationChannelId: 'com.krtirtho.Spotube',
-              androidNotificationChannelName: 'Spotube',
+              androidNotificationChannelId: 'com.krtirtho.spotifyre',
+              androidNotificationChannelName: 'spotifyre',
               androidNotificationOngoing: true,
             ),
           )

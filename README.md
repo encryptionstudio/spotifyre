@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="600" src="assets/spotube_banner.png" alt="Spotube Logo">
+  <img width="600" src="assets/spotifyre_banner.png" alt="spotifyre Logo">
 
 An open source, cross-platform Spotify client compatible across multiple platforms<br />
 utilizing Spotify's data API and YouTube, Piped.video or JioSaavn as an audio source,<br />
@@ -7,7 +7,7 @@ eliminating the need for Spotify Premium
 
 Btw it's not just another Electron app 😉
 
-<a href="https://spotube.krtirtho.dev"><img alt="Visit the website" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/documentation/website_vector.svg"></a>
+<a href="https://spotifyre.krtirtho.dev"><img alt="Visit the website" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/documentation/website_vector.svg"></a>
 <a href="https://discord.gg/uJ94vxB6vg"><img alt="Discord Server" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/social/discord-plural_vector.svg"></a>
 
 <a href="https://patreon.com/krtirtho"><img alt="Support me on Patron" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/patreon-singular_vector.svg"></a>
@@ -15,13 +15,13 @@ Btw it's not just another Electron app 😉
 
 [![HackerNews](https://hackerbadge.vercel.app/api?id=39066136&type=dark)](https://news.ycombinator.com/item?id=39066136)
 
-<a href="https://opencollective.com/spotube"><img src="https://opencollective.com/spotube/donate/button.png?color=blue" alt="Donate to our Open Collective" height="45"></a>
+<a href="https://opencollective.com/spotifyre"><img src="https://opencollective.com/spotifyre/donate/button.png?color=blue" alt="Donate to our Open Collective" height="45"></a>
 
 ---
 
-![Spotube Desktop](assets/spotube-screenshot.png)
+![spotifyre Desktop](assets/spotifyre-screenshot.png)
 
-![Spotube Mobile](assets/mobile-screenshots/combined.png)
+![spotifyre Mobile](assets/mobile-screenshots/combined.png)
 
 </div>
 
@@ -43,12 +43,12 @@ Btw it's not just another Electron app 😉
 ### ❌ Unsupported features
 
 - 🗣️ **Spotify Shows & Podcasts:** Shows and Podcasts will <ins>**never be supported**</ins> because the audio tracks are <ins>_only_</ins> available on Spotify and accessing them would require Spotify Premium.
-- 🎧 **Spotify Listen Along:** [Coming soon!](https://github.com/KRTirtho/spotube/issues/8)
+- 🎧 **Spotify Listen Along:** [Coming soon!](https://github.com/KRTirtho/spotifyre/issues/8)
 
 ## 📜 ⬇️ Installation guide
 
 New versions usually release every 3-4 months.<br />
-This handy table lists all the methods you can use to install Spotube:
+This handy table lists all the methods you can use to install spotifyre:
 
 <table>
   <tr>
@@ -58,14 +58,14 @@ This handy table lists all the methods you can use to install Spotube:
   <tr>
     <td>Windows</td>
     <td>
-      <a href="https://github.com/KRTirtho/spotube/releases/latest/download/Spotube-windows-x86_64-setup.exe">
+      <a href="https://github.com/KRTirtho/spotifyre/releases/latest/download/spotifyre-windows-x86_64-setup.exe">
         <img width="220" alt="Windows Download" src="https://get.todoist.help/hc/article_attachments/4403191721234/WindowsButton.svg">
       </a>
   </tr>
   <tr>
     <td>MacOS</td>
     <td>
-      <a href="https://github.com/KRTirtho/spotube/releases/latest/download/Spotube-macos-universal.dmg">
+      <a href="https://github.com/KRTirtho/spotifyre/releases/latest/download/spotifyre-macos-universal.dmg">
         <img width="220" alt="MacOS Download" src="https://reachify.io/wp-content/uploads/2018/09/mac-download-button-1.png">
       </a>
     </td>
@@ -73,15 +73,15 @@ This handy table lists all the methods you can use to install Spotube:
   <tr>
     <td>Android</td>
     <td>
-      <a href="https://play.google.com/store/apps/details?id=oss.krtirtho.spotube">
+      <a href="https://play.google.com/store/apps/details?id=oss.krtirtho.spotifyre">
         <img width="220" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
       </a>
       <br>
-      <a href="https://github.com/KRTirtho/spotube/releases/latest/download/Spotube-android-all-arch.apk">
+      <a href="https://github.com/KRTirtho/spotifyre/releases/latest/download/spotifyre-android-all-arch.apk">
         <img width="220" alt="APK download" src="https://user-images.githubusercontent.com/114044633/223920025-83687de0-e463-4c5d-8122-e06e4bb7d40c.png">
       </a>
       <br/>
-      <a href="https://f-droid.org/packages/oss.krtirtho.spotube">
+      <a href="https://f-droid.org/packages/oss.krtirtho.spotifyre">
         <img width="220" alt="Download from F-Droid" src="https://user-images.githubusercontent.com/61944859/174589876-bace24c0-b3fd-4c4a-bdb4-6fa82b5853ec.png">
       </a>
     </td>
@@ -89,46 +89,46 @@ This handy table lists all the methods you can use to install Spotube:
   <tr>
     <td>Flatpak</td>
     <td>
-      <p><code>flatpak install com.github.KRTirtho.Spotube</code></p>
-      <a href="https://flathub.org/apps/details/com.github.KRTirtho.Spotube">
+      <p><code>flatpak install com.github.KRTirtho.spotifyre</code></p>
+      <a href="https://flathub.org/apps/details/com.github.KRTirtho.spotifyre">
         <img width="220" alt="Download on Flathub" src="https://flathub.org/assets/badges/flathub-badge-en.png">
       </a>
     </td>
   </tr>
   <tr>
     <td>AppImage</td>
-    <td>AppImage's lacking stability led to it's temporal removal. More information at https://github.com/KRTirtho/spotube/issues/1082</td>
+    <td>AppImage's lacking stability led to it's temporal removal. More information at https://github.com/KRTirtho/spotifyre/issues/1082</td>
   </tr>
   <tr>
     <td>Debian/Ubuntu</td>
     <td>
-      <a href="https://github.com/KRTirtho/spotube/releases/latest/download/Spotube-linux-x86_64.deb">
+      <a href="https://github.com/KRTirtho/spotifyre/releases/latest/download/spotifyre-linux-x86_64.deb">
         <img width="220" alt="Debian/Ubuntu Download" src="https://user-images.githubusercontent.com/61944859/169097994-e92aff78-fd75-4c93-b6e4-f072a4b5a7ed.png">
       </a>
-      <p>Then run: <code>sudo apt install ./Spotube-linux-x86_64.deb</code></p>
+      <p>Then run: <code>sudo apt install ./spotifyre-linux-x86_64.deb</code></p>
     </td>
   </tr>
   <tr>
     <td>Arch/Manjaro</td>
     <td>
-      <p>With pamac: <code>sudo pamac install spotube-bin</code></p>
-      <p>With yay: <code>yay -Sy spotube-bin</code></p>
+      <p>With pamac: <code>sudo pamac install spotifyre-bin</code></p>
+      <p>With yay: <code>yay -Sy spotifyre-bin</code></p>
     </td>
   </tr>
   <tr>
     <td>Fedora/OpenSuse</td>
     <td>
-      <a href="https://github.com/KRTirtho/spotube/releases/latest/download/Spotube-linux-x86_64.rpm">
+      <a href="https://github.com/KRTirtho/spotifyre/releases/latest/download/spotifyre-linux-x86_64.rpm">
         <img width="220" alt="Fedora/OpenSuse Download" src="https://user-images.githubusercontent.com/61944859/223638350-5926b9da-04d6-4edd-931d-ad533e4ff058.png">
       </a>
-      <p>For Fedora: <code>sudo dnf install ./Spotube-linux-x86_64.rpm</code></p>
-      <p>For OpenSuse: <code>sudo zypper in ./Spotube-linux-x86_64.rpm</code></p>
+      <p>For Fedora: <code>sudo dnf install ./spotifyre-linux-x86_64.rpm</code></p>
+      <p>For OpenSuse: <code>sudo zypper in ./spotifyre-linux-x86_64.rpm</code></p>
     </td>
   </tr>
   <tr>
     <td>Linux (tarball)</td>
     <td>
-      <a href="https://github.com/KRTirtho/spotube/releases/latest">
+      <a href="https://github.com/KRTirtho/spotifyre/releases/latest">
         <img width="220" alt="Tarball Download" src="https://user-images.githubusercontent.com/61944859/169456985-e0ba1fd4-10e8-4cc0-ab94-337acc6e0295.png">
       </a>
     </td>
@@ -138,42 +138,42 @@ This handy table lists all the methods you can use to install Spotube:
     <td>
 <pre lang="bash">
 brew tap krtirtho/apps
-brew install --cask spotube
+brew install --cask spotifyre
 </pre>   
     </td>
   </tr>
   <tr>
     <td>Windows - <a href="https://chocolatey.org">Chocolatey</a></td>
     <td>
-      <p><code>choco install spotube</code></p>
+      <p><code>choco install spotifyre</code></p>
     </td>
   </tr>
   <tr>
     <td>Windows - <a href="https://scoop.sh">Scoop</a></td>
     <td>
       <p><code>scoop bucket add extras</code></p>
-      <p><code>scoop install spotube</code></p>
+      <p><code>scoop install spotifyre</code></p>
     </td>
   </tr>
   <tr>
     <td>Windows - <a href="https://github.com/microsoft/winget-cli">WinGet</a></td>
     <td>
-      <p><code>winget install --id KRTirtho.Spotube</code></p>
+      <p><code>winget install --id KRTirtho.spotifyre</code></p>
     </td>
   </tr>
 </table>
 
 ### 🔄 Nightly Builds
 
-Grab the latest nightly builds of Spotube [from the GitHub Releases](https://github.com/KRTirtho/spotube/releases/tag/nightly).
+Grab the latest nightly builds of spotifyre [from the GitHub Releases](https://github.com/KRTirtho/spotifyre/releases/tag/nightly).
 
 ## 🕳️ Building from source
 
-<a href="https://github.com/KRTirtho/spotube/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/KRTirtho/spotube/spotube-release-binary.yml?+label=Build%20Status"></a>
+<a href="https://github.com/KRTirtho/spotifyre/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/KRTirtho/spotifyre/spotifyre-release-binary.yml?+label=Build%20Status"></a>
 
-You can compile Spotube's source code by [following these instructions](CONTRIBUTION.md#your-first-code-contribution).
+You can compile spotifyre's source code by [following these instructions](CONTRIBUTION.md#your-first-code-contribution).
 
-## 👥 The Spotube team
+## 👥 The spotifyre team
 
 - [Kingkor Roy Tirtho](https://github.com/KRTirtho) - The Founder, Maintainer and Lead Developer
 - [RaptaG](https://github.com/RaptaG) - The GitHub Moderator and Community Manager
@@ -184,7 +184,7 @@ You can compile Spotube's source code by [following these instructions](CONTRIBU
 
 ## 💼 License
 
-Spotube is open source and licensed under the [BSD-4-Clause](/LICENSE) License.
+spotifyre is open source and licensed under the [BSD-4-Clause](/LICENSE) License.
 
 If you are concerned, you can [read the reason of choosing this license](https://dev.to/krtirtho/choosing-open-source-license-wisely-1m3p).
 
@@ -194,6 +194,7 @@ If you are concerned, you can [read the reason of choosing this license](https:/
   </summary>
 
 ### Services
+
 1. [Flutter](https://flutter.dev) - Flutter transforms the app development process. Build, test, and deploy beautiful mobile, web, desktop, and embedded apps from a single codebase
 1. [Spotify API](https://developer.spotify.com/documentation/web-api) - The Spotify Web API is a RESTful API that provides access to Spotify data
 1. [Piped](https://piped-docs.kavin.rocks/) - Piped is a privacy friendly alternative YouTube frontend, which is efficient and scalable by design.
@@ -207,9 +208,10 @@ If you are concerned, you can [read the reason of choosing this license](https:/
 1. [SponsorBlock](https://sponsor.ajay.app) - SponsorBlock is an open-source crowdsourced browser extension and open API for skipping sponsor segments in YouTube videos.
 1. [Inno Setup](https://jrsoftware.org/isinfo.php) - Inno Setup is a free installer for Windows programs by Jordan Russell and Martijn Laan
 1. [F-Droid](https://f-droid.org) - F-Droid is an installable catalogue of FOSS (Free and Open Source Software) applications for the Android platform. The client makes it easy to browse, install, and keep track of updates on your device
-1. [LastFM](https://last.fm) - Last.fm is a music streaming and discovery platform that helps users discover and share new music. It tracks users' music listening habits across many devices and platforms. 
+1. [LastFM](https://last.fm) - Last.fm is a music streaming and discovery platform that helps users discover and share new music. It tracks users' music listening habits across many devices and platforms.
 
 ### Dependencies
+
 1. [args](https://pub.dev/packages/args) - Library for defining parsers for parsing raw command-line arguments into a set of options and values using GNU and POSIX style options.
 1. [async](https://pub.dev/packages/async) - Utility functions and classes related to the 'dart:async' library.
 1. [audio_service](https://pub.dev/packages/audio_service) - Flutter plugin to play audio in the background while the screen is off.
@@ -322,4 +324,4 @@ If you are concerned, you can [read the reason of choosing this license](https:/
 1. [dart_discord_rpc](https://github.com/alexmercerind/dart_discord_rpc) - Discord Rich Presence for Flutter & Dart apps & games.
 </details>
 
-<div align="center"><h4>© Copyright Spotube 2024</h4></div>
+<div align="center"><h4>© Copyright spotifyre 2024</h4></div>

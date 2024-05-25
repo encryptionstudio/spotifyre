@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:args/args.dart';
 import 'package:flutter/foundation.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:spotube/models/logger.dart';
+import 'package:spotifyre/models/logger.dart';
 
 Future<ArgResults> startCLI(List<String> args) async {
   final parser = ArgParser();
@@ -40,7 +40,7 @@ Future<ArgResults> startCLI(List<String> args) async {
 
   if (arguments["version"] == true) {
     final package = await PackageInfo.fromPlatform();
-    print("Spotube v${package.version}");
+    print("spotifyre v${package.version}");
     exit(0);
   }
 

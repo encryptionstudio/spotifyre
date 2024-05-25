@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/spotube_icons.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
 
 class VolumeSlider extends HookConsumerWidget {
   final bool fullWidth;
@@ -45,12 +45,12 @@ class VolumeSlider extends HookConsumerWidget {
         IconButton(
           icon: Icon(
             value == 0
-                ? SpotubeIcons.volumeMute
+                ? spotifyreIcons.volumeMute
                 : value <= 0.2
-                    ? SpotubeIcons.volumeLow
+                    ? spotifyreIcons.volumeLow
                     : value <= 0.6
-                        ? SpotubeIcons.volumeMedium
-                        : SpotubeIcons.volumeHigh,
+                        ? spotifyreIcons.volumeMedium
+                        : spotifyreIcons.volumeHigh,
             size: 16,
           ),
           onPressed: () {

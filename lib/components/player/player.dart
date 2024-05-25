@@ -4,31 +4,31 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/player/player_actions.dart';
-import 'package:spotube/components/player/player_controls.dart';
-import 'package:spotube/components/player/player_queue.dart';
-import 'package:spotube/components/player/volume_slider.dart';
-import 'package:spotube/components/shared/animated_gradient.dart';
-import 'package:spotube/components/shared/dialogs/track_details_dialog.dart';
-import 'package:spotube/components/shared/links/artist_link.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/components/shared/panels/sliding_up_panel.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/hooks/utils/use_custom_status_bar_color.dart';
-import 'package:spotube/hooks/utils/use_palette_color.dart';
-import 'package:spotube/models/local_track.dart';
-import 'package:spotube/pages/lyrics/lyrics.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/server/active_sourced_track.dart';
-import 'package:spotube/provider/volume_provider.dart';
-import 'package:spotube/services/sourced_track/sources/youtube.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/player/player_actions.dart';
+import 'package:spotifyre/components/player/player_controls.dart';
+import 'package:spotifyre/components/player/player_queue.dart';
+import 'package:spotifyre/components/player/volume_slider.dart';
+import 'package:spotifyre/components/shared/animated_gradient.dart';
+import 'package:spotifyre/components/shared/dialogs/track_details_dialog.dart';
+import 'package:spotifyre/components/shared/links/artist_link.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/components/shared/panels/sliding_up_panel.dart';
+import 'package:spotifyre/extensions/artist_simple.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/hooks/utils/use_custom_status_bar_color.dart';
+import 'package:spotifyre/hooks/utils/use_palette_color.dart';
+import 'package:spotifyre/models/local_track.dart';
+import 'package:spotifyre/pages/lyrics/lyrics.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/server/active_sourced_track.dart';
+import 'package:spotifyre/provider/volume_provider.dart';
+import 'package:spotifyre/services/sourced_track/sources/youtube.dart';
 
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -138,7 +138,7 @@ class PlayerView extends HookConsumerWidget {
                     foregroundColor: titleTextColor,
                     toolbarOpacity: 1,
                     leading: IconButton(
-                      icon: const Icon(SpotubeIcons.angleDown, size: 18),
+                      icon: const Icon(spotifyreIcons.angleDown, size: 18),
                       onPressed: panelController.close,
                     ),
                     actions: [
@@ -162,7 +162,7 @@ class PlayerView extends HookConsumerWidget {
                           },
                         ),
                       IconButton(
-                        icon: const Icon(SpotubeIcons.info, size: 18),
+                        icon: const Icon(spotifyreIcons.info, size: 18),
                         tooltip: context.l10n.details,
                         style: IconButton.styleFrom(
                           foregroundColor: bodyTextColor,
@@ -278,7 +278,7 @@ class PlayerView extends HookConsumerWidget {
                               const SizedBox(width: 10),
                               Expanded(
                                 child: OutlinedButton.icon(
-                                    icon: const Icon(SpotubeIcons.queue),
+                                    icon: const Icon(spotifyreIcons.queue),
                                     label: Text(context.l10n.queue),
                                     style: OutlinedButton.styleFrom(
                                       foregroundColor: bodyTextColor,
@@ -333,7 +333,7 @@ class PlayerView extends HookConsumerWidget {
                                 Expanded(
                                   child: OutlinedButton.icon(
                                     label: Text(context.l10n.lyrics),
-                                    icon: const Icon(SpotubeIcons.music),
+                                    icon: const Icon(spotifyreIcons.music),
                                     style: OutlinedButton.styleFrom(
                                       foregroundColor: bodyTextColor,
                                       side: BorderSide(

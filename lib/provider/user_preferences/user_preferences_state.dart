@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/components/settings/color_scheme_picker_dialog.dart';
-import 'package:spotube/services/sourced_track/enums.dart';
+import 'package:spotifyre/components/settings/color_scheme_picker_dialog.dart';
+import 'package:spotifyre/services/sourced_track/enums.dart';
 
 part 'user_preferences_state.g.dart';
 part 'user_preferences_state.freezed.dart';
@@ -66,13 +66,13 @@ class UserPreferences with _$UserPreferences {
     @Default(false) bool skipNonMusic,
     @Default(false) bool systemTitleBar,
     @Default(CloseBehavior.minimizeToTray) CloseBehavior closeBehavior,
-    @Default(SpotubeColor(0xFF2196F3, name: "Blue"))
+    @Default(spotifyreColor(0xFF2196F3, name: "Blue"))
     @JsonKey(
       fromJson: UserPreferences._accentColorSchemeFromJson,
       toJson: UserPreferences._accentColorSchemeToJson,
       readValue: UserPreferences._accentColorSchemeReadValue,
     )
-    SpotubeColor accentColorScheme,
+    spotifyreColor accentColorScheme,
     @Default(LayoutMode.adaptive) LayoutMode layoutMode,
     @Default(Locale("system", "system"))
     @JsonKey(
@@ -98,8 +98,8 @@ class UserPreferences with _$UserPreferences {
 
   factory UserPreferences.withDefaults() => UserPreferences.fromJson({});
 
-  static SpotubeColor _accentColorSchemeFromJson(Map<String, dynamic> json) {
-    return SpotubeColor.fromString(json["color"]);
+  static spotifyreColor _accentColorSchemeFromJson(Map<String, dynamic> json) {
+    return spotifyreColor.fromString(json["color"]);
   }
 
   static Map<String, dynamic>? _accentColorSchemeReadValue(
@@ -111,7 +111,7 @@ class UserPreferences with _$UserPreferences {
     return json[key] as Map<String, dynamic>?;
   }
 
-  static Map<String, dynamic> _accentColorSchemeToJson(SpotubeColor color) {
+  static Map<String, dynamic> _accentColorSchemeToJson(spotifyreColor color) {
     return {"color": color.toString()};
   }
 

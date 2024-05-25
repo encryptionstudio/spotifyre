@@ -2,13 +2,13 @@
 
 # Varibles
 fname="$(basename $0)"
-installDir='/usr/share/spotube'
-desktopFile='/usr/share/applications/spotube.desktop'
-appdata='/usr/share/appdata/spotube.appdata.xml'
-icon='/usr/share/icons/spotube/spotube-logo.png'
-symlink='/usr/bin/spotube'
-temp='/tmp/spotube-installer'
-latestVer="$(wget -qO- "https://api.github.com/repos/KRTirtho/spotube/releases/latest" \ | grep -Po '"tag_name": "\K.*?(?=")')"
+installDir='/usr/share/spotifyre'
+desktopFile='/usr/share/applications/spotifyre.desktop'
+appdata='/usr/share/appdata/spotifyre.appdata.xml'
+icon='/usr/share/icons/spotifyre/spotifyre-logo.png'
+symlink='/usr/bin/spotifyre'
+temp='/tmp/spotifyre-installer'
+latestVer="$(wget -qO- "https://api.github.com/repos/KRTirtho/spotifyre/releases/latest" \ | grep -Po '"tag_name": "\K.*?(?=")')"
 
 # Root check - From CAAIS (https://codeberg.org/RaptaG/CAAIS), under GPL-3.0
 function rootCheck() {
@@ -23,9 +23,9 @@ function rootCheck() {
 function help(){
   echo "Usage: sudo ./${fname} [flags]"
   echo 'Flags:'
-  echo '  -i, --install <version>    Install any Spotube version (if not specified, the latest is installed).'
+  echo '  -i, --install <version>    Install any spotifyre version (if not specified, the latest is installed).'
   echo '  -h, --help                 This help menu'
-  echo '  -r, --remove               Removes Spotube from your system'
+  echo '  -r, --remove               Removes spotifyre from your system'
   exit 0
 }
 
@@ -55,17 +55,17 @@ function install_deps(){
     #    # JsonCpp
     #    wget https://github.com/open-source-parsers/jsoncpp/tarball/master -O jsoncpp.tar.gz
     #    tar -xf jsoncpp.tar.gz && cd open-source-parsers-jsoncpp-*
-        echo 'You have to install some dependancies manually in order for Spotube to work.'
+        echo 'You have to install some dependancies manually in order for spotifyre to work.'
         echo "The deps are the following: ${rpmDeps}"
     fi
 }
 
-function download_extract_spotube(){
-  local tarPath="/tmp/spotube-${ver}.tar.xz"
-  local donwloadURL="https://github.com/KRTirtho/spotube/releases/download/v${ver}/spotube-linux-${ver}-x86_64.tar.xz"
+function download_extract_spotifyre(){
+  local tarPath="/tmp/spotifyre-${ver}.tar.xz"
+  local donwloadURL="https://github.com/KRTirtho/spotifyre/releases/download/v${ver}/spotifyre-linux-${ver}-x86_64.tar.xz"
 
   if [ "${ver}" = "nightly" ]; then
-      downloadURL"=https://github.com/KRTirtho/spotube/releases/download/nightly/spotube-linux-nightly-x86_64.tar.xz"
+      downloadURL"=https://github.com/KRTirtho/spotifyre/releases/download/nightly/spotifyre-linux-nightly-x86_64.tar.xz"
   fi
 
   rm -rf ${temp}
@@ -75,7 +75,7 @@ function download_extract_spotube(){
   if [ -f ${tarPath} ]; then
     echo "Installation file detected. Skipping download..."
   else
-    echo "Downloading spotube-${ver}.tar.xz..."
+    echo "Downloading spotifyre-${ver}.tar.xz..."
     wget -q ${downloadURL} -P ${tarPath}
   fi
 
@@ -96,42 +96,42 @@ function download_extract_spotube(){
   fi
 }
 
-function install_spotube(){
+function install_spotifyre(){
     if [ -d ${installDir} ]; then
-        echo -n "Spotube is already installed. Do you want to reinstall it? [y/N] "
+        echo -n "spotifyre is already installed. Do you want to reinstall it? [y/N] "
         read reinstall
 
         case "${reinstall}" in
         [yY]*)
-            uninstall_spotube ;;
+            uninstall_spotifyre ;;
         *)
             echo 'Aborting installation...'
             exit 1 ;;
         esac
     fi
 
-    # Install Spotube from temp dir
+    # Install spotifyre from temp dir
     mkdir -p ${installDir}
     mv ${temp}/data ${installDir}
     mv ${temp}/lib ${installDir}
-    mv ${temp}/spotube ${installDir}
-    mv ${temp}/spotube.desktop ${desktopDir}
-    mv ${temp}/com.github.KRTirtho.Spotube.appdata.xml ${appdata}
-    mkdir -p /usr/share/icons/spotube
-    mv ${temp}/spotube-logo.png ${icon}
-    ln -s /usr/share/spotube/spotube ${symlink}
+    mv ${temp}/spotifyre ${installDir}
+    mv ${temp}/spotifyre.desktop ${desktopDir}
+    mv ${temp}/com.github.KRTirtho.spotifyre.appdata.xml ${appdata}
+    mkdir -p /usr/share/icons/spotifyre
+    mv ${temp}/spotifyre-logo.png ${icon}
+    ln -s /usr/share/spotifyre/spotifyre ${symlink}
 
     rm -rf ${temp}  # Remove temp dir
-    echo "Spotube ${ver} has been installed successfully!"
+    echo "spotifyre ${ver} has been installed successfully!"
 }
 
-function uninstall_spotube(){
-    echo -n "Are you sure you want to uninstall Spotube? [y/N] "
+function uninstall_spotifyre(){
+    echo -n "Are you sure you want to uninstall spotifyre? [y/N] "
     read confirm
 
     case "${confirm}" in
     [yY]*)
-            echo 'Unstalling Spotube..'
+            echo 'Unstalling spotifyre..'
             rm -rf ${installDir} ${desktopDir} ${appdata} ${icon} ${symlink} ;;
     *)
             echo 'Aborting...'
@@ -149,12 +149,12 @@ case "$1" in
     
     rootCheck
     install_deps
-    download_extract_spotube
-    install_spotube
+    download_extract_spotifyre
+    install_spotifyre
     exit 0 ;;
 -r | --remove)
     rootCheck
-    uninstall_spotube
+    uninstall_spotifyre
     exit 0 ;;
 -h | --help | "")
     help

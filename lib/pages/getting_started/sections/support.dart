@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/getting_started/blur_card.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/services/kv_store/kv_store.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/getting_started/blur_card.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/services/kv_store/kv_store.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class GettingStartedScreenSupportSection extends HookConsumerWidget {
@@ -26,7 +26,7 @@ class GettingStartedScreenSupportSection extends HookConsumerWidget {
               children: [
                 Row(
                   children: [
-                    const Icon(SpotubeIcons.heartFilled, color: Colors.pink),
+                    const Icon(spotifyreIcons.heartFilled, color: Colors.pink),
                     const SizedBox(width: 8),
                     Text(
                       context.l10n.help_project_grow,
@@ -43,7 +43,7 @@ class GettingStartedScreenSupportSection extends HookConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     FilledButton.icon(
-                      icon: const Icon(SpotubeIcons.github),
+                      icon: const Icon(spotifyreIcons.github),
                       label: Text(context.l10n.contribute_on_github),
                       style: FilledButton.styleFrom(
                         backgroundColor: Colors.black,
@@ -54,14 +54,14 @@ class GettingStartedScreenSupportSection extends HookConsumerWidget {
                       ),
                       onPressed: () async {
                         await launchUrlString(
-                          "https://github.com/KRTirtho/spotube",
+                          "https://github.com/KRTirtho/spotifyre",
                           mode: LaunchMode.externalApplication,
                         );
                       },
                     ),
                     const Gap(16),
                     FilledButton.icon(
-                      icon: const Icon(SpotubeIcons.openCollective),
+                      icon: const Icon(spotifyreIcons.openCollective),
                       label: Text(context.l10n.donate_on_open_collective),
                       style: FilledButton.styleFrom(
                         backgroundColor: const Color(0xff4cb7f6),
@@ -69,7 +69,7 @@ class GettingStartedScreenSupportSection extends HookConsumerWidget {
                       ),
                       onPressed: () async {
                         await launchUrlString(
-                          "https://opencollective.com/spotube",
+                          "https://opencollective.com/spotifyre",
                           mode: LaunchMode.externalApplication,
                         );
                       },
@@ -96,7 +96,7 @@ class GettingStartedScreenSupportSection extends HookConsumerWidget {
                     ),
                   ),
                   child: TextButton.icon(
-                    icon: const Icon(SpotubeIcons.anonymous),
+                    icon: const Icon(spotifyreIcons.anonymous),
                     label: Text(context.l10n.browse_anonymously),
                     style: TextButton.styleFrom(
                       foregroundColor: Colors.white,
@@ -111,7 +111,7 @@ class GettingStartedScreenSupportSection extends HookConsumerWidget {
                 ),
                 const Gap(16),
                 FilledButton.icon(
-                  icon: const Icon(SpotubeIcons.spotify),
+                  icon: const Icon(spotifyreIcons.spotify),
                   label: Text(context.l10n.connect_with_spotify),
                   style: FilledButton.styleFrom(
                     backgroundColor: const Color(0xff1db954),

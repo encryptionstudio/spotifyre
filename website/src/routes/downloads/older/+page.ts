@@ -5,7 +5,7 @@ const github = new Octokit();
 export const load: PageLoad = async () => {
 	const { data: releases } = await github.repos.listReleases({
 		owner: 'KRTirtho',
-		repo: 'spotube'
+		repo: 'spotifyre'
 	});
 
 	return {

@@ -3,15 +3,15 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop_tools/flutter_desktop_tools.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/components/shared/playbutton_card.dart';
-import 'package:spotube/components/shared/tracks_view/sections/header/header_actions.dart';
-import 'package:spotube/components/shared/tracks_view/sections/header/header_buttons.dart';
-import 'package:spotube/components/shared/tracks_view/track_view_props.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/components/shared/playbutton_card.dart';
+import 'package:spotifyre/components/shared/tracks_view/sections/header/header_actions.dart';
+import 'package:spotifyre/components/shared/tracks_view/sections/header/header_buttons.dart';
+import 'package:spotifyre/components/shared/tracks_view/track_view_props.dart';
 import 'package:gap/gap.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/hooks/utils/use_palette_color.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/hooks/utils/use_palette_color.dart';
 
 class TrackViewFlexHeader extends HookConsumerWidget {
   const TrackViewFlexHeader({super.key});

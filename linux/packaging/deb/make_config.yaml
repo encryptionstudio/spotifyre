@@ -1,5 +1,5 @@
-display_name: Spotube
-package_name: spotube
+display_name: spotifyre
+package_name: spotifyre
 
 maintainer:
   name: Kingkor Roy Tirtho
@@ -25,7 +25,7 @@ dependencies:
   - mdns-scan
 
 essential: false
-icon: assets/spotube-logo.png
+icon: assets/spotifyre-logo.png
 
 keywords:
   - Music

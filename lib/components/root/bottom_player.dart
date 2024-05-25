@@ -5,25 +5,25 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/player/player_actions.dart';
-import 'package:spotube/components/player/player_overlay.dart';
-import 'package:spotube/components/player/player_track_details.dart';
-import 'package:spotube/components/player/player_controls.dart';
-import 'package:spotube/components/player/volume_slider.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/hooks/utils/use_brightness_value.dart';
-import 'package:spotube/models/logger.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/player/player_actions.dart';
+import 'package:spotifyre/components/player/player_overlay.dart';
+import 'package:spotifyre/components/player/player_track_details.dart';
+import 'package:spotifyre/components/player/player_controls.dart';
+import 'package:spotifyre/components/player/volume_slider.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/hooks/utils/use_brightness_value.dart';
+import 'package:spotifyre/models/logger.dart';
 import 'package:flutter/material.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_state.dart';
-import 'package:spotube/provider/volume_provider.dart';
-import 'package:spotube/utils/platform.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_state.dart';
+import 'package:spotifyre/provider/volume_provider.dart';
+import 'package:spotifyre/utils/platform.dart';
 
 class BottomPlayer extends HookConsumerWidget {
   BottomPlayer({super.key});
@@ -93,7 +93,7 @@ class BottomPlayer extends HookConsumerWidget {
                         if (auth != null)
                           IconButton(
                             tooltip: context.l10n.mini_player,
-                            icon: const Icon(SpotubeIcons.miniPlayer),
+                            icon: const Icon(spotifyreIcons.miniPlayer),
                             onPressed: () async {
                               final prevSize =
                                   await DesktopTools.window.getSize();

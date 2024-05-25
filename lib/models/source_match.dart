@@ -48,7 +48,7 @@ class SourceMatch {
   Map<String, dynamic> toJson() => _$SourceMatchToJson(this);
 
   static String version = 'v1';
-  static final boxName = "oss.krtirtho.spotube.source_matches.$version";
+  static final boxName = "oss.krtirtho.spotifyre.source_matches.$version";
 
   static LazyBox<SourceMatch> get box => Hive.lazyBox<SourceMatch>(boxName);
 }

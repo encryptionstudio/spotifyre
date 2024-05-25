@@ -3,12 +3,12 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/settings/section_card_with_heading.dart';
-import 'package:spotube/components/shared/inter_scrollbar/inter_scrollbar.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/models/logger.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/settings/section_card_with_heading.dart';
+import 'package:spotifyre/components/shared/inter_scrollbar/inter_scrollbar.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/models/logger.dart';
 
 class LogsPage extends HookWidget {
   const LogsPage({super.key});
@@ -77,7 +77,7 @@ class LogsPage extends HookWidget {
         leading: const BackButton(),
         actions: [
           IconButton(
-            icon: const Icon(SpotubeIcons.clipboard),
+            icon: const Icon(spotifyreIcons.clipboard),
             iconSize: 16,
             onPressed: () async {
               await Clipboard.setData(ClipboardData(text: rawLogs.value));
@@ -115,7 +115,7 @@ class LogsPage extends HookWidget {
                     right: 10,
                     top: 0,
                     child: IconButton(
-                      icon: const Icon(SpotubeIcons.clipboard),
+                      icon: const Icon(spotifyreIcons.clipboard),
                       onPressed: () async {
                         await Clipboard.setData(
                           ClipboardData(text: log.body),

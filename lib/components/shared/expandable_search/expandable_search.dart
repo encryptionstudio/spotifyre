@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/extensions/context.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/extensions/context.dart';
 
 class ExpandableSearchField extends StatelessWidget {
   final bool isFiltering;
@@ -42,7 +42,7 @@ class ExpandableSearchField extends StatelessWidget {
                 decoration: InputDecoration(
                   hintText: context.l10n.search_tracks,
                   isDense: true,
-                  prefixIcon: const Icon(SpotubeIcons.search),
+                  prefixIcon: const Icon(spotifyreIcons.search),
                 ),
               ),
             ),
@@ -63,7 +63,7 @@ class ExpandableSearchButton extends StatelessWidget {
     super.key,
     required this.isFiltering,
     required this.searchFocus,
-    this.icon = const Icon(SpotubeIcons.filter),
+    this.icon = const Icon(spotifyreIcons.filter),
     this.onPressed,
   });
 

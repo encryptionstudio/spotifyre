@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/components/shared/links/artist_link.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/provider/download_manager_provider.dart';
-import 'package:spotube/services/download_manager/download_status.dart';
-import 'package:spotube/services/sourced_track/sourced_track.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/components/shared/links/artist_link.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/provider/download_manager_provider.dart';
+import 'package:spotifyre/services/download_manager/download_status.dart';
+import 'package:spotifyre/services/sourced_track/sourced_track.dart';
 
 class DownloadItem extends HookConsumerWidget {
   final Track track;
@@ -84,13 +84,13 @@ class DownloadItem extends HookConsumerWidget {
                         ),
                         const SizedBox(width: 10),
                         IconButton(
-                            icon: const Icon(SpotubeIcons.pause),
+                            icon: const Icon(spotifyreIcons.pause),
                             onPressed: () {
                               downloadManager.pause(track as SourcedTrack);
                             }),
                         const SizedBox(width: 10),
                         IconButton(
-                            icon: const Icon(SpotubeIcons.close),
+                            icon: const Icon(spotifyreIcons.close),
                             onPressed: () {
                               downloadManager.cancel(track as SourcedTrack);
                             }),
@@ -102,13 +102,13 @@ class DownloadItem extends HookConsumerWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     IconButton(
-                        icon: const Icon(SpotubeIcons.play),
+                        icon: const Icon(spotifyreIcons.play),
                         onPressed: () {
                           downloadManager.resume(track as SourcedTrack);
                         }),
                     const SizedBox(width: 10),
                     IconButton(
-                        icon: const Icon(SpotubeIcons.close),
+                        icon: const Icon(spotifyreIcons.close),
                         onPressed: () {
                           downloadManager.cancel(track as SourcedTrack);
                         })
@@ -119,12 +119,12 @@ class DownloadItem extends HookConsumerWidget {
                   child: Row(
                     children: [
                       Icon(
-                        SpotubeIcons.error,
+                        spotifyreIcons.error,
                         color: Colors.red[400],
                       ),
                       const SizedBox(width: 10),
                       IconButton(
-                        icon: const Icon(SpotubeIcons.refresh),
+                        icon: const Icon(spotifyreIcons.refresh),
                         onPressed: () {
                           downloadManager.retry(track as SourcedTrack);
                         },
@@ -133,9 +133,9 @@ class DownloadItem extends HookConsumerWidget {
                   ),
                 ),
               DownloadStatus.completed =>
-                Icon(SpotubeIcons.done, color: Colors.green[400]),
+                Icon(spotifyreIcons.done, color: Colors.green[400]),
               DownloadStatus.queued => IconButton(
-                  icon: const Icon(SpotubeIcons.close),
+                  icon: const Icon(spotifyreIcons.close),
                   onPressed: () {
                     downloadManager.removeFromQueue(track as SourcedTrack);
                   }),

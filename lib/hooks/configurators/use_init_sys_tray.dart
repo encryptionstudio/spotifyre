@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_desktop_tools/flutter_desktop_tools.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/intents.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/collections/intents.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
 
 void useInitSysTray(WidgetRef ref) {
   final context = useContext();
@@ -25,9 +25,9 @@ void useInitSysTray(WidgetRef ref) {
     }
     final enabled = !playlist.isFetching;
     systemTray.value = await DesktopTools.createSystemTrayMenu(
-      title: DesktopTools.platform.isWindows ? "Spotube" : "",
-      iconPath: "assets/spotube-logo.png",
-      windowsIconPath: "assets/spotube-logo.ico",
+      title: DesktopTools.platform.isWindows ? "spotifyre" : "",
+      iconPath: "assets/spotifyre-logo.png",
+      windowsIconPath: "assets/spotifyre-logo.ico",
       items: [
         MenuItemLabel(
           label: "Show/Hide",

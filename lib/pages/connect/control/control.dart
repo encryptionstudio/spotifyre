@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/player/player_queue.dart';
-import 'package:spotube/components/player/volume_slider.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/components/shared/links/anchor_button.dart';
-import 'package:spotube/components/shared/links/artist_link.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/duration.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/provider/connect/clients.dart';
-import 'package:spotube/provider/connect/connect.dart';
-import 'package:spotube/services/audio_player/loop_mode.dart';
-import 'package:spotube/utils/service_utils.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/player/player_queue.dart';
+import 'package:spotifyre/components/player/volume_slider.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/components/shared/links/anchor_button.dart';
+import 'package:spotifyre/components/shared/links/artist_link.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/duration.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/provider/connect/clients.dart';
+import 'package:spotifyre/provider/connect/connect.dart';
+import 'package:spotifyre/services/audio_player/loop_mode.dart';
+import 'package:spotifyre/utils/service_utils.dart';
 
 class RemotePlayerQueue extends ConsumerWidget {
   const RemotePlayerQueue({super.key});
@@ -186,7 +186,7 @@ class ConnectControlPage extends HookConsumerWidget {
                             tooltip: shuffled
                                 ? context.l10n.unshuffle_playlist
                                 : context.l10n.shuffle_playlist,
-                            icon: const Icon(SpotubeIcons.shuffle),
+                            icon: const Icon(spotifyreIcons.shuffle),
                             style: shuffled ? activeButtonStyle : buttonStyle,
                             onPressed: playlist.activeTrack == null
                                 ? null
@@ -196,7 +196,7 @@ class ConnectControlPage extends HookConsumerWidget {
                           ),
                           IconButton(
                             tooltip: context.l10n.previous_track,
-                            icon: const Icon(SpotubeIcons.skipBack),
+                            icon: const Icon(spotifyreIcons.skipBack),
                             onPressed: playlist.activeTrack == null
                                 ? null
                                 : connectNotifier.previous,
@@ -215,8 +215,8 @@ class ConnectControlPage extends HookConsumerWidget {
                                   )
                                 : Icon(
                                     playing
-                                        ? SpotubeIcons.pause
-                                        : SpotubeIcons.play,
+                                        ? spotifyreIcons.pause
+                                        : spotifyreIcons.play,
                                   ),
                             style: resumePauseStyle,
                             onPressed: playlist.activeTrack == null
@@ -231,7 +231,7 @@ class ConnectControlPage extends HookConsumerWidget {
                           ),
                           IconButton(
                             tooltip: context.l10n.next_track,
-                            icon: const Icon(SpotubeIcons.skipForward),
+                            icon: const Icon(spotifyreIcons.skipForward),
                             onPressed: playlist.activeTrack == null
                                 ? null
                                 : connectNotifier.next,
@@ -244,8 +244,8 @@ class ConnectControlPage extends HookConsumerWidget {
                                     : null,
                             icon: Icon(
                               loopMode == PlaybackLoopMode.one
-                                  ? SpotubeIcons.repeatOne
-                                  : SpotubeIcons.repeat,
+                                  ? spotifyreIcons.repeatOne
+                                  : spotifyreIcons.repeat,
                             ),
                             style: loopMode == PlaybackLoopMode.one ||
                                     loopMode == PlaybackLoopMode.all
@@ -292,7 +292,7 @@ class ConnectControlPage extends HookConsumerWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         sliver: SliverToBoxAdapter(
                           child: OutlinedButton.icon(
-                            icon: const Icon(SpotubeIcons.queue),
+                            icon: const Icon(spotifyreIcons.queue),
                             label: Text(context.l10n.queue),
                             onPressed: () {
                               showModalBottomSheet(

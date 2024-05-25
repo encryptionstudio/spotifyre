@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:simple_icons/simple_icons.dart';
 
-abstract class SpotubeIcons {
+abstract class spotifyreIcons {
   static const home = FluentIcons.home_12_regular;
   static const search = FeatherIcons.search;
   static const library = FluentIcons.library_16_regular;

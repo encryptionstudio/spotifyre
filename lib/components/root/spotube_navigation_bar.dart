@@ -5,22 +5,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:spotube/collections/side_bar_tiles.dart';
-import 'package:spotube/components/root/sidebar.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/hooks/utils/use_brightness_value.dart';
-import 'package:spotube/provider/download_manager_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_state.dart';
+import 'package:spotifyre/collections/side_bar_tiles.dart';
+import 'package:spotifyre/components/root/sidebar.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/hooks/utils/use_brightness_value.dart';
+import 'package:spotifyre/provider/download_manager_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_state.dart';
 
 final navigationPanelHeight = StateProvider<double>((ref) => 50);
 
-class SpotubeNavigationBar extends HookConsumerWidget {
+class spotifyreNavigationBar extends HookConsumerWidget {
   final int? selectedIndex;
   final void Function(int) onSelectedIndexChanged;
 
-  const SpotubeNavigationBar({
+  const spotifyreNavigationBar({
     required this.selectedIndex,
     required this.onSelectedIndexChanged,
     super.key,

@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:spotube/components/player/player_track_details.dart';
-import 'package:spotube/components/root/spotube_navigation_bar.dart';
-import 'package:spotube/components/shared/panels/sliding_up_panel.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/collections/intents.dart';
-import 'package:spotube/components/player/use_progress.dart';
-import 'package:spotube/components/player/player.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
+import 'package:spotifyre/components/player/player_track_details.dart';
+import 'package:spotifyre/components/root/spotifyre_navigation_bar.dart';
+import 'package:spotifyre/components/shared/panels/sliding_up_panel.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/collections/intents.dart';
+import 'package:spotifyre/components/player/use_progress.dart';
+import 'package:spotifyre/components/player/player.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
 
 class PlayerOverlay extends HookConsumerWidget {
   final String albumArt;
@@ -124,7 +124,7 @@ class PlayerOverlay extends HookConsumerWidget {
                             children: [
                               IconButton(
                                 icon: Icon(
-                                  SpotubeIcons.skipBack,
+                                  spotifyreIcons.skipBack,
                                   color: textColor,
                                 ),
                                 onPressed: playlist.isFetching
@@ -142,8 +142,8 @@ class PlayerOverlay extends HookConsumerWidget {
                                           )
                                         : Icon(
                                             playing
-                                                ? SpotubeIcons.pause
-                                                : SpotubeIcons.play,
+                                                ? spotifyreIcons.pause
+                                                : spotifyreIcons.play,
                                             color: textColor,
                                           ),
                                     onPressed: Actions.handler<PlayPauseIntent>(
@@ -155,7 +155,7 @@ class PlayerOverlay extends HookConsumerWidget {
                               ),
                               IconButton(
                                 icon: Icon(
-                                  SpotubeIcons.skipForward,
+                                  spotifyreIcons.skipForward,
                                   color: textColor,
                                 ),
                                 onPressed: playlist.isFetching

@@ -25,7 +25,7 @@ _$UserPreferencesImpl _$$UserPreferencesImplFromJson(
       accentColorScheme: UserPreferences._accentColorSchemeReadValue(
                   json, 'accentColorScheme') ==
               null
-          ? const SpotubeColor(0xFF2196F3, name: "Blue")
+          ? const spotifyreColor(0xFF2196F3, name: "Blue")
           : UserPreferences._accentColorSchemeFromJson(
               UserPreferences._accentColorSchemeReadValue(
                   json, 'accentColorScheme') as Map<String, dynamic>),

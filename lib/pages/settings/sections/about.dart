@@ -2,12 +2,12 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/env.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/settings/section_card_with_heading.dart';
-import 'package:spotube/components/shared/adaptive/adaptive_list_tile.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/collections/env.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/settings/section_card_with_heading.dart';
+import 'package:spotifyre/components/shared/adaptive/adaptive_list_tile.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class SettingsAboutSection extends HookConsumerWidget {
@@ -23,7 +23,7 @@ class SettingsAboutSection extends HookConsumerWidget {
       children: [
         AdaptiveListTile(
           leading: const Icon(
-            SpotubeIcons.heart,
+            spotifyreIcons.heart,
             color: Colors.pink,
           ),
           title: SizedBox(
@@ -32,7 +32,7 @@ class SettingsAboutSection extends HookConsumerWidget {
             child: Align(
               alignment: Alignment.centerLeft,
               child: AutoSizeText(
-                context.l10n.u_love_spotube,
+                context.l10n.u_love_spotifyre,
                 maxLines: 1,
                 style: const TextStyle(
                   color: Colors.pink,
@@ -50,14 +50,14 @@ class SettingsAboutSection extends HookConsumerWidget {
             ),
             onPressed: () {
               launchUrlString(
-                "https://opencollective.com/spotube",
+                "https://opencollective.com/spotifyre",
                 mode: LaunchMode.externalApplication,
               );
             },
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(SpotubeIcons.heart),
+                const Icon(spotifyreIcons.heart),
                 const SizedBox(width: 5),
                 Text(context.l10n.please_sponsor),
               ],
@@ -66,15 +66,15 @@ class SettingsAboutSection extends HookConsumerWidget {
         ),
         if (Env.enableUpdateChecker)
           SwitchListTile(
-            secondary: const Icon(SpotubeIcons.update),
+            secondary: const Icon(spotifyreIcons.update),
             title: Text(context.l10n.check_for_updates),
             value: preferences.checkUpdate,
             onChanged: (checked) => preferencesNotifier.setCheckUpdate(checked),
           ),
         ListTile(
-          leading: const Icon(SpotubeIcons.info),
-          title: Text(context.l10n.about_spotube),
-          trailing: const Icon(SpotubeIcons.angleRight),
+          leading: const Icon(spotifyreIcons.info),
+          title: Text(context.l10n.about_spotifyre),
+          trailing: const Icon(spotifyreIcons.angleRight),
           onTap: () {
             GoRouter.of(context).push("/settings/about");
           },

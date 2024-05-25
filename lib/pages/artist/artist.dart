@@ -4,15 +4,15 @@ import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/components/artist/artist_album_list.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/models/logger.dart';
-import 'package:spotube/pages/artist/section/footer.dart';
-import 'package:spotube/pages/artist/section/header.dart';
-import 'package:spotube/pages/artist/section/related_artists.dart';
-import 'package:spotube/pages/artist/section/top_tracks.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/components/artist/artist_album_list.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/models/logger.dart';
+import 'package:spotifyre/pages/artist/section/footer.dart';
+import 'package:spotifyre/pages/artist/section/header.dart';
+import 'package:spotifyre/pages/artist/section/related_artists.dart';
+import 'package:spotifyre/pages/artist/section/top_tracks.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 class ArtistPage extends HookConsumerWidget {
   final String artistId;

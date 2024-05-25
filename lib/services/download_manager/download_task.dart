@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
-import 'package:spotube/services/download_manager/download_request.dart';
-import 'package:spotube/services/download_manager/download_status.dart';
+import 'package:spotifyre/services/download_manager/download_request.dart';
+import 'package:spotifyre/services/download_manager/download_status.dart';
 
 class DownloadTask {
   final DownloadRequest request;

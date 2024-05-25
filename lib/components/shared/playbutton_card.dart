@@ -4,12 +4,12 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/hover_builder.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/hooks/utils/use_breakpoint_value.dart';
-import 'package:spotube/hooks/utils/use_brightness_value.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/hover_builder.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/hooks/utils/use_breakpoint_value.dart';
+import 'package:spotifyre/hooks/utils/use_brightness_value.dart';
 
 final htmlTagRegexp = RegExp(r"<[^>]*>", caseSensitive: true);
 
@@ -131,7 +131,7 @@ class PlaybuttonCard extends HookWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 const Icon(
-                                  SpotubeIcons.user,
+                                  spotifyreIcons.user,
                                   color: Colors.white,
                                   size: 16,
                                 ),
@@ -162,7 +162,7 @@ class PlaybuttonCard extends HookWidget {
                                 foregroundColor: theme.colorScheme.primary,
                                 minimumSize: const Size.square(10),
                               ),
-                              icon: const Icon(SpotubeIcons.queueAdd),
+                              icon: const Icon(spotifyreIcons.queueAdd),
                               onPressed: isLoading ? null : onAddToQueuePressed,
                             ),
                           ),
@@ -181,8 +181,8 @@ class PlaybuttonCard extends HookWidget {
                                         strokeWidth: 2),
                                   )
                                 : isPlaying
-                                    ? const Icon(SpotubeIcons.pause)
-                                    : const Icon(SpotubeIcons.play),
+                                    ? const Icon(spotifyreIcons.pause)
+                                    : const Icon(spotifyreIcons.play),
                           ),
                           onPressed: isLoading ? null : onPlaybuttonPressed,
                         ),

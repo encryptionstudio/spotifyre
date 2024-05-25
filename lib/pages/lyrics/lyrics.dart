@@ -5,22 +5,22 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/fallbacks/anonymous_fallback.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/components/shared/themed_button_tab_bar.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/hooks/utils/use_custom_status_bar_color.dart';
-import 'package:spotube/hooks/utils/use_palette_color.dart';
-import 'package:spotube/pages/lyrics/plain_lyrics.dart';
-import 'package:spotube/pages/lyrics/synced_lyrics.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/utils/platform.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/fallbacks/anonymous_fallback.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/components/shared/themed_button_tab_bar.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/hooks/utils/use_custom_status_bar_color.dart';
+import 'package:spotifyre/hooks/utils/use_palette_color.dart';
+import 'package:spotifyre/pages/lyrics/plain_lyrics.dart';
+import 'package:spotifyre/pages/lyrics/synced_lyrics.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/utils/platform.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 class LyricsPage extends HookConsumerWidget {
   final bool isModal;
@@ -122,7 +122,7 @@ class LyricsPage extends HookConsumerWidget {
                     automaticallyImplyLeading: false,
                     actions: [
                       IconButton(
-                        icon: const Icon(SpotubeIcons.minimize),
+                        icon: const Icon(spotifyreIcons.minimize),
                         onPressed: () => Navigator.of(context).pop(),
                       ),
                       const SizedBox(width: 5),

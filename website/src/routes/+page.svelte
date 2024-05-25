@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>Spotube</title>
+	<title>spotifyre</title>
 	<meta name="description" content="An Open Source Spotify Client for every platform" />
 	<meta name="keywords" content="spotify, client, open source, music, streaming" />
 	<meta name="author" content="KRTirtho" />
@@ -33,7 +33,7 @@
 
 <section class="flex flex-col gap-4 ps-4 pt-16 md:ps-24 md:pt-24">
 	<div>
-		<h1 class="h1">Spotube</h1>
+		<h1 class="h1">spotifyre</h1>
 		<br />
 		<h3 class="h3">
 			An Open Source <Fa class="inline text-[#1DB954]" icon={faSpotify} /> Spotify Client for every platform
@@ -50,7 +50,7 @@
 		</p>
 		<br />
 		<div class="flex items-center">
-			<a href="https://play.google.com/store/apps/details?id=oss.krtirtho.spotube" target="_blank">
+			<a href="https://play.google.com/store/apps/details?id=oss.krtirtho.spotifyre" target="_blank">
 				<img
 					class="-m-2"
 					src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
@@ -58,7 +58,7 @@
 					width="200"
 				/>
 			</a>
-			<a href="https://flathub.org/apps/com.github.KRTirtho.Spotube" target="_blank">
+			<a href="https://flathub.org/apps/com.github.KRTirtho.spotifyre" target="_blank">
 				<img width="160" alt="Download on Flathub" src="https://flathub.org/api/badge?locale=en" />
 			</a>
 		</div>
@@ -82,11 +82,11 @@
 		<Heart class="inline-block" color="red" />
 	</h2>
 	<p class="text-surface-500">
-		We are grateful for the support of individuals and organizations who have made Spotube possible.
+		We are grateful for the support of individuals and organizations who have made spotifyre possible.
 	</p>
 
 	<div class="flex justify-center">
-		<a href="https://opencollective.com/spotube/donate" target="_blank">
+		<a href="https://opencollective.com/spotifyre/donate" target="_blank">
 			<img
 				src="https://opencollective.com/webpack/donate/button@2x.png?color=blue"
 				width="300"

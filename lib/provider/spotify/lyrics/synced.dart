@@ -69,7 +69,7 @@ class SyncedLyricsNotifier extends FamilyAsyncNotifier<SubtitleSimple, Track?>
       ),
       headers: {
         "User-Agent":
-            "Spotube v${packageInfo.version} (https://github.com/KRTirtho/spotube)"
+            "spotifyre v${packageInfo.version} (https://github.com/KRTirtho/spotifyre)"
       },
     );
 

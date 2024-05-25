@@ -1,6 +1,6 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 bool useIsUserPlaylist(WidgetRef ref, String playlistId) {
   final userPlaylistsQuery = ref.watch(favoritePlaylistsProvider);

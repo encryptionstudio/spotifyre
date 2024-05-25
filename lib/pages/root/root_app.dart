@@ -7,20 +7,20 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/player/player_queue.dart';
-import 'package:spotube/components/shared/dialogs/replace_downloaded_dialog.dart';
-import 'package:spotube/components/root/bottom_player.dart';
-import 'package:spotube/components/root/sidebar.dart';
-import 'package:spotube/components/root/spotube_navigation_bar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/hooks/configurators/use_endless_playback.dart';
-import 'package:spotube/hooks/configurators/use_update_checker.dart';
-import 'package:spotube/provider/connect/server.dart';
-import 'package:spotube/provider/download_manager_provider.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/services/connectivity_adapter.dart';
-import 'package:spotube/utils/persisted_state_notifier.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/player/player_queue.dart';
+import 'package:spotifyre/components/shared/dialogs/replace_downloaded_dialog.dart';
+import 'package:spotifyre/components/root/bottom_player.dart';
+import 'package:spotifyre/components/root/sidebar.dart';
+import 'package:spotifyre/components/root/spotifyre_navigation_bar.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/hooks/configurators/use_endless_playback.dart';
+import 'package:spotifyre/hooks/configurators/use_update_checker.dart';
+import 'package:spotifyre/provider/connect/server.dart';
+import 'package:spotifyre/provider/download_manager_provider.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/services/connectivity_adapter.dart';
+import 'package:spotifyre/utils/persisted_state_notifier.dart';
 
 const rootPaths = {
   "/": 0,
@@ -64,7 +64,7 @@ class RootApp extends HookConsumerWidget {
                 content: Row(
                   children: [
                     Icon(
-                      SpotubeIcons.wifi,
+                      spotifyreIcons.wifi,
                       color: theme.colorScheme.onPrimary,
                     ),
                     const SizedBox(width: 10),
@@ -82,7 +82,7 @@ class RootApp extends HookConsumerWidget {
                 content: Row(
                   children: [
                     Icon(
-                      SpotubeIcons.noWifi,
+                      spotifyreIcons.noWifi,
                       color: theme.colorScheme.onError,
                     ),
                     const SizedBox(width: 10),
@@ -105,7 +105,7 @@ class RootApp extends HookConsumerWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const Icon(
-                    SpotubeIcons.error,
+                    spotifyreIcons.error,
                     color: Colors.black,
                   ),
                   const SizedBox(width: 10),
@@ -238,7 +238,7 @@ class RootApp extends HookConsumerWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             BottomPlayer(),
-            SpotubeNavigationBar(
+            spotifyreNavigationBar(
               selectedIndex: rootPaths[location],
               onSelectedIndexChanged: onSelectIndexChanged,
             ),

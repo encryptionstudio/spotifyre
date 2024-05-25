@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/components/shared/horizontal_playbutton_card_view/horizontal_playbutton_card_view.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/components/shared/horizontal_playbutton_card_view/horizontal_playbutton_card_view.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 class HomeMadeForUserSection extends HookConsumerWidget {
   const HomeMadeForUserSection({super.key});

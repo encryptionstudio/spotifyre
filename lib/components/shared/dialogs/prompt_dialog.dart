@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotube/extensions/context.dart';
+import 'package:spotifyre/extensions/context.dart';
 
 Future<bool> showPromptDialog({
   required BuildContext context,

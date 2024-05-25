@@ -3,17 +3,17 @@ import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-import 'package:spotube/collections/fake.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/hooks/utils/use_breakpoint_value.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/provider/blacklist_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
-import 'package:spotube/utils/primitive_utils.dart';
+import 'package:spotifyre/collections/fake.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/hooks/utils/use_breakpoint_value.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/provider/blacklist_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
+import 'package:spotifyre/utils/primitive_utils.dart';
 
 class ArtistPageHeader extends HookConsumerWidget {
   final String artistId;
@@ -177,7 +177,7 @@ class ArtistPageHeader extends HookConsumerWidget {
                         IconButton(
                           tooltip: context.l10n.add_artist_to_blacklist,
                           icon: Icon(
-                            SpotubeIcons.userRemove,
+                            spotifyreIcons.userRemove,
                             color:
                                 !isBlackListed ? Colors.red[400] : Colors.white,
                           ),
@@ -200,7 +200,7 @@ class ArtistPageHeader extends HookConsumerWidget {
                           },
                         ),
                         IconButton(
-                          icon: const Icon(SpotubeIcons.share),
+                          icon: const Icon(spotifyreIcons.share),
                           onPressed: () async {
                             if (artist.externalUrls?.spotify != null) {
                               await Clipboard.setData(

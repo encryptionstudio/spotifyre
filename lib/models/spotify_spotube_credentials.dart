@@ -1,17 +1,17 @@
-class SpotifySpotubeCredentials {
+class SpotifyspotifyreCredentials {
   String clientId;
   String accessToken;
   DateTime expiration;
   bool isAnonymous;
 
-  SpotifySpotubeCredentials({
+  SpotifyspotifyreCredentials({
     required this.clientId,
     required this.accessToken,
     required this.expiration,
     required this.isAnonymous,
   });
 
-  SpotifySpotubeCredentials.fromJson(Map<String, dynamic> json)
+  SpotifyspotifyreCredentials.fromJson(Map<String, dynamic> json)
       : clientId = json['clientId'],
         accessToken = json['accessToken'],
         expiration = DateTime.fromMillisecondsSinceEpoch(

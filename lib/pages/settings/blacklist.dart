@@ -4,11 +4,11 @@ import 'package:collection/collection.dart';
 import 'package:fuzzywuzzy/fuzzywuzzy.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/inter_scrollbar/inter_scrollbar.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/blacklist_provider.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/inter_scrollbar/inter_scrollbar.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/blacklist_provider.dart';
 
 class BlackListPage extends HookConsumerWidget {
   const BlackListPage({super.key});
@@ -54,7 +54,7 @@ class BlackListPage extends HookConsumerWidget {
               onChanged: (value) => searchText.value = value,
               decoration: InputDecoration(
                 hintText: context.l10n.search,
-                prefixIcon: const Icon(SpotubeIcons.search),
+                prefixIcon: const Icon(spotifyreIcons.search),
               ),
             ),
           ),
@@ -71,7 +71,7 @@ class BlackListPage extends HookConsumerWidget {
                   title: Text("${item.name} (${item.type.name})"),
                   subtitle: Text(item.id),
                   trailing: IconButton(
-                    icon: Icon(SpotubeIcons.trash, color: Colors.red[400]),
+                    icon: Icon(spotifyreIcons.trash, color: Colors.red[400]),
                     onPressed: () {
                       ref
                           .read(blacklistProvider.notifier)

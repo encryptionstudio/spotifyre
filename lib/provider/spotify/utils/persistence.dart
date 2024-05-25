@@ -2,7 +2,7 @@ part of '../spotify.dart';
 
 // ignore: invalid_use_of_internal_member
 mixin Persistence<T> on BuildlessAsyncNotifier<T> {
-  LazyBox get store => Hive.lazyBox("spotube_cache");
+  LazyBox get store => Hive.lazyBox("spotifyre_cache");
 
   FutureOr<T> fromJson(Map<String, dynamic> json);
   Map<String, dynamic> toJson(T data);

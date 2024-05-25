@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:spotube/extensions/constrains.dart';
+import 'package:spotifyre/extensions/constrains.dart';
 
 class AdaptiveListTile extends HookWidget {
   final Widget Function(BuildContext, StateSetter?)? trailing;

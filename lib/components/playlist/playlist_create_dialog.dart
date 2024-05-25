@@ -10,13 +10,13 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:spotify/spotify.dart';
 
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
-import 'package:spotube/provider/spotify_provider.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
+import 'package:spotifyre/provider/spotify_provider.dart';
 
 class PlaylistCreateDialog extends HookConsumerWidget {
   /// Track ids to add to the playlist
@@ -173,7 +173,7 @@ class PlaylistCreateDialog extends HookConsumerWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   FilledButton.icon(
-                                    icon: const Icon(SpotubeIcons.edit),
+                                    icon: const Icon(spotifyreIcons.edit),
                                     label: Text(
                                       field.value?.path != null ||
                                               updatingPlaylist?.images != null
@@ -194,7 +194,7 @@ class PlaylistCreateDialog extends HookConsumerWidget {
                                   ),
                                   const SizedBox(width: 10),
                                   IconButton.filled(
-                                    icon: const Icon(SpotubeIcons.trash),
+                                    icon: const Icon(spotifyreIcons.trash),
                                     style: IconButton.styleFrom(
                                       backgroundColor:
                                           theme.colorScheme.errorContainer,
@@ -282,7 +282,7 @@ class PlaylistCreateDialogButton extends HookConsumerWidget {
         style: FilledButton.styleFrom(
           foregroundColor: Theme.of(context).colorScheme.primary,
         ),
-        child: const Icon(SpotubeIcons.addFilled),
+        child: const Icon(spotifyreIcons.addFilled),
         onPressed: () => showPlaylistDialog(context, spotify),
       );
     }
@@ -291,7 +291,7 @@ class PlaylistCreateDialogButton extends HookConsumerWidget {
       style: FilledButton.styleFrom(
         foregroundColor: Theme.of(context).colorScheme.primary,
       ),
-      icon: const Icon(SpotubeIcons.addFilled),
+      icon: const Icon(spotifyreIcons.addFilled),
       label: Text(context.l10n.create_playlist),
       onPressed: () => showPlaylistDialog(context, spotify),
     );

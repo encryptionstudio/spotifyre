@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:spotify/spotify.dart';
-import 'package:spotube/extensions/context.dart';
+import 'package:spotifyre/extensions/context.dart';
 
 final replaceDownloadedFileState = StateProvider<bool?>((ref) => null);
 

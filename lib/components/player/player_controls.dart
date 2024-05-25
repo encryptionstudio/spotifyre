@@ -4,15 +4,15 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:palette_generator/palette_generator.dart';
 
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/collections/intents.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/duration.dart';
-import 'package:spotube/components/player/use_progress.dart';
-import 'package:spotube/models/logger.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
-import 'package:spotube/services/audio_player/loop_mode.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/collections/intents.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/duration.dart';
+import 'package:spotifyre/components/player/use_progress.dart';
+import 'package:spotifyre/models/logger.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
+import 'package:spotifyre/services/audio_player/loop_mode.dart';
 
 class PlayerControls extends HookConsumerWidget {
   final PaletteGenerator? palette;
@@ -181,7 +181,7 @@ class PlayerControls extends HookConsumerWidget {
                           tooltip: shuffled
                               ? context.l10n.unshuffle_playlist
                               : context.l10n.shuffle_playlist,
-                          icon: const Icon(SpotubeIcons.shuffle),
+                          icon: const Icon(spotifyreIcons.shuffle),
                           style: shuffled ? activeButtonStyle : buttonStyle,
                           onPressed: playlist.isFetching == true
                               ? null
@@ -196,7 +196,7 @@ class PlayerControls extends HookConsumerWidget {
                       }),
                   IconButton(
                     tooltip: context.l10n.previous_track,
-                    icon: const Icon(SpotubeIcons.skipBack),
+                    icon: const Icon(spotifyreIcons.skipBack),
                     style: buttonStyle,
                     onPressed: playlist.isFetching == true
                         ? null
@@ -216,7 +216,9 @@ class PlayerControls extends HookConsumerWidget {
                             ),
                           )
                         : Icon(
-                            playing ? SpotubeIcons.pause : SpotubeIcons.play,
+                            playing
+                                ? spotifyreIcons.pause
+                                : spotifyreIcons.play,
                           ),
                     style: resumePauseStyle,
                     onPressed: playlist.isFetching == true
@@ -228,7 +230,7 @@ class PlayerControls extends HookConsumerWidget {
                   ),
                   IconButton(
                     tooltip: context.l10n.next_track,
-                    icon: const Icon(SpotubeIcons.skipForward),
+                    icon: const Icon(spotifyreIcons.skipForward),
                     style: buttonStyle,
                     onPressed: playlist.isFetching == true
                         ? null
@@ -246,8 +248,8 @@ class PlayerControls extends HookConsumerWidget {
                                   : null,
                           icon: Icon(
                             loopMode == PlaybackLoopMode.one
-                                ? SpotubeIcons.repeatOne
-                                : SpotubeIcons.repeat,
+                                ? spotifyreIcons.repeatOne
+                                : spotifyreIcons.repeat,
                           ),
                           style: loopMode == PlaybackLoopMode.one ||
                                   loopMode == PlaybackLoopMode.all

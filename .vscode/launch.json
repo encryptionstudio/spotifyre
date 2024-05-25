@@ -2,30 +2,27 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "spotube",
+      "name": "spotifyre",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart"
+    },
+    {
+      "name": "spotifyre (mobile)",
       "type": "dart",
       "request": "launch",
       "program": "lib/main.dart",
+      "args": ["--flavor", "dev"]
     },
     {
-      "name": "spotube (mobile)",
-      "type": "dart",
-      "request": "launch",
-      "program": "lib/main.dart",
-      "args": [
-        "--flavor",
-        "dev"
-      ]
-    },
-    {
-      "name": "spotube (profile)",
+      "name": "spotifyre (profile)",
       "type": "dart",
       "request": "launch",
       "program": "lib/main.dart",
       "flutterMode": "profile"
     },
     {
-      "name": "spotube (release)",
+      "name": "spotifyre (release)",
       "type": "dart",
       "request": "launch",
       "program": "lib/main.dart",

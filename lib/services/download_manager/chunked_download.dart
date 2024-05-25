@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:spotube/models/logger.dart';
+import 'package:spotifyre/models/logger.dart';
 
 final logger = getLogger("ChunkedDownload");
 

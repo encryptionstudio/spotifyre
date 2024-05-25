@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/pages/getting_started/sections/greeting.dart';
-import 'package:spotube/pages/getting_started/sections/playback.dart';
-import 'package:spotube/pages/getting_started/sections/region.dart';
-import 'package:spotube/pages/getting_started/sections/support.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/themes/theme.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/pages/getting_started/sections/greeting.dart';
+import 'package:spotifyre/pages/getting_started/sections/playback.dart';
+import 'package:spotifyre/pages/getting_started/sections/region.dart';
+import 'package:spotifyre/pages/getting_started/sections/support.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/themes/theme.dart';
 
 class GettingStarting extends HookConsumerWidget {
   const GettingStarting({super.key});

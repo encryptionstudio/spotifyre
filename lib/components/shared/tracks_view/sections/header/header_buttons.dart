@@ -5,14 +5,14 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:palette_generator/palette_generator.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/dialogs/select_device_dialog.dart';
-import 'package:spotube/components/shared/tracks_view/track_view_props.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/models/connect/connect.dart';
-import 'package:spotube/provider/connect/connect.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/dialogs/select_device_dialog.dart';
+import 'package:spotifyre/components/shared/tracks_view/track_view_props.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/models/connect/connect.dart';
+import 'package:spotifyre/provider/connect/connect.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
 
 class TrackViewHeaderButtons extends HookConsumerWidget {
   final PaletteColor color;
@@ -104,16 +104,16 @@ class TrackViewHeaderButtons extends HookConsumerWidget {
         children: [
           if (!isActive && !isLoading.value)
             IconButton(
-              icon: const Icon(SpotubeIcons.shuffle),
+              icon: const Icon(spotifyreIcons.shuffle),
               onPressed: props.tracks.isEmpty ? null : onShuffle,
             ),
           const Gap(10),
           IconButton.filledTonal(
             icon: isActive
-                ? const Icon(SpotubeIcons.pause)
+                ? const Icon(spotifyreIcons.pause)
                 : isLoading.value
                     ? progressIndicator
-                    : const Icon(SpotubeIcons.play),
+                    : const Icon(spotifyreIcons.play),
             onPressed: isActive || props.tracks.isEmpty || isLoading.value
                 ? null
                 : onPlay,
@@ -139,7 +139,7 @@ class TrackViewHeaderButtons extends HookConsumerWidget {
                     foregroundColor: Colors.black,
                     minimumSize: const Size(150, 40)),
                 label: Text(context.l10n.shuffle),
-                icon: const Icon(SpotubeIcons.shuffle),
+                icon: const Icon(spotifyreIcons.shuffle),
                 onPressed: props.tracks.isEmpty ? null : onShuffle,
               ),
             ),
@@ -155,10 +155,10 @@ class TrackViewHeaderButtons extends HookConsumerWidget {
               ? null
               : onPlay,
           icon: isActive
-              ? const Icon(SpotubeIcons.pause)
+              ? const Icon(spotifyreIcons.pause)
               : isLoading.value
                   ? progressIndicator
-                  : const Icon(SpotubeIcons.play),
+                  : const Icon(spotifyreIcons.play),
           label: Text(context.l10n.play),
         ),
       ],

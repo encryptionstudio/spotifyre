@@ -33,7 +33,7 @@ mixin _$UserPreferences {
       fromJson: UserPreferences._accentColorSchemeFromJson,
       toJson: UserPreferences._accentColorSchemeToJson,
       readValue: UserPreferences._accentColorSchemeReadValue)
-  SpotubeColor get accentColorScheme => throw _privateConstructorUsedError;
+  spotifyreColor get accentColorScheme => throw _privateConstructorUsedError;
   LayoutMode get layoutMode => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: UserPreferences._localeFromJson,
@@ -78,7 +78,7 @@ abstract class $UserPreferencesCopyWith<$Res> {
           fromJson: UserPreferences._accentColorSchemeFromJson,
           toJson: UserPreferences._accentColorSchemeToJson,
           readValue: UserPreferences._accentColorSchemeReadValue)
-      SpotubeColor accentColorScheme,
+      spotifyreColor accentColorScheme,
       LayoutMode layoutMode,
       @JsonKey(
           fromJson: UserPreferences._localeFromJson,
@@ -175,7 +175,7 @@ class _$UserPreferencesCopyWithImpl<$Res, $Val extends UserPreferences>
       accentColorScheme: null == accentColorScheme
           ? _value.accentColorScheme
           : accentColorScheme // ignore: cast_nullable_to_non_nullable
-              as SpotubeColor,
+              as spotifyreColor,
       layoutMode: null == layoutMode
           ? _value.layoutMode
           : layoutMode // ignore: cast_nullable_to_non_nullable
@@ -254,7 +254,7 @@ abstract class _$$UserPreferencesImplCopyWith<$Res>
           fromJson: UserPreferences._accentColorSchemeFromJson,
           toJson: UserPreferences._accentColorSchemeToJson,
           readValue: UserPreferences._accentColorSchemeReadValue)
-      SpotubeColor accentColorScheme,
+      spotifyreColor accentColorScheme,
       LayoutMode layoutMode,
       @JsonKey(
           fromJson: UserPreferences._localeFromJson,
@@ -349,7 +349,7 @@ class __$$UserPreferencesImplCopyWithImpl<$Res>
       accentColorScheme: null == accentColorScheme
           ? _value.accentColorScheme
           : accentColorScheme // ignore: cast_nullable_to_non_nullable
-              as SpotubeColor,
+              as spotifyreColor,
       layoutMode: null == layoutMode
           ? _value.layoutMode
           : layoutMode // ignore: cast_nullable_to_non_nullable
@@ -423,7 +423,7 @@ class _$UserPreferencesImpl implements _UserPreferences {
           fromJson: UserPreferences._accentColorSchemeFromJson,
           toJson: UserPreferences._accentColorSchemeToJson,
           readValue: UserPreferences._accentColorSchemeReadValue)
-      this.accentColorScheme = const SpotubeColor(0xFF2196F3, name: "Blue"),
+      this.accentColorScheme = const spotifyreColor(0xFF2196F3, name: "Blue"),
       this.layoutMode = LayoutMode.adaptive,
       @JsonKey(
           fromJson: UserPreferences._localeFromJson,
@@ -477,7 +477,7 @@ class _$UserPreferencesImpl implements _UserPreferences {
       fromJson: UserPreferences._accentColorSchemeFromJson,
       toJson: UserPreferences._accentColorSchemeToJson,
       readValue: UserPreferences._accentColorSchemeReadValue)
-  final SpotubeColor accentColorScheme;
+  final spotifyreColor accentColorScheme;
   @override
   @JsonKey()
   final LayoutMode layoutMode;
@@ -637,7 +637,7 @@ abstract class _UserPreferences implements UserPreferences {
           fromJson: UserPreferences._accentColorSchemeFromJson,
           toJson: UserPreferences._accentColorSchemeToJson,
           readValue: UserPreferences._accentColorSchemeReadValue)
-      final SpotubeColor accentColorScheme,
+      final spotifyreColor accentColorScheme,
       final LayoutMode layoutMode,
       @JsonKey(
           fromJson: UserPreferences._localeFromJson,
@@ -682,7 +682,7 @@ abstract class _UserPreferences implements UserPreferences {
       fromJson: UserPreferences._accentColorSchemeFromJson,
       toJson: UserPreferences._accentColorSchemeToJson,
       readValue: UserPreferences._accentColorSchemeReadValue)
-  SpotubeColor get accentColorScheme;
+  spotifyreColor get accentColorScheme;
   @override
   LayoutMode get layoutMode;
   @override

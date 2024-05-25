@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/components/desktop_login/login_form.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/components/desktop_login/login_form.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
 
 class DesktopLoginPage extends HookConsumerWidget {
   const DesktopLoginPage({super.key});
@@ -33,7 +33,7 @@ class DesktopLoginPage extends HookConsumerWidget {
               ),
               child: Column(
                 children: [
-                  Assets.spotubeLogoPng.image(
+                  Assets.spotifyreLogoPng.image(
                     width: MediaQuery.of(context).size.width *
                         (mediaQuery.mdAndDown ? .5 : .3),
                   ),

@@ -6,7 +6,7 @@ import 'package:flutter_broadcasts/flutter_broadcasts.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:audio_session/audio_session.dart';
 // ignore: implementation_imports
-import 'package:spotube/services/audio_player/playback_state.dart';
+import 'package:spotifyre/services/audio_player/playback_state.dart';
 
 /// MediaKit [Player] by default doesn't have a state stream.
 /// This class adds a state stream to the [Player] class.

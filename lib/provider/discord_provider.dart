@@ -3,10 +3,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_desktop_tools/flutter_desktop_tools.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/env.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/collections/env.dart';
+import 'package:spotifyre/extensions/artist_simple.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
 
 class Discord extends ChangeNotifier {
   final DiscordRPC? discordRPC;
@@ -29,10 +29,10 @@ class Discord extends ChangeNotifier {
         details: "Song: ${track.name} by $artistNames",
         state: "Vibing in Music",
         startTimeStamp: DateTime.now().millisecondsSinceEpoch,
-        largeImageKey: "spotube-logo-foreground",
-        largeImageText: "Spotube",
-        smallImageKey: "spotube-logo-foreground",
-        smallImageText: "Spotube",
+        largeImageKey: "spotifyre-logo-foreground",
+        largeImageText: "spotifyre",
+        smallImageKey: "spotifyre-logo-foreground",
+        smallImageText: "spotifyre",
       ),
     );
   }

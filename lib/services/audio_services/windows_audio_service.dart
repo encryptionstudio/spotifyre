@@ -3,11 +3,11 @@ import 'dart:async';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:smtc_windows/smtc_windows.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
-import 'package:spotube/services/audio_player/playback_state.dart';
+import 'package:spotifyre/extensions/artist_simple.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
+import 'package:spotifyre/services/audio_player/playback_state.dart';
 
 class WindowsAudioService {
   final SMTCWindows smtc;

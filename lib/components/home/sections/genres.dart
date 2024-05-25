@@ -7,13 +7,13 @@ import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/fake.dart';
-import 'package:spotube/collections/gradients.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/collections/fake.dart';
+import 'package:spotifyre/collections/gradients.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 class HomeGenresSection extends HookConsumerWidget {
   const HomeGenresSection({super.key});
@@ -52,7 +52,7 @@ class HomeGenresSection extends HookConsumerWidget {
                     onPressed: () {
                       context.push('/genres');
                     },
-                    icon: const Icon(SpotubeIcons.angleRight),
+                    icon: const Icon(spotifyreIcons.angleRight),
                     label: Text(
                       "Browse All",
                       style: textTheme.bodyMedium?.copyWith(

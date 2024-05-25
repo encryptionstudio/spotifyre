@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/models/spotify_friends.dart';
-import 'package:spotube/provider/spotify_provider.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/models/spotify_friends.dart';
+import 'package:spotifyre/provider/spotify_provider.dart';
 
 class FriendItem extends HookConsumerWidget {
   final SpotifyFriendActivity friend;
@@ -63,7 +63,7 @@ class FriendItem extends HookConsumerWidget {
                     const TextSpan(text: " • "),
                     const WidgetSpan(
                       child: Icon(
-                        SpotubeIcons.artist,
+                        spotifyreIcons.artist,
                         size: 12,
                       ),
                     ),
@@ -94,7 +94,7 @@ class FriendItem extends HookConsumerWidget {
                     const TextSpan(text: " • "),
                     const WidgetSpan(
                       child: Icon(
-                        SpotubeIcons.album,
+                        spotifyreIcons.album,
                         size: 12,
                       ),
                     ),

@@ -3,13 +3,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/components/desktop_login/login_form.dart';
-import 'package:spotube/components/shared/links/hyper_link.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/utils/service_utils.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/components/desktop_login/login_form.dart';
+import 'package:spotifyre/components/shared/links/hyper_link.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/utils/service_utils.dart';
 
 class LoginTutorial extends ConsumerWidget {
   const LoginTutorial({super.key});

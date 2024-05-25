@@ -14,20 +14,20 @@ import 'package:path_provider/path_provider.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/fake.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/expandable_search/expandable_search.dart';
-import 'package:spotube/components/shared/fallbacks/not_found.dart';
-import 'package:spotube/components/shared/inter_scrollbar/inter_scrollbar.dart';
-import 'package:spotube/components/shared/sort_tracks_dropdown.dart';
-import 'package:spotube/components/shared/track_tile/track_tile.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/track.dart';
-import 'package:spotube/models/local_track.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/utils/service_utils.dart';
+import 'package:spotifyre/collections/fake.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/expandable_search/expandable_search.dart';
+import 'package:spotifyre/components/shared/fallbacks/not_found.dart';
+import 'package:spotifyre/components/shared/inter_scrollbar/inter_scrollbar.dart';
+import 'package:spotifyre/components/shared/sort_tracks_dropdown.dart';
+import 'package:spotifyre/components/shared/track_tile/track_tile.dart';
+import 'package:spotifyre/extensions/artist_simple.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/track.dart';
+import 'package:spotifyre/models/local_track.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/utils/service_utils.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_rust_bridge/flutter_rust_bridge.dart' show FfiException;
 
@@ -84,7 +84,7 @@ final localTracksProvider = FutureProvider<List<LocalTrack>>((ref) async {
 
             final imageFile = File(join(
               (await getTemporaryDirectory()).path,
-              "spotube",
+              "spotifyre",
               basenameWithoutExtension(file.path) +
                   imgMimeToExt[metadata.picture?.mimeType ?? "image/jpeg"]!,
             ));
@@ -194,7 +194,9 @@ class UserLocalTracks extends HookConsumerWidget {
                   children: [
                     Text(context.l10n.play),
                     Icon(
-                      isPlaylistPlaying ? SpotubeIcons.stop : SpotubeIcons.play,
+                      isPlaylistPlaying
+                          ? spotifyreIcons.stop
+                          : spotifyreIcons.play,
                     )
                   ],
                 ),
@@ -214,7 +216,7 @@ class UserLocalTracks extends HookConsumerWidget {
               ),
               const SizedBox(width: 5),
               FilledButton(
-                child: const Icon(SpotubeIcons.refresh),
+                child: const Icon(spotifyreIcons.refresh),
                 onPressed: () {
                   ref.invalidate(localTracksProvider);
                 },

@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:spotube/collections/assets.gen.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
 
 class UniversalImage extends HookWidget {
   final String path;

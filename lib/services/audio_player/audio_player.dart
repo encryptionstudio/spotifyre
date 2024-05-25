@@ -3,24 +3,24 @@ import 'dart:io';
 import 'package:catcher_2/catcher_2.dart';
 import 'package:flutter/foundation.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/extensions/track.dart';
-import 'package:spotube/models/local_track.dart';
-import 'package:spotube/provider/server/server.dart';
-import 'package:spotube/services/audio_player/custom_player.dart';
+import 'package:spotifyre/extensions/track.dart';
+import 'package:spotifyre/models/local_track.dart';
+import 'package:spotifyre/provider/server/server.dart';
+import 'package:spotifyre/services/audio_player/custom_player.dart';
 import 'dart:async';
 
 import 'package:media_kit/media_kit.dart' as mk;
 
-import 'package:spotube/services/audio_player/loop_mode.dart';
-import 'package:spotube/services/audio_player/playback_state.dart';
+import 'package:spotifyre/services/audio_player/loop_mode.dart';
+import 'package:spotifyre/services/audio_player/playback_state.dart';
 
 part 'audio_players_streams_mixin.dart';
 part 'audio_player_impl.dart';
 
-class SpotubeMedia extends mk.Media {
+class spotifyreMedia extends mk.Media {
   final Track track;
 
-  SpotubeMedia(
+  spotifyreMedia(
     this.track, {
     Map<String, String>? extras,
     super.httpHeaders,
@@ -34,9 +34,9 @@ class SpotubeMedia extends mk.Media {
           },
         );
 
-  factory SpotubeMedia.fromMedia(mk.Media media) {
+  factory spotifyreMedia.fromMedia(mk.Media media) {
     final track = Track.fromJson(media.extras?["track"]);
-    return SpotubeMedia(track);
+    return spotifyreMedia(track);
   }
 }
 
@@ -46,7 +46,7 @@ abstract class AudioPlayerInterface {
   AudioPlayerInterface()
       : _mkPlayer = CustomPlayer(
           configuration: const mk.PlayerConfiguration(
-            title: "Spotube",
+            title: "spotifyre",
             logLevel: kDebugMode ? mk.MPVLogLevel.info : mk.MPVLogLevel.error,
           ),
         ) {

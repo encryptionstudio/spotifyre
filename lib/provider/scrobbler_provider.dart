@@ -4,10 +4,10 @@ import 'package:catcher_2/catcher_2.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scrobblenaut/scrobblenaut.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/env.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/utils/persisted_state_notifier.dart';
+import 'package:spotifyre/collections/env.dart';
+import 'package:spotifyre/extensions/artist_simple.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/utils/persisted_state_notifier.dart';
 
 class ScrobblerState {
   final String username;

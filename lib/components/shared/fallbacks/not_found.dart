@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotube/collections/assets.gen.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
 
 class NotFound extends StatelessWidget {
   final bool vertical;

@@ -1,5 +1,5 @@
 import 'package:spotify/spotify.dart';
-import 'package:spotube/extensions/track.dart';
+import 'package:spotifyre/extensions/track.dart';
 
 class LocalTrack extends Track {
   final String path;

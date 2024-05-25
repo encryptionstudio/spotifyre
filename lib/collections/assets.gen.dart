@@ -55,33 +55,34 @@ class Assets {
   static const $AssetsLogosGen logos = $AssetsLogosGen();
   static const AssetGenImage placeholder =
       AssetGenImage('assets/placeholder.png');
-  static const AssetGenImage spotubeHeroBanner =
-      AssetGenImage('assets/spotube-hero-banner.png');
-  static const AssetGenImage spotubeLogoForeground =
-      AssetGenImage('assets/spotube-logo-foreground.jpg');
-  static const String spotubeLogoIco = 'assets/spotube-logo.ico';
-  static const AssetGenImage spotubeLogoPng =
-      AssetGenImage('assets/spotube-logo.png');
-  static const String spotubeLogoSvg = 'assets/spotube-logo.svg';
-  static const AssetGenImage spotubeLogoAndroid12 =
-      AssetGenImage('assets/spotube-logo_android12.png');
-  static const AssetGenImage spotubeNightlyLogoForeground =
-      AssetGenImage('assets/spotube-nightly-logo-foreground.jpg');
-  static const AssetGenImage spotubeNightlyLogoPng =
-      AssetGenImage('assets/spotube-nightly-logo.png');
-  static const String spotubeNightlyLogoSvg = 'assets/spotube-nightly-logo.svg';
-  static const AssetGenImage spotubeNightlyLogoAndroid12 =
-      AssetGenImage('assets/spotube-nightly-logo_android12.png');
-  static const AssetGenImage spotubeScreenshot =
-      AssetGenImage('assets/spotube-screenshot.png');
-  static const AssetGenImage spotubeTallCapsule =
-      AssetGenImage('assets/spotube-tall-capsule.png');
-  static const AssetGenImage spotubeWideCapsuleLarge =
-      AssetGenImage('assets/spotube-wide-capsule-large.png');
-  static const AssetGenImage spotubeWideCapsuleSmall =
-      AssetGenImage('assets/spotube-wide-capsule-small.png');
-  static const AssetGenImage spotubeBanner =
-      AssetGenImage('assets/spotube_banner.png');
+  static const AssetGenImage spotifyreHeroBanner =
+      AssetGenImage('assets/spotifyre-hero-banner.png');
+  static const AssetGenImage spotifyreLogoForeground =
+      AssetGenImage('assets/spotifyre-logo-foreground.jpg');
+  static const String spotifyreLogoIco = 'assets/spotifyre-logo.ico';
+  static const AssetGenImage spotifyreLogoPng =
+      AssetGenImage('assets/spotifyre-logo.png');
+  static const String spotifyreLogoSvg = 'assets/spotifyre-logo.svg';
+  static const AssetGenImage spotifyreLogoAndroid12 =
+      AssetGenImage('assets/spotifyre-logo_android12.png');
+  static const AssetGenImage spotifyreNightlyLogoForeground =
+      AssetGenImage('assets/spotifyre-nightly-logo-foreground.jpg');
+  static const AssetGenImage spotifyreNightlyLogoPng =
+      AssetGenImage('assets/spotifyre-nightly-logo.png');
+  static const String spotifyreNightlyLogoSvg =
+      'assets/spotifyre-nightly-logo.svg';
+  static const AssetGenImage spotifyreNightlyLogoAndroid12 =
+      AssetGenImage('assets/spotifyre-nightly-logo_android12.png');
+  static const AssetGenImage spotifyreScreenshot =
+      AssetGenImage('assets/spotifyre-screenshot.png');
+  static const AssetGenImage spotifyreTallCapsule =
+      AssetGenImage('assets/spotifyre-tall-capsule.png');
+  static const AssetGenImage spotifyreWideCapsuleLarge =
+      AssetGenImage('assets/spotifyre-wide-capsule-large.png');
+  static const AssetGenImage spotifyreWideCapsuleSmall =
+      AssetGenImage('assets/spotifyre-wide-capsule-small.png');
+  static const AssetGenImage spotifyreBanner =
+      AssetGenImage('assets/spotifyre_banner.png');
   static const AssetGenImage success = AssetGenImage('assets/success.png');
   static const $AssetsTutorialGen tutorial = $AssetsTutorialGen();
   static const AssetGenImage userPlaceholder =
@@ -96,21 +97,21 @@ class Assets {
         jiosaavn,
         likedTracks,
         placeholder,
-        spotubeHeroBanner,
-        spotubeLogoForeground,
-        spotubeLogoIco,
-        spotubeLogoPng,
-        spotubeLogoSvg,
-        spotubeLogoAndroid12,
-        spotubeNightlyLogoForeground,
-        spotubeNightlyLogoPng,
-        spotubeNightlyLogoSvg,
-        spotubeNightlyLogoAndroid12,
-        spotubeScreenshot,
-        spotubeTallCapsule,
-        spotubeWideCapsuleLarge,
-        spotubeWideCapsuleSmall,
-        spotubeBanner,
+        spotifyreHeroBanner,
+        spotifyreLogoForeground,
+        spotifyreLogoIco,
+        spotifyreLogoPng,
+        spotifyreLogoSvg,
+        spotifyreLogoAndroid12,
+        spotifyreNightlyLogoForeground,
+        spotifyreNightlyLogoPng,
+        spotifyreNightlyLogoSvg,
+        spotifyreNightlyLogoAndroid12,
+        spotifyreScreenshot,
+        spotifyreTallCapsule,
+        spotifyreWideCapsuleLarge,
+        spotifyreWideCapsuleSmall,
+        spotifyreBanner,
         success,
         userPlaceholder
       ];

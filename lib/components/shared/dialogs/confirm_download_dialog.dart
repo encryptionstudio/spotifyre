@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
 
 class ConfirmDownloadDialog extends StatelessWidget {
   const ConfirmDownloadDialog({super.key});

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/components/shared/links/hyper_link.dart';
-import 'package:spotube/components/shared/page_window_title_bar.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/hooks/controllers/use_package_info.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/components/shared/links/hyper_link.dart';
+import 'package:spotifyre/components/shared/page_window_title_bar.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/hooks/controllers/use_package_info.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -15,8 +15,8 @@ final _licenseProvider = FutureProvider<String>((ref) async {
   return await rootBundle.loadString("LICENSE");
 });
 
-class AboutSpotube extends HookConsumerWidget {
-  const AboutSpotube({super.key});
+class Aboutspotifyre extends HookConsumerWidget {
+  const Aboutspotifyre({super.key});
 
   @override
   Widget build(BuildContext context, ref) {
@@ -29,14 +29,14 @@ class AboutSpotube extends HookConsumerWidget {
     return Scaffold(
       appBar: PageWindowTitleBar(
         leading: const BackButton(),
-        title: Text(context.l10n.about_spotube),
+        title: Text(context.l10n.about_spotifyre),
       ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             children: [
-              Assets.spotubeLogoPng.image(
+              Assets.spotifyreLogoPng.image(
                 height: 200,
                 width: 200,
               ),
@@ -44,7 +44,7 @@ class AboutSpotube extends HookConsumerWidget {
                 child: Column(
                   children: [
                     Text(
-                      context.l10n.spotube_description,
+                      context.l10n.spotifyre_description,
                       style: theme.textTheme.titleLarge,
                     ),
                     const SizedBox(height: 20),
@@ -84,8 +84,8 @@ class AboutSpotube extends HookConsumerWidget {
                             Text(context.l10n.repository),
                             colon,
                             const Hyperlink(
-                              "github.com/KRTirtho/spotube",
-                              "https://github.com/KRTirtho/spotube",
+                              "github.com/KRTirtho/spotifyre",
+                              "https://github.com/KRTirtho/spotifyre",
                             ),
                           ],
                         ),
@@ -95,7 +95,7 @@ class AboutSpotube extends HookConsumerWidget {
                             colon,
                             const Hyperlink(
                               "BSD-4-Clause",
-                              "https://raw.githubusercontent.com/KRTirtho/spotube/master/LICENSE",
+                              "https://raw.githubusercontent.com/KRTirtho/spotifyre/master/LICENSE",
                             ),
                           ],
                         ),
@@ -104,8 +104,8 @@ class AboutSpotube extends HookConsumerWidget {
                             Text(context.l10n.bug_issues),
                             colon,
                             const Hyperlink(
-                              "github.com/KRTirtho/spotube/issues",
-                              "https://github.com/KRTirtho/spotube/issues",
+                              "github.com/KRTirtho/spotifyre/issues",
+                              "https://github.com/KRTirtho/spotifyre/issues",
                             ),
                           ],
                         ),
@@ -157,13 +157,13 @@ class AboutSpotube extends HookConsumerWidget {
                       onTap: () {
                         launchUrl(
                           Uri.parse(
-                            "https://opencollective.com/spotube",
+                            "https://opencollective.com/spotifyre",
                           ),
                           mode: LaunchMode.externalApplication,
                         );
                       },
                       child: Image.network(
-                        "https://opencollective.com/spotube/donate/button.png?color=blue",
+                        "https://opencollective.com/spotifyre/donate/button.png?color=blue",
                         height: 45,
                       ),
                     ),

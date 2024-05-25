@@ -1,7 +1,7 @@
 import 'package:spotify/spotify.dart';
-import 'package:spotube/extensions/track.dart';
-import 'package:spotube/models/spotify/home_feed.dart';
-import 'package:spotube/models/spotify_friends.dart';
+import 'package:spotifyre/extensions/track.dart';
+import 'package:spotifyre/models/spotify/home_feed.dart';
+import 'package:spotifyre/models/spotify_friends.dart';
 
 abstract class FakeData {
   static final Image image = Image()

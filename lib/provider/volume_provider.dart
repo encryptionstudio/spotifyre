@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/services/audio_player/audio_player.dart';
-import 'package:spotube/utils/persisted_state_notifier.dart';
+import 'package:spotifyre/services/audio_player/audio_player.dart';
+import 'package:spotifyre/utils/persisted_state_notifier.dart';
 
 class VolumeProvider extends PersistedStateNotifier<double> {
   VolumeProvider() : super(1, 'volume');

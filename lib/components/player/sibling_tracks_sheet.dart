@@ -4,30 +4,31 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/assets.gen.dart';
-import 'package:spotube/collections/spotube_icons.dart';
+import 'package:spotifyre/collections/assets.gen.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
 
-import 'package:spotube/components/shared/image/universal_image.dart';
-import 'package:spotube/components/shared/inter_scrollbar/inter_scrollbar.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/duration.dart';
-import 'package:spotube/hooks/utils/use_debounce.dart';
-import 'package:spotube/provider/proxy_playlist/proxy_playlist_provider.dart';
-import 'package:spotube/provider/server/active_sourced_track.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_state.dart';
-import 'package:spotube/services/sourced_track/models/source_info.dart';
-import 'package:spotube/services/sourced_track/models/video_info.dart';
-import 'package:spotube/services/sourced_track/sourced_track.dart';
-import 'package:spotube/services/sourced_track/sources/jiosaavn.dart';
-import 'package:spotube/services/sourced_track/sources/piped.dart';
-import 'package:spotube/services/sourced_track/sources/youtube.dart';
-import 'package:spotube/utils/service_utils.dart';
+import 'package:spotifyre/components/shared/image/universal_image.dart';
+import 'package:spotifyre/components/shared/inter_scrollbar/inter_scrollbar.dart';
+import 'package:spotifyre/extensions/artist_simple.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/duration.dart';
+import 'package:spotifyre/hooks/utils/use_debounce.dart';
+import 'package:spotifyre/provider/proxy_playlist/proxy_playlist_provider.dart';
+import 'package:spotifyre/provider/server/active_sourced_track.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_state.dart';
+import 'package:spotifyre/services/sourced_track/models/source_info.dart';
+import 'package:spotifyre/services/sourced_track/models/video_info.dart';
+import 'package:spotifyre/services/sourced_track/sourced_track.dart';
+import 'package:spotifyre/services/sourced_track/sources/jiosaavn.dart';
+import 'package:spotifyre/services/sourced_track/sources/piped.dart';
+import 'package:spotifyre/services/sourced_track/sources/youtube.dart';
+import 'package:spotifyre/utils/service_utils.dart';
 
 final sourceInfoToIconMap = {
-  YoutubeSourceInfo: const Icon(SpotubeIcons.youtube, color: Color(0xFFFF0000)),
+  YoutubeSourceInfo:
+      const Icon(spotifyreIcons.youtube, color: Color(0xFFFF0000)),
   JioSaavnSourceInfo: Container(
     height: 30,
     width: 30,
@@ -39,7 +40,7 @@ final sourceInfoToIconMap = {
       ),
     ),
   ),
-  PipedSourceInfo: const Icon(SpotubeIcons.piped),
+  PipedSourceInfo: const Icon(spotifyreIcons.piped),
 };
 
 class SiblingTracksSheet extends HookConsumerWidget {
@@ -237,7 +238,7 @@ class SiblingTracksSheet extends HookConsumerWidget {
                   actions: [
                     if (!isSearching.value)
                       IconButton(
-                        icon: const Icon(SpotubeIcons.search, size: 18),
+                        icon: const Icon(spotifyreIcons.search, size: 18),
                         onPressed: () {
                           isSearching.value = true;
                         },
@@ -245,7 +246,7 @@ class SiblingTracksSheet extends HookConsumerWidget {
                     else ...[
                       if (preferences.audioSource == AudioSource.piped)
                         PopupMenuButton(
-                          icon: const Icon(SpotubeIcons.filter, size: 18),
+                          icon: const Icon(spotifyreIcons.filter, size: 18),
                           onSelected: (SearchMode mode) {
                             searchMode.value = mode;
                           },
@@ -260,7 +261,7 @@ class SiblingTracksSheet extends HookConsumerWidget {
                               .toList(),
                         ),
                       IconButton(
-                        icon: const Icon(SpotubeIcons.close, size: 18),
+                        icon: const Icon(spotifyreIcons.close, size: 18),
                         onPressed: () {
                           isSearching.value = false;
                         },

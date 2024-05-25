@@ -23,14 +23,14 @@
 			</button>
 			<h2 class="text-3xl">
 				<a href="/" class="flex gap-2 items-center">
-					<img src="/images/spotube-logo.png" width="40px" alt="Spotube Logo" />
-					Spotube
+					<img src="/images/spotifyre-logo.png" width="40px" alt="spotifyre Logo" />
+					spotifyre
 				</a>
 			</h2>
 		</div>
 		<a
 			class="mw-2 md:me-4"
-			href="https://github.com/KRTirtho/spotube?referrer=spotube.krtirtho.dev"
+			href="https://github.com/KRTirtho/spotifyre?referrer=spotifyre.krtirtho.dev"
 			target="_blank"
 		>
 			<button class="btn variant-filled flex items-center gap-2">

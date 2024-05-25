@@ -11,7 +11,7 @@
 		class="btn variant-ghost-tertiary max-w-44 flex flex-col items-center p-4 rounded-2xl"
 	>
 		<img
-			alt="Author of Spotube"
+			alt="Author of spotifyre"
 			src="https://github.com/KRTirtho.png"
 			class="h-auto w-40 rounded-full"
 		/>

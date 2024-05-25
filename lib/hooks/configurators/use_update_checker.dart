@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
-import 'package:spotube/collections/env.dart';
+import 'package:spotifyre/collections/env.dart';
 
-import 'package:spotube/components/shared/links/anchor_button.dart';
-import 'package:spotube/hooks/controllers/use_package_info.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/components/shared/links/anchor_button.dart';
+import 'package:spotifyre/hooks/controllers/use_package_info.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:version/version.dart';
 
@@ -17,14 +17,14 @@ void useUpdateChecker(WidgetRef ref) {
   final isCheckUpdateEnabled =
       ref.watch(userPreferencesProvider.select((s) => s.checkUpdate));
   final packageInfo = usePackageInfo(
-    appName: 'Spotube',
-    packageName: 'spotube',
+    appName: 'spotifyre',
+    packageName: 'spotifyre',
   );
   final Future<List<Version?>> Function() checkUpdate = useCallback(
     () async {
       final value = await http.get(
         Uri.parse(
-            "https://api.github.com/repos/KRTirtho/spotube/releases/latest"),
+            "https://api.github.com/repos/KRTirtho/spotifyre/releases/latest"),
       );
       final tagName =
           (jsonDecode(value.body)["tag_name"] as String).replaceAll("v", "");
@@ -62,9 +62,9 @@ void useUpdateChecker(WidgetRef ref) {
         barrierColor: Colors.black26,
         builder: (context) {
           const url =
-              "https://spotube.krtirtho.dev/other-downloads/stable-downloads";
+              "https://spotifyre.krtirtho.dev/other-downloads/stable-downloads";
           return AlertDialog(
-            title: const Text("Spotube has an update"),
+            title: const Text("spotifyre has an update"),
             actions: [
               FilledButton(
                 child: const Text("Download Now"),
@@ -74,7 +74,7 @@ void useUpdateChecker(WidgetRef ref) {
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text("Spotube v${value.last} has been released"),
+                Text("spotifyre v${value.last} has been released"),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

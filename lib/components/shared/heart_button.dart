@@ -3,10 +3,10 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:spotify/spotify.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/provider/scrobbler_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/provider/scrobbler_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 class HeartButton extends HookConsumerWidget {
   final bool isLiked;

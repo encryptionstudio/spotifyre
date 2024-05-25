@@ -5,16 +5,16 @@ import 'package:collection/collection.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_state.dart';
-import 'package:spotube/services/sourced_track/enums.dart';
-import 'package:spotube/services/sourced_track/exceptions.dart';
-import 'package:spotube/services/sourced_track/models/source_info.dart';
-import 'package:spotube/services/sourced_track/models/source_map.dart';
-import 'package:spotube/services/sourced_track/sources/jiosaavn.dart';
-import 'package:spotube/services/sourced_track/sources/piped.dart';
-import 'package:spotube/services/sourced_track/sources/youtube.dart';
-import 'package:spotube/utils/service_utils.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_state.dart';
+import 'package:spotifyre/services/sourced_track/enums.dart';
+import 'package:spotifyre/services/sourced_track/exceptions.dart';
+import 'package:spotifyre/services/sourced_track/models/source_info.dart';
+import 'package:spotifyre/services/sourced_track/models/source_map.dart';
+import 'package:spotifyre/services/sourced_track/sources/jiosaavn.dart';
+import 'package:spotifyre/services/sourced_track/sources/piped.dart';
+import 'package:spotifyre/services/sourced_track/sources/youtube.dart';
+import 'package:spotifyre/utils/service_utils.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 
 abstract class SourcedTrack extends Track {

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/components/shared/tracks_view/track_view.dart';
-import 'package:spotube/components/shared/tracks_view/track_view_props.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
+import 'package:spotifyre/components/shared/tracks_view/track_view.dart';
+import 'package:spotifyre/components/shared/tracks_view/track_view_props.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/extensions/image.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
 
 class AlbumPage extends HookConsumerWidget {
   final AlbumSimple album;

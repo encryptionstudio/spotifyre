@@ -8,12 +8,12 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
-import 'package:spotube/models/logger.dart';
-import 'package:spotube/services/download_manager/chunked_download.dart';
-import 'package:spotube/services/download_manager/download_request.dart';
-import 'package:spotube/services/download_manager/download_status.dart';
-import 'package:spotube/services/download_manager/download_task.dart';
-import 'package:spotube/utils/primitive_utils.dart';
+import 'package:spotifyre/models/logger.dart';
+import 'package:spotifyre/services/download_manager/chunked_download.dart';
+import 'package:spotifyre/services/download_manager/download_request.dart';
+import 'package:spotifyre/services/download_manager/download_status.dart';
+import 'package:spotifyre/services/download_manager/download_task.dart';
+import 'package:spotifyre/utils/primitive_utils.dart';
 
 export './download_request.dart';
 export './download_status.dart';
@@ -83,7 +83,7 @@ class DownloadManager {
       final tmpDirPath = await Directory(
         path.join(
           (await getTemporaryDirectory()).path,
-          "spotube-downloads",
+          "spotifyre-downloads",
         ),
       ).create(recursive: true);
 

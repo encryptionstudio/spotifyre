@@ -1,14 +1,14 @@
 import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/models/source_match.dart';
-import 'package:spotube/services/sourced_track/enums.dart';
-import 'package:spotube/services/sourced_track/exceptions.dart';
-import 'package:spotube/services/sourced_track/models/source_info.dart';
-import 'package:spotube/services/sourced_track/models/source_map.dart';
-import 'package:spotube/services/sourced_track/sourced_track.dart';
+import 'package:spotifyre/models/source_match.dart';
+import 'package:spotifyre/services/sourced_track/enums.dart';
+import 'package:spotifyre/services/sourced_track/exceptions.dart';
+import 'package:spotifyre/services/sourced_track/models/source_info.dart';
+import 'package:spotifyre/services/sourced_track/models/source_map.dart';
+import 'package:spotifyre/services/sourced_track/sourced_track.dart';
 import 'package:jiosaavn/jiosaavn.dart';
-import 'package:spotube/extensions/string.dart';
+import 'package:spotifyre/extensions/string.dart';
 
 final jiosaavnClient = JioSaavnClient();
 

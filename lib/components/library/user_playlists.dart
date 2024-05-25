@@ -8,18 +8,18 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/fake.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/playlist/playlist_create_dialog.dart';
-import 'package:spotube/components/shared/inter_scrollbar/inter_scrollbar.dart';
-import 'package:spotube/components/shared/fallbacks/anonymous_fallback.dart';
-import 'package:spotube/components/playlist/playlist_card.dart';
-import 'package:spotube/components/shared/waypoint.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/authentication_provider.dart';
-import 'package:spotube/provider/spotify/spotify.dart';
-import 'package:spotube/utils/platform.dart';
+import 'package:spotifyre/collections/fake.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/playlist/playlist_create_dialog.dart';
+import 'package:spotifyre/components/shared/inter_scrollbar/inter_scrollbar.dart';
+import 'package:spotifyre/components/shared/fallbacks/anonymous_fallback.dart';
+import 'package:spotifyre/components/playlist/playlist_card.dart';
+import 'package:spotifyre/components/shared/waypoint.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/authentication_provider.dart';
+import 'package:spotifyre/provider/spotify/spotify.dart';
+import 'package:spotifyre/utils/platform.dart';
 
 class UserPlaylists extends HookConsumerWidget {
   const UserPlaylists({super.key});
@@ -95,7 +95,7 @@ class UserPlaylists extends HookConsumerWidget {
                   child: SearchBar(
                     onChanged: (value) => searchText.value = value,
                     hintText: context.l10n.filter_playlists,
-                    leading: const Icon(SpotubeIcons.filter),
+                    leading: const Icon(spotifyreIcons.filter),
                   ),
                 ),
                 bottom: PreferredSize(
@@ -107,7 +107,7 @@ class UserPlaylists extends HookConsumerWidget {
                       const PlaylistCreateDialogButton(),
                       const Gap(10),
                       ElevatedButton.icon(
-                        icon: const Icon(SpotubeIcons.magic),
+                        icon: const Icon(spotifyreIcons.magic),
                         label: Text(context.l10n.generate_playlist),
                         onPressed: () {
                           GoRouter.of(context).push("/library/generate");

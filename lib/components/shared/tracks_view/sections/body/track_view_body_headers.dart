@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/components/shared/expandable_search/expandable_search.dart';
-import 'package:spotube/components/shared/sort_tracks_dropdown.dart';
-import 'package:spotube/components/shared/tracks_view/sections/body/track_view_options.dart';
-import 'package:spotube/components/shared/tracks_view/track_view_props.dart';
-import 'package:spotube/components/shared/tracks_view/track_view_provider.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
+import 'package:spotifyre/components/shared/expandable_search/expandable_search.dart';
+import 'package:spotifyre/components/shared/sort_tracks_dropdown.dart';
+import 'package:spotifyre/components/shared/tracks_view/sections/body/track_view_options.dart';
+import 'package:spotifyre/components/shared/tracks_view/track_view_props.dart';
+import 'package:spotifyre/components/shared/tracks_view/track_view_provider.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
 
 class TrackViewBodyHeaders extends HookConsumerWidget {
   final ValueNotifier<bool> isFiltering;

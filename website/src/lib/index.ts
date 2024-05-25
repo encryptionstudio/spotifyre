@@ -18,44 +18,44 @@ export const routes: Record<string, [string, any]> = {
 	'/about': ['About', null]
 };
 
-const releasesUrl = 'https://github.com/KRTirtho/Spotube/releases/latest/download';
+const releasesUrl = 'https://github.com/KRTirtho/spotifyre/releases/latest/download';
 
 export const downloadLinks: Record<string, [string, IconDefinition[]]> = {
-	'Android Apk': [`${releasesUrl}/Spotube-android-all-arch.apk`, [faAndroid]],
-	'Windows Executable': [`${releasesUrl}/Spotube-windows-x86_64-setup.exe`, [faWindows]],
-	'macOS Dmg': [`${releasesUrl}/Spotube-macos-universal.dmg`, [faApple]],
-	'Ubuntu, Debian': [`${releasesUrl}/Spotube-linux-x86_64.deb`, [faUbuntu, faDebian]],
+	'Android Apk': [`${releasesUrl}/spotifyre-android-all-arch.apk`, [faAndroid]],
+	'Windows Executable': [`${releasesUrl}/spotifyre-windows-x86_64-setup.exe`, [faWindows]],
+	'macOS Dmg': [`${releasesUrl}/spotifyre-macos-universal.dmg`, [faApple]],
+	'Ubuntu, Debian': [`${releasesUrl}/spotifyre-linux-x86_64.deb`, [faUbuntu, faDebian]],
 	'Fedora, Redhat, Opensuse': [
-		`${releasesUrl}/Spotube-linux-x86_64.rpm`,
+		`${releasesUrl}/spotifyre-linux-x86_64.rpm`,
 		[faFedora, faRedhat, faOpensuse]
 	],
-	'iPhone Ipa': [`${releasesUrl}/Spotube-iOS.ipa`, [faApple]]
+	'iPhone Ipa': [`${releasesUrl}/spotifyre-iOS.ipa`, [faApple]]
 };
 
 export const extendedDownloadLinks: Record<string, [string, IconDefinition[], string]> = {
-	Android: [`${releasesUrl}/Spotube-android-all-arch.apk`, [faAndroid], 'apk'],
-	Windows: [`${releasesUrl}/Spotube-windows-x86_64-setup.exe`, [faWindows], 'exe'],
-	macOS: [`${releasesUrl}/Spotube-macos-universal.dmg`, [faApple], 'dmg'],
-	'Ubuntu, Debian': [`${releasesUrl}/Spotube-linux-x86_64.deb`, [faUbuntu, faDebian], 'deb'],
+	Android: [`${releasesUrl}/spotifyre-android-all-arch.apk`, [faAndroid], 'apk'],
+	Windows: [`${releasesUrl}/spotifyre-windows-x86_64-setup.exe`, [faWindows], 'exe'],
+	macOS: [`${releasesUrl}/spotifyre-macos-universal.dmg`, [faApple], 'dmg'],
+	'Ubuntu, Debian': [`${releasesUrl}/spotifyre-linux-x86_64.deb`, [faUbuntu, faDebian], 'deb'],
 	'Fedora, Redhat, Opensuse': [
-		`${releasesUrl}/Spotube-linux-x86_64.rpm`,
+		`${releasesUrl}/spotifyre-linux-x86_64.rpm`,
 		[faFedora, faRedhat, faOpensuse],
 		'rpm'
 	],
-	iPhone: [`${releasesUrl}/Spotube-iOS.ipa`, [faApple], 'ipa']
+	iPhone: [`${releasesUrl}/spotifyre-iOS.ipa`, [faApple], 'ipa']
 };
 
-const nightlyReleaseUrl = 'https://github.com/KRTirtho/Spotube/releases/download/nightly';
+const nightlyReleaseUrl = 'https://github.com/KRTirtho/spotifyre/releases/download/nightly';
 
 export const extendedNightlyDownloadLinks: Record<string, [string, IconDefinition[], string]> = {
-	Android: [`${nightlyReleaseUrl}/Spotube-android-all-arch.apk`, [faAndroid], 'apk'],
-	Windows: [`${nightlyReleaseUrl}/Spotube-windows-x86_64-setup.exe`, [faWindows], 'exe'],
-	macOS: [`${nightlyReleaseUrl}/Spotube-macos-universal.dmg`, [faApple], 'dmg'],
-	'Ubuntu, Debian': [`${nightlyReleaseUrl}/Spotube-linux-x86_64.deb`, [faUbuntu, faDebian], 'deb'],
+	Android: [`${nightlyReleaseUrl}/spotifyre-android-all-arch.apk`, [faAndroid], 'apk'],
+	Windows: [`${nightlyReleaseUrl}/spotifyre-windows-x86_64-setup.exe`, [faWindows], 'exe'],
+	macOS: [`${nightlyReleaseUrl}/spotifyre-macos-universal.dmg`, [faApple], 'dmg'],
+	'Ubuntu, Debian': [`${nightlyReleaseUrl}/spotifyre-linux-x86_64.deb`, [faUbuntu, faDebian], 'deb'],
 	'Fedora, Redhat, Opensuse': [
-		`${nightlyReleaseUrl}/Spotube-linux-x86_64.rpm`,
+		`${nightlyReleaseUrl}/spotifyre-linux-x86_64.rpm`,
 		[faFedora, faRedhat, faOpensuse],
 		'rpm'
 	],
-	iPhone: [`${nightlyReleaseUrl}/Spotube-iOS.ipa`, [faApple], 'ipa']
+	iPhone: [`${nightlyReleaseUrl}/spotifyre-iOS.ipa`, [faApple], 'ipa']
 };

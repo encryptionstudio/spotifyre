@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/connect/clients.dart';
-import 'package:spotube/utils/service_utils.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/connect/clients.dart';
+import 'package:spotifyre/utils/service_utils.dart';
 
 class ConnectDeviceButton extends HookConsumerWidget {
   final bool _sidebar;
@@ -38,7 +38,7 @@ class ConnectDeviceButton extends HookConsumerWidget {
                   " (${connectClients.asData?.value.services.length})",
                 ),
               const Spacer(),
-              const Icon(SpotubeIcons.speaker),
+              const Icon(spotifyreIcons.speaker),
               const Gap(5),
             ],
           ),
@@ -105,7 +105,7 @@ class ConnectDeviceButton extends HookConsumerWidget {
           Positioned(
             right: -3,
             child: IconButton.filled(
-              icon: const Icon(SpotubeIcons.speaker),
+              icon: const Icon(spotifyreIcons.speaker),
               style: IconButton.styleFrom(
                 visualDensity: VisualDensity.standard,
                 foregroundColor: colorScheme.onPrimary,

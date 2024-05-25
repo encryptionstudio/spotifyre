@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_desktop_tools/flutter_desktop_tools.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/settings/section_card_with_heading.dart';
-import 'package:spotube/components/shared/adaptive/adaptive_select_tile.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-import 'package:spotube/provider/user_preferences/user_preferences_state.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/settings/section_card_with_heading.dart';
+import 'package:spotifyre/components/shared/adaptive/adaptive_select_tile.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_provider.dart';
+import 'package:spotifyre/provider/user_preferences/user_preferences_state.dart';
 
 class SettingsDesktopSection extends HookConsumerWidget {
   const SettingsDesktopSection({super.key});
@@ -22,7 +22,7 @@ class SettingsDesktopSection extends HookConsumerWidget {
       children: [
         const Gap(10),
         AdaptiveSelectTile<CloseBehavior>(
-          secondary: const Icon(SpotubeIcons.close),
+          secondary: const Icon(spotifyreIcons.close),
           title: Text(context.l10n.close_behavior),
           value: preferences.closeBehavior,
           options: [
@@ -42,20 +42,20 @@ class SettingsDesktopSection extends HookConsumerWidget {
           },
         ),
         SwitchListTile(
-          secondary: const Icon(SpotubeIcons.tray),
+          secondary: const Icon(spotifyreIcons.tray),
           title: Text(context.l10n.show_tray_icon),
           value: preferences.showSystemTrayIcon,
           onChanged: preferencesNotifier.setShowSystemTrayIcon,
         ),
         SwitchListTile(
-          secondary: const Icon(SpotubeIcons.window),
+          secondary: const Icon(spotifyreIcons.window),
           title: Text(context.l10n.use_system_title_bar),
           value: preferences.systemTitleBar,
           onChanged: preferencesNotifier.setSystemTitleBar,
         ),
         if (!DesktopTools.platform.isMacOS)
           SwitchListTile(
-            secondary: const Icon(SpotubeIcons.discord),
+            secondary: const Icon(spotifyreIcons.discord),
             title: Text(context.l10n.discord_rich_presence),
             value: preferences.discordPresence,
             onChanged: preferencesNotifier.setDiscordPresence,

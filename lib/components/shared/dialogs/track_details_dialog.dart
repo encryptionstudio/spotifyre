@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:spotify/spotify.dart';
-import 'package:spotube/collections/spotube_icons.dart';
-import 'package:spotube/components/shared/links/artist_link.dart';
-import 'package:spotube/components/shared/links/hyper_link.dart';
-import 'package:spotube/components/shared/links/link_text.dart';
-import 'package:spotube/extensions/constrains.dart';
-import 'package:spotube/extensions/context.dart';
-import 'package:spotube/services/sourced_track/sourced_track.dart';
-import 'package:spotube/extensions/duration.dart';
+import 'package:spotifyre/collections/spotifyre_icons.dart';
+import 'package:spotifyre/components/shared/links/artist_link.dart';
+import 'package:spotifyre/components/shared/links/hyper_link.dart';
+import 'package:spotifyre/components/shared/links/link_text.dart';
+import 'package:spotifyre/extensions/constrains.dart';
+import 'package:spotifyre/extensions/context.dart';
+import 'package:spotifyre/services/sourced_track/sourced_track.dart';
+import 'package:spotifyre/extensions/duration.dart';
 
 class TrackDetailsDialog extends HookWidget {
   final Track track;
@@ -78,7 +78,7 @@ class TrackDetailsDialog extends HookWidget {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(SpotubeIcons.info),
+          const Icon(spotifyreIcons.info),
           const SizedBox(width: 8),
           Text(
             context.l10n.details,
